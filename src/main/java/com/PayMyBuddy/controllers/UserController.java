@@ -11,7 +11,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +21,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.WebRequest;
 
+import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.UserRepository;
 
@@ -66,8 +70,31 @@ public class UserController {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	
+	@GetMapping (value = "")
+	private ResponseEntity<String> getIndex (){
+		return new ResponseEntity<String>("index", HttpStatus.OK);
+	}
+	
+	@GetMapping (value ="/register")
+	private String getRegister (WebRequest request, Model model){
+		model.addAttribute("user", new UserDTO());
+		logger.info("entring users/register");
+		return "signup_form";
+	}
+	
+	@PostMapping("/register/process_registration")
+	public ResponseEntity<String> processRegister(User user) {
+	    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+	    String encodedPassword = passwordEncoder.encode(user.getPassword());
+	    user.setPassword(encodedPassword);
+	     
+	    userRepo.save(user);
+	     
+	    return new ResponseEntity<String>( "register_success", HttpStatus.ACCEPTED);
+	}
 
-	@PostMapping(value = "/postUser")
+	@PostMapping(value = "/register/registration")
 	@RolesAllowed(value ="User")
 	private ResponseEntity<User> postUser(@RequestBody User user) {
 		try {
@@ -80,20 +107,6 @@ public class UserController {
 		}
 	}
 
-	 /* @PostMapping(value = "/postUser/register")
-	@RolesAllowed("USER")
-	public ResponseEntity<?> userRegistration(@RequestBody User user) {
 
-		try {
-			User saveUser = userRepo
-					.save(new User(user.getUsername(), user.getEmail(), user.getPassword(), user.getCreateTime()));
-			String encodedPassword = passwordEncoder.encode(user.getPassword());
-			logger.info("post /users/postUser" + saveUser);
-			return new ResponseEntity<User>(saveUser, HttpStatus.CREATED);
-		} catch (Exception e) {
-			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-
-	} */
 
 }

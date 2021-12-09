@@ -36,10 +36,10 @@ public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
-		.withUser("springuser").password(passwordEncoder().encode("spring123"))
+		.withUser("user").password(passwordEncoder().encode(""))
 		.roles("USER")
 		.and()
-		.withUser("springadmin").password(passwordEncoder().encode("admin123"))
+		.withUser("root").password(passwordEncoder().encode("rootroot"))
 		.roles("ADMIN", "USER");
 }
 	
@@ -54,9 +54,10 @@ public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.formLogin()
 		    .and()
 		    .oauth2Login();
+		//disabled csrf to permit post operation
+		http.csrf().disable();
 
-		//http.csrf().ignoringAntMatchers("/admin");
-		//http.headers().frameOptions().sameOrigin();
+	
 	}
 	
 	
