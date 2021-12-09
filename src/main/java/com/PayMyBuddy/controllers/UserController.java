@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import javax.annotation.security.RolesAllowed;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +30,10 @@ public class UserController {
 	private static Logger logger = LoggerFactory.getLogger(UserController.class);
 
 	@Autowired
-	UserRepository userRepo;
+	private UserRepository userRepo;
+
+	 /* @Autowired
+	PasswordEncoder passwordEncoder; */
 
 	@GetMapping(value = "/getUsers")
 	private ResponseEntity<List<User>> getAllUsers() {
@@ -61,6 +68,7 @@ public class UserController {
 	}
 
 	@PostMapping(value = "/postUser")
+	@RolesAllowed(value ="User")
 	private ResponseEntity<User> postUser(@RequestBody User user) {
 		try {
 			User saveUser = userRepo
@@ -71,5 +79,21 @@ public class UserController {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+
+	 /* @PostMapping(value = "/postUser/register")
+	@RolesAllowed("USER")
+	public ResponseEntity<?> userRegistration(@RequestBody User user) {
+
+		try {
+			User saveUser = userRepo
+					.save(new User(user.getUsername(), user.getEmail(), user.getPassword(), user.getCreateTime()));
+			String encodedPassword = passwordEncoder.encode(user.getPassword());
+			logger.info("post /users/postUser" + saveUser);
+			return new ResponseEntity<User>(saveUser, HttpStatus.CREATED);
+		} catch (Exception e) {
+			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+	} */
 
 }

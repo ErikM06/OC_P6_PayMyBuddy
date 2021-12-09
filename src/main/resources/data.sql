@@ -1,8 +1,15 @@
 
 
-INSERT into user (username, email, password, create_time)
+INSERT into user (username, email, password, create_time, enable)
  values 
- ('Bob','Bob@email.com','bobpassword',CURRENT_TIMESTAMP);
+ ('Bob','Bob@email.com','bobpassword',CURRENT_TIMESTAMP,1);
+
+INSERT into user_authorities (authorities, user_id)
+values 
+('User',
+(SELECT id FROM user WHERE username = 'bob')
+);
+
  
 INSERT into bankAccount (bankAccountNumber, user_id)
 values
