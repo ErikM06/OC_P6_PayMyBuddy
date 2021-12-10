@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`user` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(16) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
-  `password` VARCHAR(32) NOT NULL,
+  `password` VARCHAR(74) NOT NULL,
   `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `enable` TINYINT NOT NULL,
   PRIMARY KEY (`id`),

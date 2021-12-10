@@ -5,29 +5,31 @@ import java.util.List;
 import java.util.Optional;
 
 import javax.annotation.security.RolesAllowed;
+import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.UserRepository;
+import com.PayMyBuddy.services.UserService;
 
-@RestController
+@Controller
 @RequestMapping(value = "/users")
 public class UserController {
 
@@ -35,6 +37,9 @@ public class UserController {
 
 	@Autowired
 	private UserRepository userRepo;
+	
+	@Autowired
+	private UserService userService;
 
 	 /* @Autowired
 	PasswordEncoder passwordEncoder; */
@@ -72,41 +77,28 @@ public class UserController {
 	}
 	
 	@GetMapping (value = "")
-	private ResponseEntity<String> getIndex (){
-		return new ResponseEntity<String>("index", HttpStatus.OK);
+	private String getIndex (){
+		return "index";
 	}
 	
 	@GetMapping (value ="/register")
 	private String getRegister (WebRequest request, Model model){
 		model.addAttribute("user", new UserDTO());
-		logger.info("entring users/register");
-		return "signup_form";
+		logger.info("reach users/register");
+		return "signup";
 	}
 	
-	@PostMapping("/register/process_registration")
-	public ResponseEntity<String> processRegister(User user) {
-	    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-	    String encodedPassword = passwordEncoder.encode(user.getPassword());
-	    user.setPassword(encodedPassword);
-	     
-	    userRepo.save(user);
-	     
-	    return new ResponseEntity<String>( "register_success", HttpStatus.ACCEPTED);
-	}
-
-	@PostMapping(value = "/register/registration")
-	@RolesAllowed(value ="User")
-	private ResponseEntity<User> postUser(@RequestBody User user) {
+	@PostMapping("/register")
+	public ModelAndView userRegistration 
+	(@ModelAttribute ("user") UserDTO userDto,  HttpServletRequest request, Errors errors) {
 		try {
-			User saveUser = userRepo
-					.save(new User(user.getUsername(), user.getEmail(), user.getPassword(), user.getCreateTime()));
-			logger.info("post /users/postUser" + saveUser);
-			return new ResponseEntity<User>(saveUser, HttpStatus.CREATED);
-		} catch (Exception e) {
-			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+	        User registered = userService.registerNewUserAccount(userDto);
+	        logger.info("Post user " + userDto);
+	    } catch (Exception e) {
+	     
+	    }
+	    return new ModelAndView("successRegister", "user", userDto);
 	}
-
-
+	     
 
 }

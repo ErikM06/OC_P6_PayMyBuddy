@@ -28,6 +28,9 @@ public class User {
 	
 	@Column (name ="create_time")
 	private Timestamp createTime;
+	
+	@Column (name ="enable")
+	private boolean enable;
 
 	public User(String username, String email, String password, Timestamp createTime) {
 		super();
@@ -79,6 +82,14 @@ public class User {
 
 	public void setCreateTime(Timestamp createTime) {
 		this.createTime = createTime;
+	}
+
+	public boolean isEnable() {
+		return enable;
+	}
+
+	public void setEnable(boolean enable) {
+		this.enable = enable;
 	}
 	
 } 

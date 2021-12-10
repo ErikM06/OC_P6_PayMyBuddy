@@ -18,15 +18,12 @@ public class UserDTO {
 
 	private boolean enable;
 
-	public UserDTO(String username, String password, String matchingPassword, String email, Timestamp createTime,
-			boolean enable) {
+	public UserDTO(String username, String password, String email) {
 		super();
 		this.username = username;
 		this.password = password;
-		this.matchingPassword = matchingPassword;
 		this.email = email;
-		this.createTime = createTime;
-		this.enable = enable;
+		
 	}
 	public UserDTO () {
 		super();
