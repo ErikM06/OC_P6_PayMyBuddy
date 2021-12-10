@@ -17,8 +17,8 @@ public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	
 	Logger logger = LoggerFactory.getLogger(JdbcSecurityConfiguration.class);
 
-	/* @Autowired
-	private DataSource dataSource; */
+	// @Autowired
+//	private DataSource dataSource; 
 
 	
 	/* @Autowired
@@ -36,7 +36,7 @@ public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
-		.withUser("user").password(passwordEncoder().encode(""))
+		.withUser("PayMyBuddyUser").password(passwordEncoder().encode("PMB"))
 		.roles("USER")
 		.and()
 		.withUser("root").password(passwordEncoder().encode("rootroot"))
@@ -48,10 +48,21 @@ public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeHttpRequests()
 			.antMatchers("/admin").hasRole("ADMIN")
 			.antMatchers("/user").hasRole("USER")
+			.antMatchers("/login*", "/", "/users/register").permitAll()
 			.anyRequest()
 			.authenticated()
 			.and()
 			.formLogin()
+		/*	.loginPage("/login")
+			.loginProcessingUrl("/perform_login")
+		      .defaultSuccessUrl("/homepage.html", true)
+		      .failureUrl("/login.html?error=true")
+		      .failureHandler(authenticationFailureHandler())
+		      .and()
+		      .logout()
+		      .logoutUrl("/perform_logout")
+		      .deleteCookies("JSESSIONID")
+		      .logoutSuccessHandler(logoutSuccessHandler()) */
 		    .and()
 		    .oauth2Login();
 		//disabled csrf to permit post operation
