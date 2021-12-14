@@ -20,8 +20,10 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.PayMyBuddy.dto.UserDTO;
+import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.UserRepository;
+import com.PayMyBuddy.services.BalanceService;
 import com.PayMyBuddy.services.UserService;
 
 @Controller
@@ -35,6 +37,9 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private BalanceService balanceService;
 
 	 /* @Autowired
 	PasswordEncoder passwordEncoder; */
@@ -72,15 +77,21 @@ public class UserController {
 	}
 	
 	@PostMapping("/register")
-	public ModelAndView userRegistration 
+	private ModelAndView userRegistration 
 	(@ModelAttribute ("user") UserDTO userDto,  HttpServletRequest request, Errors errors) {
 		try {
 	        User registered = userService.registerNewUserAccount(userDto);
-	        logger.info("Post user " + userDto);
+	        Balance setNewBalance = balanceService.setBalanceAtRegistration(registered);
+	        logger.info("reach registration at users/register");
 	    } catch (Exception e) {
 	     
 	    }
 	    return new ModelAndView("successRegister", "user", userDto);
+	}
+	
+	private String setBankAccount(){
+		return null;
+		
 	}
 	     
 

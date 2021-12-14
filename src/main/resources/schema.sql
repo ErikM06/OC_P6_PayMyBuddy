@@ -20,8 +20,6 @@ USE `paymybuddy_db` ;
 -- -----------------------------------------------------
 -- Table `paymybuddy_db`.`user`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `paymybuddy_db`.`user` ;
-
 CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`user` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(16) NOT NULL,
@@ -37,7 +35,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `paymybuddy_db`.`bankAccount`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `paymybuddy_db`.`bankAccount` ;
 
 CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`bankAccount` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -56,7 +53,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `paymybuddy_db`.`balance`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `paymybuddy_db`.`balance` ;
 
 CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`balance` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -75,7 +71,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `paymybuddy_db`.`transaction`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `paymybuddy_db`.`transaction` ;
 
 CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`transaction` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -96,7 +91,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `paymybuddy_db`.`transactionDescription`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `paymybuddy_db`.`transactionDescription` ;
 
 CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`transactionDescription` (
   `description` VARCHAR(255) NULL,
@@ -113,7 +107,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `paymybuddy_db`.`transactionRecords`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `paymybuddy_db`.`transactionRecords` ;
 
 CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`transactionRecords` (
   `transaction_records` VARCHAR(255) NULL,
@@ -144,7 +137,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `paymybuddy_db`.`transactionStatut`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `paymybuddy_db`.`transactionStatut` ;
 
 CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`transactionStatut` (
   `statut` TINYINT NULL,
@@ -160,8 +152,7 @@ ENGINE = InnoDB;
 
 -- -----------------------------------------------------
 -- Table `paymybuddy_db`.`errors`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `paymybuddy_db`.`errors` ;
+-- ----------------------------------------------------- 
 
 CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`errors` (
   `errors_id` INT NOT NULL AUTO_INCREMENT,
@@ -180,7 +171,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `paymybuddy_db`.`user_authorities`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `paymybuddy_db`.`user_authorities` ;
 
 CREATE TABLE IF NOT EXISTS `paymybuddy_db`.`user_authorities` (
   `id` INT NOT NULL AUTO_INCREMENT,
