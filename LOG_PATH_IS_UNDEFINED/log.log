@@ -1,64 +1,64 @@
-15-12-2021 10:45:45.619 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 3912 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 10:45:45.628 [main] INFO 
+21-12-2021 11:49:26.372 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 11760 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 11:49:26.379 [main] INFO 
 				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 10:45:46.484 [main] INFO 
+21-12-2021 11:49:27.358 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 10:45:46.485 [main] INFO 
+21-12-2021 11:49:27.359 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 10:45:46.513 [main] INFO 
+21-12-2021 11:49:27.387 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 10:45:46.515 [main] INFO 
+21-12-2021 11:49:27.388 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 10:45:46.515 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 JDBC repository interfaces.
-15-12-2021 10:45:46.522 [main] INFO 
+21-12-2021 11:49:27.389 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces.
+21-12-2021 11:49:27.395 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 10:45:46.523 [main] INFO 
+21-12-2021 11:49:27.396 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 10:45:46.554 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
-15-12-2021 10:45:47.113 [main] INFO 
+21-12-2021 11:49:27.425 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+21-12-2021 11:49:28.017 [main] INFO 
 				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 10:45:47.123 [main] INFO 
+21-12-2021 11:49:28.027 [main] INFO 
 				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 10:45:47.124 [main] INFO 
+21-12-2021 11:49:28.028 [main] INFO 
 				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 10:45:47.124 [main] INFO 
+21-12-2021 11:49:28.028 [main] INFO 
 				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 10:45:47.221 [main] INFO 
+21-12-2021 11:49:28.126 [main] INFO 
 				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 10:45:47.221 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1557 ms
-15-12-2021 10:45:47.482 [main] INFO 
+21-12-2021 11:49:28.126 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1705 ms
+21-12-2021 11:49:28.408 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 10:45:47.632 [main] INFO 
+21-12-2021 11:49:28.568 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 10:45:47.773 [main] INFO 
+21-12-2021 11:49:28.701 [main] INFO 
 				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 10:45:47.837 [main] INFO 
+21-12-2021 11:49:28.764 [main] INFO 
 				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 10:45:48.012 [main] INFO 
+21-12-2021 11:49:28.970 [main] INFO 
 				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 10:45:48.144 [main] INFO 
+21-12-2021 11:49:29.108 [main] INFO 
 				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 10:45:48.272 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: int
-15-12-2021 10:45:48.273 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: int
-15-12-2021 10:45:48.273 [main] INFO 
+21-12-2021 11:49:29.351 [main] ERROR
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
+21-12-2021 11:49:29.351 [main] WARN 
+				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
+21-12-2021 11:49:29.352 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 10:45:48.286 [main] INFO 
+21-12-2021 11:49:29.363 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 10:45:48.288 [main] INFO 
+21-12-2021 11:49:29.365 [main] INFO 
 				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 10:45:48.301 [main] INFO 
+21-12-2021 11:49:29.377 [main] INFO 
 				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 10:45:48.317 [main] ERROR
+21-12-2021 11:49:29.393 [main] ERROR
 				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: int
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
@@ -76,271 +76,429 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
 	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: int
-	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:100)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1808)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1752)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1640)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
 	... 16 common frames omitted
-15-12-2021 10:51:17.836 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 8712 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 10:51:17.838 [main] INFO 
+Caused by: org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
+	at org.hibernate.mapping.Collection.checkColumnDuplication(Collection.java:344)
+	at org.hibernate.mapping.Collection.checkColumnDuplication(Collection.java:368)
+	at org.hibernate.mapping.Collection.validate(Collection.java:324)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:363)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:307)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+21-12-2021 11:52:45.076 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 14028 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 11:52:45.078 [main] INFO 
 				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 10:51:18.548 [main] INFO 
+21-12-2021 11:52:45.758 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 10:51:18.550 [main] INFO 
+21-12-2021 11:52:45.759 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 10:51:18.572 [main] INFO 
+21-12-2021 11:52:45.780 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 10:51:18.573 [main] INFO 
+21-12-2021 11:52:45.781 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 10:51:18.573 [main] INFO 
+21-12-2021 11:52:45.782 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
+21-12-2021 11:52:45.788 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+21-12-2021 11:52:45.789 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21-12-2021 11:52:45.814 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+21-12-2021 11:52:46.289 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+21-12-2021 11:52:46.297 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+21-12-2021 11:52:46.298 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+21-12-2021 11:52:46.298 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21-12-2021 11:52:46.384 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+21-12-2021 11:52:46.384 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1274 ms
+21-12-2021 11:52:46.649 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+21-12-2021 11:52:46.771 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+21-12-2021 11:52:46.880 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+21-12-2021 11:52:46.935 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+21-12-2021 11:52:47.069 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21-12-2021 11:52:47.177 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+21-12-2021 11:52:47.395 [main] ERROR
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
+21-12-2021 11:52:47.395 [main] WARN 
+				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
+21-12-2021 11:52:47.395 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+21-12-2021 11:52:47.407 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+21-12-2021 11:52:47.409 [main] INFO 
+				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+21-12-2021 11:52:47.421 [main] INFO 
+				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+21-12-2021 11:52:47.435 [main] ERROR
+				o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+Caused by: org.hibernate.MappingException: Repeated column in mapping for collection: com.PayMyBuddy.models.Connections.connections column: connections_id
+	at org.hibernate.mapping.Collection.checkColumnDuplication(Collection.java:344)
+	at org.hibernate.mapping.Collection.checkColumnDuplication(Collection.java:368)
+	at org.hibernate.mapping.Collection.validate(Collection.java:324)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:363)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:307)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+21-12-2021 11:57:45.640 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 4920 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 11:57:45.642 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+21-12-2021 11:57:46.320 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+21-12-2021 11:57:46.322 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+21-12-2021 11:57:46.343 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+21-12-2021 11:57:46.344 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+21-12-2021 11:57:46.344 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
+21-12-2021 11:57:46.350 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+21-12-2021 11:57:46.352 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21-12-2021 11:57:46.377 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+21-12-2021 11:57:46.849 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+21-12-2021 11:57:46.856 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+21-12-2021 11:57:46.857 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+21-12-2021 11:57:46.857 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21-12-2021 11:57:46.944 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+21-12-2021 11:57:46.944 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1274 ms
+21-12-2021 11:57:47.191 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+21-12-2021 11:57:47.313 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+21-12-2021 11:57:47.418 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+21-12-2021 11:57:47.470 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+21-12-2021 11:57:47.602 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21-12-2021 11:57:47.713 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+21-12-2021 11:57:48.146 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Connections (class must be instantiated by Interceptor)
+21-12-2021 11:57:48.157 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Balance (class must be instantiated by Interceptor)
+21-12-2021 11:57:48.263 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-12-2021 11:57:48.272 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 11:57:48.343 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-12-2021 11:57:49.201 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f3fafca, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d7d0946, org.springframework.security.web.header.HeaderWriterFilter@31ecd003, org.springframework.security.web.authentication.logout.LogoutFilter@21a462ce, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@452d6fd, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@40f931ec, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ef812b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@43e9a8a2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@174aabb2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f97e963, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d8cece4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33b4c775, org.springframework.security.web.session.SessionManagementFilter@6894436e, org.springframework.security.web.access.ExceptionTranslationFilter@33efa7d4, org.springframework.security.web.access.intercept.AuthorizationFilter@4446a191]
+21-12-2021 11:57:49.289 [main] WARN 
+				o.s.data.convert.CustomConversions.register - Registering converter from class java.time.OffsetDateTime to class org.springframework.data.jdbc.core.convert.JdbcValue as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+21-12-2021 11:57:49.620 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+21-12-2021 11:57:50.297 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+21-12-2021 11:57:50.334 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+21-12-2021 11:57:50.359 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+21-12-2021 11:57:50.370 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.97 seconds (JVM running for 5.698)
+21-12-2021 11:57:52.194 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-12-2021 11:57:52.195 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-12-2021 11:57:52.196 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+21-12-2021 11:59:24.948 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+21-12-2021 11:59:25.081 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 11:59:25.083 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+21-12-2021 11:59:25.093 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+21-12-2021 11:59:27.924 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 15864 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 11:59:27.926 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+21-12-2021 11:59:28.645 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+21-12-2021 11:59:28.646 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+21-12-2021 11:59:28.668 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+21-12-2021 11:59:28.670 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+21-12-2021 11:59:28.670 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 0 JDBC repository interfaces.
-15-12-2021 10:51:18.580 [main] INFO 
+21-12-2021 11:59:28.677 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 10:51:18.581 [main] INFO 
+21-12-2021 11:59:28.678 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 10:51:18.606 [main] INFO 
+21-12-2021 11:59:28.703 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
-15-12-2021 10:51:19.090 [main] INFO 
+21-12-2021 11:59:29.189 [main] INFO 
 				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 10:51:19.099 [main] INFO 
+21-12-2021 11:59:29.197 [main] INFO 
 				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 10:51:19.099 [main] INFO 
+21-12-2021 11:59:29.198 [main] INFO 
 				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 10:51:19.099 [main] INFO 
+21-12-2021 11:59:29.198 [main] INFO 
 				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 10:51:19.202 [main] INFO 
+21-12-2021 11:59:29.285 [main] INFO 
 				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 10:51:19.202 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1334 ms
-15-12-2021 10:51:19.446 [main] INFO 
+21-12-2021 11:59:29.286 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1330 ms
+21-12-2021 11:59:29.538 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 10:51:19.560 [main] INFO 
+21-12-2021 11:59:29.660 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 10:51:19.666 [main] INFO 
+21-12-2021 11:59:29.771 [main] INFO 
 				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 10:51:19.720 [main] INFO 
+21-12-2021 11:59:29.822 [main] INFO 
 				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 10:51:19.853 [main] INFO 
+21-12-2021 11:59:29.958 [main] INFO 
 				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 10:51:19.957 [main] INFO 
+21-12-2021 11:59:30.069 [main] INFO 
 				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 10:51:20.062 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: int
-15-12-2021 10:51:20.063 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: int
-15-12-2021 10:51:20.063 [main] INFO 
+21-12-2021 11:59:30.453 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Connections (class must be instantiated by Interceptor)
+21-12-2021 11:59:30.465 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Balance (class must be instantiated by Interceptor)
+21-12-2021 11:59:30.721 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-12-2021 11:59:30.729 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 11:59:30.786 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-12-2021 11:59:31.563 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5da41d02, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b6fc231, org.springframework.security.web.header.HeaderWriterFilter@6c3627c, org.springframework.security.web.authentication.logout.LogoutFilter@12bb8943, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@29280ca6, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@7fb2645b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7a91027c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@dffcf1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@17d837ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b897ffb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@663cc8c9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e77f29e, org.springframework.security.web.session.SessionManagementFilter@24be6e34, org.springframework.security.web.access.ExceptionTranslationFilter@49b6373f, org.springframework.security.web.access.intercept.AuthorizationFilter@f047670]
+21-12-2021 11:59:31.647 [main] WARN 
+				o.s.data.convert.CustomConversions.register - Registering converter from class java.time.OffsetDateTime to class org.springframework.data.jdbc.core.convert.JdbcValue as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+21-12-2021 11:59:31.942 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+21-12-2021 11:59:32.664 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+21-12-2021 11:59:32.702 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+21-12-2021 11:59:32.718 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+21-12-2021 11:59:32.730 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.058 seconds (JVM running for 5.803)
+21-12-2021 11:59:34.495 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-12-2021 11:59:34.495 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-12-2021 11:59:34.496 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+21-12-2021 12:10:55.020 [RMI TCP Connection(22)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+21-12-2021 12:10:55.160 [RMI TCP Connection(22)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:10:55.163 [RMI TCP Connection(22)-127.0.0.1] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 10:51:20.071 [main] INFO 
+21-12-2021 12:10:55.172 [RMI TCP Connection(22)-127.0.0.1] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 10:51:20.074 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 10:51:20.086 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 10:51:20.100 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: int
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: int
-	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:100)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1808)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1752)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1640)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-15-12-2021 10:54:39.053 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 12516 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 10:54:39.055 [main] INFO 
+21-12-2021 12:10:57.911 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 4300 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 12:10:57.913 [main] INFO 
 				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 10:54:39.739 [main] INFO 
+21-12-2021 12:10:58.588 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 10:54:39.740 [main] INFO 
+21-12-2021 12:10:58.589 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 10:54:39.763 [main] INFO 
+21-12-2021 12:10:58.611 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 10:54:39.764 [main] INFO 
+21-12-2021 12:10:58.612 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 10:54:39.765 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 21 ms. Found 0 JDBC repository interfaces.
-15-12-2021 10:54:39.771 [main] INFO 
+21-12-2021 12:10:58.613 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
+21-12-2021 12:10:58.619 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 10:54:39.772 [main] INFO 
+21-12-2021 12:10:58.620 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 10:54:39.797 [main] INFO 
+21-12-2021 12:10:58.645 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
-15-12-2021 10:54:40.264 [main] INFO 
+21-12-2021 12:10:59.143 [main] INFO 
 				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 10:54:40.272 [main] INFO 
+21-12-2021 12:10:59.152 [main] INFO 
 				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 10:54:40.273 [main] INFO 
+21-12-2021 12:10:59.152 [main] INFO 
 				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 10:54:40.273 [main] INFO 
+21-12-2021 12:10:59.152 [main] INFO 
 				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 10:54:40.359 [main] INFO 
+21-12-2021 12:10:59.256 [main] INFO 
 				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 10:54:40.359 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1276 ms
-15-12-2021 10:54:40.611 [main] INFO 
+21-12-2021 12:10:59.257 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1315 ms
+21-12-2021 12:10:59.502 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 10:54:40.731 [main] INFO 
+21-12-2021 12:10:59.619 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 10:54:40.836 [main] INFO 
+21-12-2021 12:10:59.720 [main] INFO 
 				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 10:54:40.885 [main] INFO 
+21-12-2021 12:10:59.770 [main] INFO 
 				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 10:54:41.019 [main] INFO 
+21-12-2021 12:10:59.899 [main] INFO 
 				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 10:54:41.126 [main] INFO 
+21-12-2021 12:11:00.003 [main] INFO 
 				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 10:54:41.237 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: java.util.List
-15-12-2021 10:54:41.237 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: java.util.List
-15-12-2021 10:54:41.238 [main] INFO 
+21-12-2021 12:11:00.368 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Connections (class must be instantiated by Interceptor)
+21-12-2021 12:11:00.380 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Balance (class must be instantiated by Interceptor)
+21-12-2021 12:11:00.535 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-12-2021 12:11:00.543 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:11:00.605 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-12-2021 12:11:01.351 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7860a014, org.springframework.security.web.context.SecurityContextPersistenceFilter@5cbaafbd, org.springframework.security.web.header.HeaderWriterFilter@20724c21, org.springframework.security.web.authentication.logout.LogoutFilter@fe38d1e, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@77262e71, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@5f5076f9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c7a4986, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@64710a6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@86e8469, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f5c4ff8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f510929, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76b6bad3, org.springframework.security.web.session.SessionManagementFilter@11e75942, org.springframework.security.web.access.ExceptionTranslationFilter@280f061e, org.springframework.security.web.access.intercept.AuthorizationFilter@29280ca6]
+21-12-2021 12:11:01.429 [main] WARN 
+				o.s.data.convert.CustomConversions.register - Registering converter from class java.time.OffsetDateTime to class org.springframework.data.jdbc.core.convert.JdbcValue as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+21-12-2021 12:11:01.718 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+21-12-2021 12:11:02.404 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+21-12-2021 12:11:02.439 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+21-12-2021 12:11:02.454 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+21-12-2021 12:11:02.465 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.795 seconds (JVM running for 5.521)
+21-12-2021 12:11:04.827 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-12-2021 12:11:04.827 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-12-2021 12:11:04.829 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+21-12-2021 12:45:41.483 [RMI TCP Connection(46)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+21-12-2021 12:45:41.620 [RMI TCP Connection(46)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:45:41.622 [RMI TCP Connection(46)-127.0.0.1] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 10:54:41.247 [main] INFO 
+21-12-2021 12:45:41.627 [RMI TCP Connection(46)-127.0.0.1] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 10:54:41.249 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 10:54:41.261 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 10:54:41.275 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: java.util.List
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: java.util.List
-	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:100)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1808)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1752)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1640)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-15-12-2021 11:08:55.642 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 11520 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 11:08:55.644 [main] INFO 
+21-12-2021 12:45:44.394 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 15960 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 12:45:44.396 [main] INFO 
 				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 11:08:56.392 [main] INFO 
+21-12-2021 12:45:45.092 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:08:56.394 [main] INFO 
+21-12-2021 12:45:45.094 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 11:08:56.415 [main] INFO 
+21-12-2021 12:45:45.115 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:08:56.416 [main] INFO 
+21-12-2021 12:45:45.116 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:08:56.416 [main] INFO 
+21-12-2021 12:45:45.117 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
-15-12-2021 11:08:56.422 [main] INFO 
+21-12-2021 12:45:45.124 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:08:56.424 [main] INFO 
+21-12-2021 12:45:45.125 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 11:08:56.449 [main] INFO 
+21-12-2021 12:45:45.150 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
-15-12-2021 11:08:56.921 [main] INFO 
+21-12-2021 12:45:45.634 [main] INFO 
 				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 11:08:56.929 [main] INFO 
+21-12-2021 12:45:45.642 [main] INFO 
 				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 11:08:56.929 [main] INFO 
+21-12-2021 12:45:45.642 [main] INFO 
 				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 11:08:56.930 [main] INFO 
+21-12-2021 12:45:45.642 [main] INFO 
 				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 11:08:57.015 [main] INFO 
+21-12-2021 12:45:45.729 [main] INFO 
 				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 11:08:57.016 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1335 ms
-15-12-2021 11:08:57.289 [main] INFO 
+21-12-2021 12:45:45.729 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1303 ms
+21-12-2021 12:45:45.978 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 11:08:57.414 [main] INFO 
+21-12-2021 12:45:46.102 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 11:08:57.525 [main] INFO 
+21-12-2021 12:45:46.214 [main] INFO 
 				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 11:08:57.577 [main] INFO 
+21-12-2021 12:45:46.267 [main] INFO 
 				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 11:08:57.732 [main] INFO 
+21-12-2021 12:45:46.402 [main] INFO 
 				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 11:08:57.850 [main] INFO 
+21-12-2021 12:45:46.513 [main] INFO 
 				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 11:08:57.961 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: java.util.List
-15-12-2021 11:08:57.962 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: java.util.List
-15-12-2021 11:08:57.962 [main] INFO 
+21-12-2021 12:45:46.720 [main] ERROR
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.PayMyBuddy.models.Connections column: user_id (should be mapped with insert="false" update="false")
+21-12-2021 12:45:46.720 [main] WARN 
+				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.PayMyBuddy.models.Connections column: user_id (should be mapped with insert="false" update="false")
+21-12-2021 12:45:46.720 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 11:08:57.970 [main] INFO 
+21-12-2021 12:45:46.729 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 11:08:57.973 [main] INFO 
+21-12-2021 12:45:46.731 [main] INFO 
 				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 11:08:57.984 [main] INFO 
+21-12-2021 12:45:46.743 [main] INFO 
 				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 11:08:57.999 [main] ERROR
+21-12-2021 12:45:46.757 [main] ERROR
 				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: java.util.List
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.PayMyBuddy.models.Connections column: user_id (should be mapped with insert="false" update="false")
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
@@ -358,762 +516,426 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
 	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.PayMyBuddy.models.Connections.connectionId references an unknown entity: java.util.List
-	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:100)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1808)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1752)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1640)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.PayMyBuddy.models.Connections column: user_id (should be mapped with insert="false" update="false")
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
 	... 16 common frames omitted
-15-12-2021 11:12:42.610 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 13508 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 11:12:42.612 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 11:12:43.346 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:12:43.348 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 11:12:43.369 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:12:43.370 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:12:43.371 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
-15-12-2021 11:12:43.377 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:12:43.379 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 11:12:43.405 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
-15-12-2021 11:12:43.911 [main] INFO 
-				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 11:12:43.919 [main] INFO 
-				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 11:12:43.920 [main] INFO 
-				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 11:12:43.920 [main] INFO 
-				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 11:12:44.006 [main] INFO 
-				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 11:12:44.006 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1364 ms
-15-12-2021 11:12:44.270 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 11:12:44.397 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 11:12:44.513 [main] INFO 
-				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 11:12:44.564 [main] INFO 
-				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 11:12:44.696 [main] INFO 
-				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 11:12:44.808 [main] INFO 
-				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 11:12:44.940 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NullPointerException
-15-12-2021 11:12:44.941 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 11:12:44.948 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 11:12:44.951 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 11:12:44.964 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 11:12:44.979 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: java.lang.NullPointerException: null
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1730)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1640)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.PayMyBuddy.models.Connections column: user_id (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:895)
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:913)
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:935)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:637)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:359)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:307)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
 	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-15-12-2021 11:17:58.021 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 9912 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 11:17:58.024 [main] INFO 
+	... 20 common frames omitted
+21-12-2021 12:46:23.864 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 10148 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 12:46:23.868 [main] INFO 
 				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 11:17:58.695 [main] INFO 
+21-12-2021 12:46:24.549 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:17:58.696 [main] INFO 
+21-12-2021 12:46:24.550 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 11:17:58.717 [main] INFO 
+21-12-2021 12:46:24.570 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:17:58.718 [main] INFO 
+21-12-2021 12:46:24.571 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:17:58.718 [main] INFO 
+21-12-2021 12:46:24.571 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
-15-12-2021 11:17:58.724 [main] INFO 
+21-12-2021 12:46:24.578 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:17:58.725 [main] INFO 
+21-12-2021 12:46:24.579 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 11:17:58.750 [main] INFO 
+21-12-2021 12:46:24.604 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
-15-12-2021 11:17:59.227 [main] INFO 
+21-12-2021 12:46:25.084 [main] INFO 
 				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 11:17:59.235 [main] INFO 
+21-12-2021 12:46:25.092 [main] INFO 
 				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 11:17:59.235 [main] INFO 
+21-12-2021 12:46:25.092 [main] INFO 
 				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 11:17:59.235 [main] INFO 
+21-12-2021 12:46:25.092 [main] INFO 
 				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 11:17:59.320 [main] INFO 
+21-12-2021 12:46:25.178 [main] INFO 
 				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 11:17:59.320 [main] INFO 
+21-12-2021 12:46:25.179 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1282 ms
+21-12-2021 12:46:25.425 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+21-12-2021 12:46:25.547 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+21-12-2021 12:46:25.654 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+21-12-2021 12:46:25.706 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+21-12-2021 12:46:25.842 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21-12-2021 12:46:25.951 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+21-12-2021 12:46:26.338 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Connections (class must be instantiated by Interceptor)
+21-12-2021 12:46:26.346 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Balance (class must be instantiated by Interceptor)
+21-12-2021 12:46:26.603 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-12-2021 12:46:26.610 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:46:26.670 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-12-2021 12:46:27.464 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fe38d1e, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e8eea59, org.springframework.security.web.header.HeaderWriterFilter@58e0d1ac, org.springframework.security.web.authentication.logout.LogoutFilter@eb66b47, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@755fdfad, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1930e8ef, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6805415d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@39f3285d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1a4564a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67b1c3af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24381e4a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@157267db, org.springframework.security.web.session.SessionManagementFilter@66ce4b4, org.springframework.security.web.access.ExceptionTranslationFilter@6c75c5e8, org.springframework.security.web.access.intercept.AuthorizationFilter@75bbe39d]
+21-12-2021 12:46:27.544 [main] WARN 
+				o.s.data.convert.CustomConversions.register - Registering converter from class java.time.OffsetDateTime to class org.springframework.data.jdbc.core.convert.JdbcValue as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+21-12-2021 12:46:27.837 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+21-12-2021 12:46:28.530 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+21-12-2021 12:46:28.566 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+21-12-2021 12:46:28.581 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+21-12-2021 12:46:28.591 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.968 seconds (JVM running for 5.703)
+21-12-2021 12:46:29.385 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-12-2021 12:46:29.386 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-12-2021 12:46:29.387 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+21-12-2021 12:47:15.750 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+21-12-2021 12:47:15.878 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:47:15.880 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+21-12-2021 12:47:15.888 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+21-12-2021 12:47:18.625 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 5492 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 12:47:18.627 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+21-12-2021 12:47:19.306 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+21-12-2021 12:47:19.307 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+21-12-2021 12:47:19.328 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+21-12-2021 12:47:19.329 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+21-12-2021 12:47:19.330 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
+21-12-2021 12:47:19.336 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+21-12-2021 12:47:19.337 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21-12-2021 12:47:19.361 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+21-12-2021 12:47:19.833 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+21-12-2021 12:47:19.841 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+21-12-2021 12:47:19.841 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+21-12-2021 12:47:19.841 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21-12-2021 12:47:19.927 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+21-12-2021 12:47:19.927 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1272 ms
+21-12-2021 12:47:20.172 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+21-12-2021 12:47:20.293 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+21-12-2021 12:47:20.401 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+21-12-2021 12:47:20.452 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+21-12-2021 12:47:20.587 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21-12-2021 12:47:20.695 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+21-12-2021 12:47:21.081 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Connections (class must be instantiated by Interceptor)
+21-12-2021 12:47:21.089 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Balance (class must be instantiated by Interceptor)
+21-12-2021 12:47:21.243 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-12-2021 12:47:21.250 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:47:21.316 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-12-2021 12:47:22.107 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@86e8469, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f0f56f5, org.springframework.security.web.header.HeaderWriterFilter@c0cb9c2, org.springframework.security.web.authentication.logout.LogoutFilter@1a4564a2, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@77902ed6, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@19439ec4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@32d3b965, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@949165f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@76b6bad3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7692c0e9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55a2ca5e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e38d655, org.springframework.security.web.session.SessionManagementFilter@23c61c1b, org.springframework.security.web.access.ExceptionTranslationFilter@7d7888a5, org.springframework.security.web.access.intercept.AuthorizationFilter@7c7a4986]
+21-12-2021 12:47:22.191 [main] WARN 
+				o.s.data.convert.CustomConversions.register - Registering converter from class java.time.OffsetDateTime to class org.springframework.data.jdbc.core.convert.JdbcValue as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+21-12-2021 12:47:22.515 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+21-12-2021 12:47:23.201 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+21-12-2021 12:47:23.251 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+21-12-2021 12:47:23.268 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+21-12-2021 12:47:23.279 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.898 seconds (JVM running for 5.628)
+21-12-2021 12:47:24.581 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-12-2021 12:47:24.582 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-12-2021 12:47:24.584 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
+21-12-2021 12:48:30.618 [RMI TCP Connection(10)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+21-12-2021 12:48:30.757 [RMI TCP Connection(10)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:48:30.759 [RMI TCP Connection(10)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+21-12-2021 12:48:30.767 [RMI TCP Connection(10)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+21-12-2021 12:49:44.525 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 15188 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 12:49:44.527 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+21-12-2021 12:49:45.200 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+21-12-2021 12:49:45.202 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+21-12-2021 12:49:45.223 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+21-12-2021 12:49:45.224 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+21-12-2021 12:49:45.224 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
+21-12-2021 12:49:45.230 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+21-12-2021 12:49:45.232 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21-12-2021 12:49:45.257 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+21-12-2021 12:49:45.729 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+21-12-2021 12:49:45.737 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+21-12-2021 12:49:45.737 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+21-12-2021 12:49:45.737 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+21-12-2021 12:49:45.822 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+21-12-2021 12:49:45.823 [main] INFO 
 				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1268 ms
-15-12-2021 11:17:59.563 [main] INFO 
+21-12-2021 12:49:46.064 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 11:17:59.683 [main] INFO 
+21-12-2021 12:49:46.186 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 11:17:59.791 [main] INFO 
+21-12-2021 12:49:46.291 [main] INFO 
 				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 11:17:59.840 [main] INFO 
+21-12-2021 12:49:46.342 [main] INFO 
 				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 11:17:59.974 [main] INFO 
+21-12-2021 12:49:46.476 [main] INFO 
 				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 11:18:00.085 [main] INFO 
+21-12-2021 12:49:46.585 [main] INFO 
 				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 11:18:00.192 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: @Column(s) not allowed on a @ManyToOne property: com.PayMyBuddy.models.User.connections
-15-12-2021 11:18:00.193 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: com.PayMyBuddy.models.User.connections
-15-12-2021 11:18:00.193 [main] INFO 
+21-12-2021 12:49:46.965 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Connections (class must be instantiated by Interceptor)
+21-12-2021 12:49:46.974 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Balance (class must be instantiated by Interceptor)
+21-12-2021 12:49:47.133 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-12-2021 12:49:47.139 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:49:47.212 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-12-2021 12:49:47.988 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2bbaf1bc, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f510929, org.springframework.security.web.header.HeaderWriterFilter@7692c0e9, org.springframework.security.web.authentication.logout.LogoutFilter@29280ca6, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@e38d655, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4c376b44, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6768dc74, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@27d44578, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@65852d05, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12bb8943, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f0b5d79, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47462daf, org.springframework.security.web.session.SessionManagementFilter@6805415d, org.springframework.security.web.access.ExceptionTranslationFilter@4a6d6308, org.springframework.security.web.access.intercept.AuthorizationFilter@1a598e30]
+21-12-2021 12:49:48.068 [main] WARN 
+				o.s.data.convert.CustomConversions.register - Registering converter from class java.time.OffsetDateTime to class org.springframework.data.jdbc.core.convert.JdbcValue as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+21-12-2021 12:49:48.357 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+21-12-2021 12:49:49.010 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+21-12-2021 12:49:49.045 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+21-12-2021 12:49:49.060 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+21-12-2021 12:49:49.070 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.786 seconds (JVM running for 5.503)
+21-12-2021 12:49:50.022 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-12-2021 12:49:50.023 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-12-2021 12:49:50.025 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
+21-12-2021 12:52:08.287 [RMI TCP Connection(13)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+21-12-2021 12:52:08.415 [RMI TCP Connection(13)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:52:08.417 [RMI TCP Connection(13)-127.0.0.1] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 11:18:00.202 [main] INFO 
+21-12-2021 12:52:08.425 [RMI TCP Connection(13)-127.0.0.1] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 11:18:00.205 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 11:18:00.216 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 11:18:00.230 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: com.PayMyBuddy.models.User.connections
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: com.PayMyBuddy.models.User.connections
-	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1808)
-	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:982)
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:807)
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:225)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-15-12-2021 11:18:20.136 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 4800 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 11:18:20.139 [main] INFO 
+21-12-2021 12:52:11.213 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 14220 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 12:52:11.215 [main] INFO 
 				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 11:18:20.842 [main] INFO 
+21-12-2021 12:52:11.899 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:18:20.843 [main] INFO 
+21-12-2021 12:52:11.900 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 11:18:20.865 [main] INFO 
+21-12-2021 12:52:11.922 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:18:20.866 [main] INFO 
+21-12-2021 12:52:11.923 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:18:20.867 [main] INFO 
+21-12-2021 12:52:11.924 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
-15-12-2021 11:18:20.873 [main] INFO 
+21-12-2021 12:52:11.930 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:18:20.874 [main] INFO 
+21-12-2021 12:52:11.931 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 11:18:20.899 [main] INFO 
+21-12-2021 12:52:11.955 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
-15-12-2021 11:18:21.371 [main] INFO 
+21-12-2021 12:52:12.458 [main] INFO 
 				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 11:18:21.378 [main] INFO 
+21-12-2021 12:52:12.467 [main] INFO 
 				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 11:18:21.379 [main] INFO 
+21-12-2021 12:52:12.467 [main] INFO 
 				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 11:18:21.380 [main] INFO 
+21-12-2021 12:52:12.468 [main] INFO 
 				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 11:18:21.466 [main] INFO 
+21-12-2021 12:52:12.567 [main] INFO 
 				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 11:18:21.466 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1298 ms
-15-12-2021 11:18:21.708 [main] INFO 
+21-12-2021 12:52:12.567 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1323 ms
+21-12-2021 12:52:12.818 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 11:18:21.829 [main] INFO 
+21-12-2021 12:52:12.940 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 11:18:21.933 [main] INFO 
+21-12-2021 12:52:13.045 [main] INFO 
 				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 11:18:21.985 [main] INFO 
+21-12-2021 12:52:13.095 [main] INFO 
 				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 11:18:22.119 [main] INFO 
+21-12-2021 12:52:13.236 [main] INFO 
 				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 11:18:22.226 [main] INFO 
+21-12-2021 12:52:13.348 [main] INFO 
 				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 11:18:22.345 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-15-12-2021 11:18:22.346 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-15-12-2021 11:18:22.346 [main] INFO 
+21-12-2021 12:52:13.789 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Connections (class must be instantiated by Interceptor)
+21-12-2021 12:52:13.804 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Balance (class must be instantiated by Interceptor)
+21-12-2021 12:52:13.963 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-12-2021 12:52:13.971 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:52:14.037 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-12-2021 12:52:14.849 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f6352a3, org.springframework.security.web.context.SecurityContextPersistenceFilter@280f061e, org.springframework.security.web.header.HeaderWriterFilter@5bed8b91, org.springframework.security.web.authentication.logout.LogoutFilter@57cc0333, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@54faa040, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1f591b2e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@52518ee1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7f5c4ff8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@24455d50, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4accc3de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a6d6308, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bb160fb, org.springframework.security.web.session.SessionManagementFilter@13288174, org.springframework.security.web.access.ExceptionTranslationFilter@88e85a, org.springframework.security.web.access.intercept.AuthorizationFilter@4cb87009]
+21-12-2021 12:52:14.931 [main] WARN 
+				o.s.data.convert.CustomConversions.register - Registering converter from class java.time.OffsetDateTime to class org.springframework.data.jdbc.core.convert.JdbcValue as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+21-12-2021 12:52:15.243 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+21-12-2021 12:52:15.959 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+21-12-2021 12:52:15.995 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+21-12-2021 12:52:16.011 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+21-12-2021 12:52:16.021 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.051 seconds (JVM running for 5.792)
+21-12-2021 12:52:18.527 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-12-2021 12:52:18.528 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-12-2021 12:52:18.529 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+21-12-2021 12:52:43.052 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+21-12-2021 12:52:43.168 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:52:43.170 [RMI TCP Connection(11)-127.0.0.1] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 11:18:22.354 [main] INFO 
+21-12-2021 12:52:43.178 [RMI TCP Connection(11)-127.0.0.1] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 11:18:22.357 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 11:18:22.368 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 11:18:22.382 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-	at org.hibernate.cfg.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:164)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1678)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1646)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-15-12-2021 11:19:13.132 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 8248 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 11:19:13.135 [main] INFO 
+21-12-2021 12:52:45.860 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 12148 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+21-12-2021 12:52:45.862 [main] INFO 
 				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 11:19:13.802 [main] INFO 
+21-12-2021 12:52:46.530 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:19:13.803 [main] INFO 
+21-12-2021 12:52:46.532 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 11:19:13.824 [main] INFO 
+21-12-2021 12:52:46.553 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:19:13.825 [main] INFO 
+21-12-2021 12:52:46.554 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:19:13.825 [main] INFO 
+21-12-2021 12:52:46.554 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
-15-12-2021 11:19:13.832 [main] INFO 
+21-12-2021 12:52:46.560 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:19:13.833 [main] INFO 
+21-12-2021 12:52:46.562 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 11:19:13.857 [main] INFO 
+21-12-2021 12:52:46.586 [main] INFO 
 				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
-15-12-2021 11:19:14.335 [main] INFO 
+21-12-2021 12:52:47.060 [main] INFO 
 				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 11:19:14.343 [main] INFO 
+21-12-2021 12:52:47.068 [main] INFO 
 				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 11:19:14.343 [main] INFO 
+21-12-2021 12:52:47.068 [main] INFO 
 				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 11:19:14.344 [main] INFO 
+21-12-2021 12:52:47.068 [main] INFO 
 				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 11:19:14.431 [main] INFO 
+21-12-2021 12:52:47.156 [main] INFO 
 				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 11:19:14.431 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1268 ms
-15-12-2021 11:19:14.689 [main] INFO 
+21-12-2021 12:52:47.157 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1266 ms
+21-12-2021 12:52:47.401 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 11:19:14.813 [main] INFO 
+21-12-2021 12:52:47.521 [main] INFO 
 				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 11:19:14.923 [main] INFO 
+21-12-2021 12:52:47.635 [main] INFO 
 				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 11:19:14.975 [main] INFO 
+21-12-2021 12:52:47.684 [main] INFO 
 				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 11:19:15.109 [main] INFO 
+21-12-2021 12:52:47.819 [main] INFO 
 				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 11:19:15.218 [main] INFO 
+21-12-2021 12:52:47.927 [main] INFO 
 				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 11:19:15.339 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-15-12-2021 11:19:15.339 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-15-12-2021 11:19:15.339 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 11:19:15.348 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 11:19:15.350 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 11:19:15.361 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 11:19:15.375 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-	at org.hibernate.cfg.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:164)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1678)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1646)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-15-12-2021 11:19:43.913 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 9852 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 11:19:43.915 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 11:19:44.618 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:19:44.619 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 11:19:44.641 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:19:44.642 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:19:44.642 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
-15-12-2021 11:19:44.648 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:19:44.649 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 11:19:44.674 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
-15-12-2021 11:19:45.149 [main] INFO 
-				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 11:19:45.158 [main] INFO 
-				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 11:19:45.158 [main] INFO 
-				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 11:19:45.158 [main] INFO 
-				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 11:19:45.262 [main] INFO 
-				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 11:19:45.262 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1317 ms
-15-12-2021 11:19:45.508 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 11:19:45.622 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 11:19:45.722 [main] INFO 
-				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 11:19:45.770 [main] INFO 
-				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 11:19:45.905 [main] INFO 
-				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 11:19:46.021 [main] INFO 
-				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 11:19:46.131 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-15-12-2021 11:19:46.132 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-15-12-2021 11:19:46.132 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 11:19:46.141 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 11:19:46.143 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 11:19:46.155 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 11:19:46.169 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connection
-	at org.hibernate.cfg.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:164)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1678)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1646)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-15-12-2021 11:20:14.482 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 14116 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 11:20:14.485 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 11:20:15.160 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:20:15.161 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 11:20:15.182 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:20:15.183 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:20:15.184 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
-15-12-2021 11:20:15.190 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:20:15.191 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 11:20:15.217 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
-15-12-2021 11:20:15.689 [main] INFO 
-				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 11:20:15.697 [main] INFO 
-				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 11:20:15.698 [main] INFO 
-				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 11:20:15.698 [main] INFO 
-				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 11:20:15.783 [main] INFO 
-				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 11:20:15.784 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1269 ms
-15-12-2021 11:20:16.036 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 11:20:16.161 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 11:20:16.270 [main] INFO 
-				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 11:20:16.322 [main] INFO 
-				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 11:20:16.462 [main] INFO 
-				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 11:20:16.577 [main] INFO 
-				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 11:20:16.691 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connections
-15-12-2021 11:20:16.692 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connections
-15-12-2021 11:20:16.692 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 11:20:16.702 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 11:20:16.704 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 11:20:16.716 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 11:20:16.730 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connections
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connection, referenced property unknown: java.util.List.connections
-	at org.hibernate.cfg.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:164)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1678)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1646)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-15-12-2021 11:20:48.665 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 2568 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 11:20:48.667 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 11:20:49.336 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:20:49.337 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 11:20:49.358 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:20:49.359 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:20:49.360 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
-15-12-2021 11:20:49.366 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:20:49.367 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 11:20:49.392 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
-15-12-2021 11:20:49.865 [main] INFO 
-				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 11:20:49.873 [main] INFO 
-				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 11:20:49.873 [main] INFO 
-				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 11:20:49.873 [main] INFO 
-				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 11:20:49.958 [main] INFO 
-				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 11:20:49.959 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1264 ms
-15-12-2021 11:20:50.201 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 11:20:50.323 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 11:20:50.428 [main] INFO 
-				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 11:20:50.478 [main] INFO 
-				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 11:20:50.610 [main] INFO 
-				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 11:20:50.717 [main] INFO 
-				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 11:20:50.840 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connections, referenced property unknown: java.util.List.connections
-15-12-2021 11:20:50.840 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connections, referenced property unknown: java.util.List.connections
-15-12-2021 11:20:50.840 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 11:20:50.849 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 11:20:50.851 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 11:20:50.863 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 11:20:50.877 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connections, referenced property unknown: java.util.List.connections
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connections, referenced property unknown: java.util.List.connections
-	at org.hibernate.cfg.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:164)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1678)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1646)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
-15-12-2021 11:21:22.861 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 3004 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
-15-12-2021 11:21:22.866 [main] INFO 
-				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-15-12-2021 11:21:23.582 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:21:23.584 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-15-12-2021 11:21:23.604 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.BalanceRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:21:23.605 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.PayMyBuddy.repo.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-15-12-2021 11:21:23.606 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 18 ms. Found 0 JDBC repository interfaces.
-15-12-2021 11:21:23.612 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
-15-12-2021 11:21:23.614 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-15-12-2021 11:21:23.637 [main] INFO 
-				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
-15-12-2021 11:21:24.123 [main] INFO 
-				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-15-12-2021 11:21:24.130 [main] INFO 
-				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-15-12-2021 11:21:24.131 [main] INFO 
-				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-15-12-2021 11:21:24.131 [main] INFO 
-				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
-15-12-2021 11:21:24.217 [main] INFO 
-				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-15-12-2021 11:21:24.217 [main] INFO 
-				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1319 ms
-15-12-2021 11:21:24.460 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-15-12-2021 11:21:24.579 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-15-12-2021 11:21:24.686 [main] INFO 
-				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-15-12-2021 11:21:24.736 [main] INFO 
-				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
-15-12-2021 11:21:24.869 [main] INFO 
-				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15-12-2021 11:21:24.975 [main] INFO 
-				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-15-12-2021 11:21:25.097 [main] ERROR
-				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connections, referenced property unknown: java.util.Collection.connections
-15-12-2021 11:21:25.098 [main] WARN 
-				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connections, referenced property unknown: java.util.Collection.connections
-15-12-2021 11:21:25.098 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-15-12-2021 11:21:25.107 [main] INFO 
-				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-15-12-2021 11:21:25.109 [main] INFO 
-				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
-15-12-2021 11:21:25.120 [main] INFO 
-				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15-12-2021 11:21:25.135 [main] ERROR
-				o.s.boot.SpringApplication.reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connections, referenced property unknown: java.util.Collection.connections
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.PayMyBuddy.PayMyBuddyApplication.main(PayMyBuddyApplication.java:10)
-Caused by: org.hibernate.AnnotationException: Unknown mappedBy in: com.PayMyBuddy.models.Connections.connections, referenced property unknown: java.util.Collection.connections
-	at org.hibernate.cfg.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:164)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1678)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1646)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 16 common frames omitted
+21-12-2021 12:52:48.302 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Connections (class must be instantiated by Interceptor)
+21-12-2021 12:52:48.312 [main] INFO 
+				org.hibernate.tuple.PojoInstantiator.<init> - HHH000182: No default (no-argument) constructor for class: com.PayMyBuddy.models.Balance (class must be instantiated by Interceptor)
+21-12-2021 12:52:48.541 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21-12-2021 12:52:48.548 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-12-2021 12:52:48.602 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-12-2021 12:52:49.361 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7fd3c38b, org.springframework.security.web.context.SecurityContextPersistenceFilter@663cc8c9, org.springframework.security.web.header.HeaderWriterFilter@2ec258f1, org.springframework.security.web.authentication.logout.LogoutFilter@f047670, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1a598e30, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@40c92dfa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e22dadb, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@23a78d2e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@27260f9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b977aaa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@280f061e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25031fd4, org.springframework.security.web.session.SessionManagementFilter@2eed6331, org.springframework.security.web.access.ExceptionTranslationFilter@5b312863, org.springframework.security.web.access.intercept.AuthorizationFilter@57cc0333]
+21-12-2021 12:52:49.442 [main] WARN 
+				o.s.data.convert.CustomConversions.register - Registering converter from class java.time.OffsetDateTime to class org.springframework.data.jdbc.core.convert.JdbcValue as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+21-12-2021 12:52:49.734 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+21-12-2021 12:52:50.435 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+21-12-2021 12:52:50.470 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+21-12-2021 12:52:50.486 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+21-12-2021 12:52:50.496 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.893 seconds (JVM running for 5.641)
+21-12-2021 12:52:50.633 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-12-2021 12:52:50.634 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-12-2021 12:52:50.635 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms

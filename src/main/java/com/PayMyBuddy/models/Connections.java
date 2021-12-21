@@ -1,30 +1,19 @@
 package com.PayMyBuddy.models;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
-@Table(name = "connections")
-public class Connections implements Serializable {
+public class Connections {
 
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	@Column(name = "create_time")
@@ -34,18 +23,20 @@ public class Connections implements Serializable {
 	@Column(name = "note")
 	private String note;
 
-	@Column (name = "user_id")
-	private int userId;
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
 
-	@ManyToMany
-	private Collection<User> connections = new ArrayList<>();
+	@ManyToOne
+	@JoinColumn(name = "user_username")
+	private User connection;
 
-	public Connections(Timestamp createTime, String note, int userId, List<User> connection) {
+	public Connections(Timestamp createTime, String note, User user, User connection) {
 		super();
 		this.createTime = createTime;
 		this.note = note;
-		this.userId = userId;
-		this.connections = connection;
+		this.user = user;
+		this.connection = connection;
 	}
 
 	public int getId() {
@@ -72,20 +63,20 @@ public class Connections implements Serializable {
 		this.note = note;
 	}
 
-	public int getUserId() {
-		return userId;
+	public User getUser() {
+		return user;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
-	public Collection<User> getConnection() {
-		return connections;
+	public User getConnection() {
+		return connection;
 	}
 
-	public void setConnection(Collection<User> connection) {
-		this.connections = connection;
+	public void setConnection(User connection) {
+		this.connection = connection;
 	}
 
 }

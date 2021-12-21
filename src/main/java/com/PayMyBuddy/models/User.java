@@ -1,20 +1,20 @@
 package com.PayMyBuddy.models;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table (name="user")
 
-public class User implements Serializable {
+public class User {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -29,8 +29,11 @@ public class User implements Serializable {
 	@Column (name ="password")
 	protected String password;
 	
-	@ManyToOne
-	private Connections connections;
+	@OneToMany( mappedBy = "user")
+	private Collection<Connections> user;
+	
+	@OneToMany( mappedBy = "connection")
+	private Collection<Connections> connection;
 	
 	@Column (name ="create_time")
 	private Timestamp createTime;
