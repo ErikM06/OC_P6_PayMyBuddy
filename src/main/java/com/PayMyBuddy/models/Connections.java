@@ -38,6 +38,10 @@ public class Connections {
 		this.user = user;
 		this.connection = connection;
 	}
+	
+	public Connections() {
+		super();
+	}
 
 	public int getId() {
 		return id;

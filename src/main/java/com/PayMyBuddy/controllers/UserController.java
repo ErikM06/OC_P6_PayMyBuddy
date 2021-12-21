@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.PayMyBuddy.dto.ConnectionDTO;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.User;
@@ -89,8 +90,10 @@ public class UserController {
 	    return new ModelAndView("successRegister", "user", userDto);
 	}
 	
-	private String setBankAccount(){
-		return null;
+	@PostMapping("/addingConnection")
+	private ModelAndView addConnection(
+			@ModelAttribute ("connections") ConnectionDTO connectionDto, HttpServletRequest request, Errors errors){
+		return new ModelAndView("successRegister", "connections", connectionDto);
 		
 	}
 	     
