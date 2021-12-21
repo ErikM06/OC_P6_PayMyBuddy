@@ -16,4 +16,7 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 	
 	@Query(value = "Select email FROM User u WHERE u.email=?1")
 	public Object findByEmail(String email); 
+	
+	@Query(value ="Select u FROM User u WHERE u.id =?1")
+	public User findUserById (int id);
 }
