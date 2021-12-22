@@ -44,5 +44,9 @@ public class UserService implements IUserService {
 	private boolean emailExists(String email) {
 		return userRepo.findByEmail(email) != null;
 	}
+	
+	public User findByUsername (String username) {
+		return userRepo.findUserByUsername(username);
+	}
 
 }
