@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -26,6 +27,7 @@ import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.UserRepository;
 import com.PayMyBuddy.services.BalanceService;
 import com.PayMyBuddy.services.UserService;
+import com.PayMyBuddy.services.util.SecurityService;
 
 @Controller
 @RequestMapping(value = "/users")
@@ -41,6 +43,9 @@ public class UserController {
 	
 	@Autowired
 	private BalanceService balanceService;
+	
+	@Autowired
+	private SecurityService securityService;
 
 	 /* @Autowired
 	PasswordEncoder passwordEncoder; */
@@ -61,8 +66,17 @@ public class UserController {
 
 	@GetMapping(value = "/login")
 	private String getLogin (WebRequest request, Model model) {
-		return  "sign_in";	
+		return  "sign_in";
+		
+		
 	}
+	@PostMapping(value = "/login")
+    public String postLogin(@RequestParam(value = "username") String username,
+                              @RequestParam(value = "password") String password){
+        logger.debug(username + " and " + password );
+        boolean loginResult = securityService.login(username, password); 
+        return (loginResult ? "redirect:/index" : "redirect:/login?error=true");
+        }
 	
 	@GetMapping (value = "")
 	private String getIndex (){

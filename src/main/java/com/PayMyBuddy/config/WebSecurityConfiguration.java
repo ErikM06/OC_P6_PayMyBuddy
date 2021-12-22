@@ -66,9 +66,9 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.hasAnyAuthority("ADMIN").anyRequest().authenticated()
 				.and()
 				.formLogin()
-				.loginPage("/login").permitAll()
+				.permitAll()
 				.and()
-				.logout().logoutSuccessUrl("/login");
+				.logout().logoutSuccessUrl("/users/login");
 		// .oauth2Login();
 		// disabled csrf to permit post operation
 		http.csrf().disable();
