@@ -31,7 +31,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		}
 		// still need to impl roles services
 		return new org.springframework.security.core.userdetails.User(
-                user.getEmail(), user.getPassword(), null);
+                user.getEmail(), user.getPassword(), user.getRoles());
 	}
 
 }
