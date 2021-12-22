@@ -15,6 +15,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+@SuppressWarnings("serial")
 @Data
 @Entity
 @EqualsAndHashCode
@@ -31,6 +32,10 @@ public class Role implements GrantedAuthority {
 
 	public Role(String roleName) {
 		this.roleName = roleName;
+	}
+	
+	public Role () {
+		
 	}
 
 	@Override

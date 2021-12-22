@@ -30,7 +30,6 @@ import com.PayMyBuddy.services.UserService;
 import com.PayMyBuddy.services.util.SecurityService;
 
 @Controller
-@RequestMapping(value = "/users")
 public class UserController {
 
 	private static Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -94,9 +93,9 @@ public class UserController {
 	private ModelAndView userRegistration 
 	(@ModelAttribute ("user") UserDTO userDto,  HttpServletRequest request, Errors errors) {
 		try {
-	        User registered = userService.registerNewUserAccount(userDto);
+			User registered = userService.registerNewUserAccount(userDto);
 	        Balance setNewBalance = balanceService.setBalanceAtRegistration(registered);
-	        logger.info("reach registration at users/register");
+	        logger.info("reach registration at users/register" + " balance is " + setNewBalance);
 	    } catch (Exception e) {
 	     
 	    }

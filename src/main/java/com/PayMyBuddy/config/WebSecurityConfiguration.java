@@ -12,9 +12,9 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.PayMyBuddy.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity
@@ -22,13 +22,13 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	Logger logger = LoggerFactory.getLogger(WebSecurityConfiguration.class);
 
+	@Autowired
+	private UserDetailsServiceImpl userDetailsService;
 	
-	@SuppressWarnings("unused")
-	private UserDetailsService userDetailsService;
-	
-	public void getUserDetailsService (UserDetailsService userDetailsService) {
-		this.userDetailsService = userDetailsService;
-	}
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	// setter to avoid circulare references error
+
 
 	/*
 	 * @Override protected void configure(AuthenticationManagerBuilder auth) throws
@@ -48,8 +48,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Bean
 	public DaoAuthenticationProvider authProvider() {
 		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-		authProvider.setUserDetailsService(userDetailsService());
-		authProvider.setPasswordEncoder(passwordEncoder());
+		authProvider.setUserDetailsService(userDetailsService);
+		authProvider.setPasswordEncoder(passwordEncoder);
 		return authProvider;
 	}
 
@@ -62,21 +62,17 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 
-				.antMatchers("/users/login", "/users/register", "/").anonymous().antMatchers("/secure/*")
-				.hasAnyAuthority("ADMIN").anyRequest().authenticated()
+				.antMatchers( "/login* ","/register", "/").anonymous()
+				.antMatchers("/secure/*").hasAnyAuthority("ADMIN").anyRequest().authenticated()
 				.and()
 				.formLogin()
-				.permitAll()
+				.loginPage("/login")
 				.and()
-				.logout().logoutSuccessUrl("/users/login");
+				.logout().logoutSuccessUrl("/login");
 		// .oauth2Login();
 		// disabled csrf to permit post operation
 		http.csrf().disable();
 	}
 
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		logger.info("in passwordEncoder @Bean");
-		return new BCryptPasswordEncoder();
-	}
+	
 }

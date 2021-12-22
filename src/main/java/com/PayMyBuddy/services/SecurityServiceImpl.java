@@ -1,5 +1,7 @@
 package com.PayMyBuddy.services;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,9 +16,11 @@ import com.PayMyBuddy.services.util.SecurityService;
 @Service
 public class SecurityServiceImpl implements SecurityService {
 
+	Logger logger = LoggerFactory.getLogger(SecurityServiceImpl.class);
+	
 	@Qualifier("userDetailsServiceImpl")
 	@Autowired
-	private UserDetailsService userDetailsService;
+	private UserDetailsServiceImpl userDetailsService;
 
 	@Autowired
 	private AuthenticationManager authenticationManager;
@@ -24,6 +28,7 @@ public class SecurityServiceImpl implements SecurityService {
 	@Override
 	public boolean login(String username, String password) {
 		UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+		logger.info("in SecurityServiceImpl, loaded username is "+ username);
 		UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(userDetails, password);
 
 		authenticationManager.authenticate(token);
