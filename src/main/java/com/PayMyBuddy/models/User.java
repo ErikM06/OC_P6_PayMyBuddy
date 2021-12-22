@@ -37,7 +37,7 @@ public class User {
 	protected String password;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "Id"),
+    @JoinTable(name = "users_role", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "Id"),
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "roleId"))
     private List<Role> roles;
 	

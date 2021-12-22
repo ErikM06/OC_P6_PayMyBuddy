@@ -61,8 +61,7 @@ public class UserController {
 
 	@GetMapping(value = "/login")
 	private String getLogin (WebRequest request, Model model) {
-		return  "sign_in";
-		
+		return  "sign_in";	
 	}
 	
 	@GetMapping (value = "")

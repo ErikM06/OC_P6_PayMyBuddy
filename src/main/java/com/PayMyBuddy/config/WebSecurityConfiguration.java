@@ -18,12 +18,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
-public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-	Logger logger = LoggerFactory.getLogger(JdbcSecurityConfiguration.class);
+	Logger logger = LoggerFactory.getLogger(WebSecurityConfiguration.class);
 
-	@Autowired
+	
+	@SuppressWarnings("unused")
 	private UserDetailsService userDetailsService;
+	
+	public void getUserDetailsService (UserDetailsService userDetailsService) {
+		this.userDetailsService = userDetailsService;
+	}
 
 	/*
 	 * @Override protected void configure(AuthenticationManagerBuilder auth) throws
@@ -43,7 +48,7 @@ public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Bean
 	public DaoAuthenticationProvider authProvider() {
 		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-		authProvider.setUserDetailsService(userDetailsService);
+		authProvider.setUserDetailsService(userDetailsService());
 		authProvider.setPasswordEncoder(passwordEncoder());
 		return authProvider;
 	}
@@ -59,7 +64,6 @@ public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 				.antMatchers("/users/login", "/users/register", "/").anonymous().antMatchers("/secure/*")
 				.hasAnyAuthority("ADMIN").anyRequest().authenticated()
-				.anyRequest().authenticated()
 				.and()
 				.formLogin()
 				.loginPage("/login").permitAll()
@@ -72,6 +76,7 @@ public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {
+		logger.info("in passwordEncoder @Bean");
 		return new BCryptPasswordEncoder();
 	}
 }

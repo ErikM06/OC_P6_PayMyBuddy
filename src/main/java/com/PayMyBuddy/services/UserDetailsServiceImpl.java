@@ -1,5 +1,7 @@
 package com.PayMyBuddy.services;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -15,6 +17,7 @@ import com.PayMyBuddy.models.User;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
+	Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
 	
 	private final UserService userService;
 	
@@ -26,6 +29,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = userService.findByUsername(username);
+		logger.info("in UserDetailsServiceImpl");
 		if (user == null) {
 			throw new UsernameNotFoundException("user with "+username+" not found!");
 		}
