@@ -55,7 +55,7 @@ public class UserController {
 		List<User> users = new ArrayList<User>();
 		try {
 			userRepo.findAll().forEach(users::add);
-			logger.info("get /users/getUsers" + users);
+			logger.info("get /getUsers" + users);
 			return new ResponseEntity<List<User>>(users, HttpStatus.OK);
 		} catch (NullPointerException e) {
 			logger.error("Unable to set List<User> ", e);
@@ -64,8 +64,12 @@ public class UserController {
 	}
 
 	@GetMapping(value = "/login")
-	private String getLogin (WebRequest request, Model model) {
-		return  "sign_in";
+	private String getLogin (Model model,
+            @RequestParam(value = "error", required = false) String error) {
+		if (null != error && error.equalsIgnoreCase("true")){
+            model.addAttribute("loginError", "Unable to Login");
+        }
+		return  "login";
 		
 		
 	}
@@ -74,40 +78,43 @@ public class UserController {
                               @RequestParam(value = "password") String password){
         logger.debug(username + " and " + password );
         boolean loginResult = securityService.login(username, password); 
-        return (loginResult ? "redirect:/index" : "redirect:/login?error=true");
+        return (loginResult ? "redirect:/users/home" : "redirect:/login?error=true");
         }
 	
-	@GetMapping (value = "")
+	 @GetMapping (value = "/index")
 	private String getIndex (){
 		return "index";
-	}
+	} 
 	
 	@GetMapping (value ="/register")
 	private String getRegister (WebRequest request, Model model){
 		model.addAttribute("user", new UserDTO());
-		logger.info("reach users/register");
+		logger.info("reach /register");
 		return "signup";
 	}
 	
-	@PostMapping("/register")
+	@PostMapping(value ="/register")
 	private ModelAndView userRegistration 
 	(@ModelAttribute ("user") UserDTO userDto,  HttpServletRequest request, Errors errors) {
 		try {
 			User registered = userService.registerNewUserAccount(userDto);
 	        Balance setNewBalance = balanceService.setBalanceAtRegistration(registered);
-	        logger.info("reach registration at users/register" + " balance is " + setNewBalance);
+	        logger.info("reach registration at /register" + " balance is " + setNewBalance);
 	    } catch (Exception e) {
 	     
 	    }
 	    return new ModelAndView("successRegister", "user", userDto);
 	}
-	
+	/*
 	@PostMapping("/addingConnection")
 	private ModelAndView addConnection(
 			@ModelAttribute ("connections") ConnectionDTO connectionDto, HttpServletRequest request, Errors errors){
 		return new ModelAndView("successRegister", "connections", connectionDto);
 		
 	}
-	     
-
+	     */
+	@GetMapping(value ="/user/home")
+	public String getUserHome () {
+		return "home";
+	}
 }

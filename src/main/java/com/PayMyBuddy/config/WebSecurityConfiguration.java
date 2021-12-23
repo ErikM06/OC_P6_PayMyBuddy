@@ -30,15 +30,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	// setter to avoid circulare references error
 
 
-	/*
-	 * @Override protected void configure(AuthenticationManagerBuilder auth) throws
-	 * Exception { auth.inMemoryAuthentication()
-	 * .withUser("PayMyBuddyUser").password(passwordEncoder().encode("PMB"))
-	 * .roles("USER") .and()
-	 * .withUser("root").password(passwordEncoder().encode("rootroot"))
-	 * .roles("ADMIN", "USER"); }
-	 */
-
 	@Bean(name = BeanIds.AUTHENTICATION_MANAGER)
 	@Override
 	public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -62,13 +53,16 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 
-				.antMatchers( "/login* ","/register", "/").anonymous()
-				.antMatchers("/secure/*").hasAnyAuthority("ADMIN").anyRequest().authenticated()
+				.antMatchers( "/index","/register").anonymous()
+				//.antMatchers("/secure/*").hasAnyAuthority("ADMIN").anyRequest().authenticated()
 				.and()
 				.formLogin()
 				.loginPage("/login")
+				.permitAll()
 				.and()
-				.logout().logoutSuccessUrl("/login");
+				.logout()
+				.permitAll()
+				.logoutSuccessUrl("/login");
 		// .oauth2Login();
 		// disabled csrf to permit post operation
 		http.csrf().disable();

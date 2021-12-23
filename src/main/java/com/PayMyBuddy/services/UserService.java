@@ -33,7 +33,7 @@ public class UserService implements IUserService {
 	private RoleRepository roleRepo;
 	
 	
-	// method from Spring doc to avoid circulare references error
+	// method from Spring doc to avoid circular references error
 	
 	
 

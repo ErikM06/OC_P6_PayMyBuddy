@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" class="no-js" lang="zxx">
+<body class="simple-bg-screen">
+<div class="wrapper">
+    <section class="login-screen-sec">
+        <div class="container">
+            <div class="login-screen">
+                <form th:method="post" th:action="@{/login}" enctype="utf8">
+                    <input th:type="username" name="username" placeholder="username" required="">
+                    <input th:type="password" name="password" placeholder="password" required="">
+                    <button th:type="submit" name="submit"> Login </button>
+                    <span>You Have No Account? <a th:href="@{/register}"> Create An Account</a></span>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
