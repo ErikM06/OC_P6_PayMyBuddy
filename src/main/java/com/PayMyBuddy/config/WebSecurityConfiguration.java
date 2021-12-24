@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
 import com.PayMyBuddy.services.UserDetailsServiceImpl;
 
@@ -52,8 +53,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-
-				.antMatchers( "/index","/register").anonymous()
+		
+				.antMatchers( "/","/register").anonymous()
 				//.antMatchers("/secure/*").hasAnyAuthority("ADMIN").anyRequest().authenticated()
 				.and()
 				.formLogin()

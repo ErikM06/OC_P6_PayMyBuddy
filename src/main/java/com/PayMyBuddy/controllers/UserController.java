@@ -36,18 +36,19 @@ public class UserController {
 
 	@Autowired
 	private UserRepository userRepo;
-	
+
 	@Autowired
 	private UserService userService;
-	
+
 	@Autowired
 	private BalanceService balanceService;
-	
+
 	@Autowired
 	private SecurityService securityService;
 
-	 /* @Autowired
-	PasswordEncoder passwordEncoder; */
+	/*
+	 * @Autowired PasswordEncoder passwordEncoder;
+	 */
 
 	@GetMapping(value = "/getUsers")
 	private ResponseEntity<List<User>> getAllUsers() {
@@ -64,58 +65,60 @@ public class UserController {
 	}
 
 	@GetMapping(value = "/login")
-	private String getLogin (Model model,
-            @RequestParam(value = "error", required = false) String error) {
-		if (null != error && error.equalsIgnoreCase("true")){
-            model.addAttribute("loginError", "Unable to Login");
-        }
-		return  "login";
-		
-		
+	private String getLogin(Model model, @RequestParam(value = "error", required = false) String error) {
+		if (null != error && error.equalsIgnoreCase("true")) {
+			model.addAttribute("loginError", "Unable to Login");
+		}
+		return "login";
+
 	}
+
 	@PostMapping(value = "/login")
-    public String postLogin(@RequestParam(value = "username") String username,
-                              @RequestParam(value = "password") String password){
-        logger.debug(username + " and " + password );
-        boolean loginResult = securityService.login(username, password); 
-        return (loginResult ? "redirect:/users/home" : "redirect:/login?error=true");
-        }
-	
-	 @GetMapping (value = "/index")
-	private String getIndex (){
+	public String postLogin(@RequestParam(value = "username") String username,
+			@RequestParam(value = "password") String password) {
+		logger.debug(username + " and " + password);
+		boolean loginResult = securityService.login(username, password);
+		return (loginResult ? "redirect:/users/home" : "redirect:/login?error=true");
+	}
+
+	@GetMapping(value = "/")
+	private String getIndex() {
 		return "index";
-	} 
-	
-	@GetMapping (value ="/register")
-	private String getRegister (WebRequest request, Model model){
+	}
+
+	@GetMapping(value = "/register")
+	private String getRegister(Model model, @RequestParam(value = "error", required = false) String error) {
 		model.addAttribute("user", new UserDTO());
 		logger.info("reach /register");
+		if (null != error && error.equalsIgnoreCase("true")) {
+			model.addAttribute("registerError", "Unable to register");
+		}
 		return "signup";
 	}
-	
-	@PostMapping(value ="/register")
-	private ModelAndView userRegistration 
-	(@ModelAttribute ("user") UserDTO userDto,  HttpServletRequest request, Errors errors) {
+
+	@PostMapping(value = "/register")
+	private ModelAndView userRegistration(@ModelAttribute("user") UserDTO userDto, HttpServletRequest request,
+			Errors errors) {
 		try {
 			User registered = userService.registerNewUserAccount(userDto);
-	        Balance setNewBalance = balanceService.setBalanceAtRegistration(registered);
-	        logger.info("reach registration at /register" + " balance is " + setNewBalance);
-	    } catch (Exception e) {
-	     
-	    }
-	    return new ModelAndView("successRegister", "user", userDto);
+			Balance setNewBalance = balanceService.setBalanceAtRegistration(registered);
+			logger.info("reach registration at /register" + " balance is " + setNewBalance);
+		} catch (Exception e) {
+
+		}
+		return new ModelAndView("successRegister", "user", userDto);
 	}
-	/*
-	@PostMapping("/addingConnection")
-	private ModelAndView addConnection(
-			@ModelAttribute ("connections") ConnectionDTO connectionDto, HttpServletRequest request, Errors errors){
+
+	@PostMapping("/user/addConnection")
+	private ModelAndView addConnection(@ModelAttribute("connections") ConnectionDTO connectionDto,
+			HttpServletRequest request, Errors errors) {
 		return new ModelAndView("successRegister", "connections", connectionDto);
-		
+
 	}
-	     */
-	@GetMapping(value ="/user/home")
-	public String getUserHome () {
+
+	@GetMapping(value = "/user/home")
+	public String getUserHome() {
 		return "home";
 	}
-	
+
 }
