@@ -59,10 +59,12 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.formLogin()
 				.loginPage("/login")
 				.permitAll()
+				.loginProcessingUrl("/login")
+				.defaultSuccessUrl("/user/home")
 				.and()
-				.logout()
+				.logout().invalidateHttpSession(true)
 				.permitAll()
-				.logoutSuccessUrl("/login");
+				.logoutSuccessUrl("/index");
 		// .oauth2Login();
 		// disabled csrf to permit post operation
 		http.csrf().disable();
