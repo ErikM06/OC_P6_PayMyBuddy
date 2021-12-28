@@ -2,27 +2,43 @@ package com.PayMyBuddy.dto;
 
 import java.sql.Timestamp;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 import org.springframework.stereotype.Component;
 
+import com.PayMyBuddy.services.util.PasswordMatches;
+
+@PasswordMatches
 @Component
 public class UserDTO {
-
+	
+	@NotNull (message = "Username cannot be null")
+	@NotEmpty
 	private String username;
-
+	
+	@NotNull
+	@NotEmpty
 	private String password;
+	@NotNull
+	@NotEmpty
 	private String matchingPassword;
-
+	@NotNull
+	@NotEmpty
+	@Email (message = "email should be valid")
 	private String email;
 
 	private Timestamp createTime;
 
 	private boolean enable;
 
-	public UserDTO(String username, String password, String email) {
+	public UserDTO(String username, String password, String matchingPassword, String email) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.email = email;
+		this.matchingPassword = matchingPassword;
 		
 	}
 	public UserDTO () {
