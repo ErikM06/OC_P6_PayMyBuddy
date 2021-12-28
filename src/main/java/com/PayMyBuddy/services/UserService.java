@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.PayMyBuddy.config.UserAlreadyExistException;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.models.Role;
 import com.PayMyBuddy.models.User;
@@ -23,28 +24,25 @@ import com.PayMyBuddy.repo.UserRepository;
 @Service
 @Transactional
 public class UserService implements IUserService {
-	
+
 	Logger logger = LoggerFactory.getLogger(UserService.class);
 
 	@Autowired
 	private UserRepository userRepo;
-	
+
 	@Autowired
 	private RoleRepository roleRepo;
-	
-	
-	// method from Spring doc to avoid circular references error
-	
-	
 
-	public User registerNewUserAccount(UserDTO userDto) {
+	// method from Spring doc to avoid circular references error
+
+	public User registerNewUserAccount(UserDTO userDto) throws UserAlreadyExistException {
 		if (emailExists(userDto.getEmail())) {
-			// code for UserAlreadyExistException
+			throw new UserAlreadyExistException("user already exist" + userDto.getEmail());
 		}
-		
+
 		List<Role> userRoleLs = new ArrayList<>();
 		userRoleLs.add(roleRepo.findRoleByRoleName("USER"));
-		
+
 		User user = new User();
 		user.setUsername(userDto.getUsername());
 		user.setPassword(passwordEncoder().encode(userDto.getPassword()));
@@ -52,18 +50,19 @@ public class UserService implements IUserService {
 		user.setCreateTime(new Timestamp(System.currentTimeMillis()));
 		user.setEnable(true);
 		user.setRoles(userRoleLs);
-		logger.info("UserService user is: "+user);
+		logger.info("UserService user is: " + user);
 		return userRepo.save(user);
 	}
 
+    // Check if email already exist
 	private boolean emailExists(String email) {
 		return userRepo.findByEmail(email) != null;
 	}
-	
-	public User findByUsername (String username) {
+
+	public User findByUsername(String username) {
 		return userRepo.findUserByUsername(username);
 	}
-	
+
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		logger.info("in passwordEncoder @Bean");
