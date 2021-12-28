@@ -15,17 +15,17 @@ import com.PayMyBuddy.services.util.PasswordMatches;
 public class UserDTO {
 	
 	@NotNull (message = "Username cannot be null")
-	@NotEmpty
+	@NotEmpty (message = "Username cannot be empty")
 	private String username;
 	
-	@NotNull
-	@NotEmpty
+	@NotNull (message = "password cannot be null")
+	@NotEmpty (message ="password cannot be empty")
 	private String password;
-	@NotNull
-	@NotEmpty
+	
+	
 	private String matchingPassword;
-	@NotNull
-	@NotEmpty
+	@NotNull (message = "email cannot be null")
+	@NotEmpty (message = "email cannot be empty")
 	@Email (message = "email should be valid")
 	private String email;
 

@@ -37,7 +37,8 @@ public class UserService implements IUserService {
 
 	public User registerNewUserAccount(UserDTO userDto) throws UserAlreadyExistException {
 		if (emailExists(userDto.getEmail())) {
-			throw new UserAlreadyExistException("user already exist" + userDto.getEmail());
+			logger.info("ok");
+			throw new UserAlreadyExistException("user already exist " + userDto.getEmail());
 		}
 
 		List<Role> userRoleLs = new ArrayList<>();
@@ -56,6 +57,7 @@ public class UserService implements IUserService {
 
     // Check if email already exist
 	private boolean emailExists(String email) {
+		logger.info(email);
 		return userRepo.findByEmail(email) != null;
 	}
 

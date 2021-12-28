@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.PayMyBuddy.config.UserAlreadyExistException;
 import com.PayMyBuddy.dto.ConnectionDTO;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.models.Balance;
@@ -103,7 +104,9 @@ public class UserController {
 			User registered = userService.registerNewUserAccount(userDto);
 			Balance setNewBalance = balanceService.setBalanceAtRegistration(registered);
 			logger.info("reach registration at /register" + " balance is " + setNewBalance);
-		} catch (Exception e) {
+		} catch (UserAlreadyExistException e) {
+			logger.error(e.getMessage());
+			return new ModelAndView("ErrorRegister", "error", e.getMessage());
 
 		}
 		return new ModelAndView("successRegister", "user", userDto);
