@@ -9,6 +9,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.PayMyBuddy.services.util.SecurityService;
@@ -26,7 +27,7 @@ public class SecurityServiceImpl implements SecurityService {
 	private AuthenticationManager authenticationManager;
 
 	@Override
-	public boolean login(String username, String password) {
+	public boolean login(String username, String password) throws UsernameNotFoundException{
 		UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 		logger.info("in SecurityServiceImpl, loaded username is "+ username);
 		UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(userDetails, password);
