@@ -27,11 +27,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetailsServiceImpl(UserService userService) {
         this.userService = userService;
     }
-        
+    
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = userService.findByUsername(username);
-		logger.info("in UserDetailsServiceImpl");
+		logger.info("loading User by username: ", username);
 		if (user == null) {
 			throw new UsernameNotFoundException("user with "+username+" not found!");
 		}

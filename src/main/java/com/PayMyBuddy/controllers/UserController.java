@@ -48,8 +48,6 @@ public class UserController {
 	@Autowired
 	private SecurityService securityService;
 
-	
-
 	@GetMapping(value = "/getUsers")
 	private ResponseEntity<List<User>> getAllUsers() {
 
@@ -76,14 +74,10 @@ public class UserController {
 	@PostMapping(value = "/login")
 	public String postLogin(@RequestParam(value = "username") String username,
 			@RequestParam(value = "password") String password) {
-		  try {
-			logger.info(username + " and " + password);
-			boolean loginResult = securityService.login(username, password);
-		} catch (UsernameNotFoundException e) {
-			logger.info("wrong username or password", e.getMessage());
-			return "redirect:/login?error=true";
-		} 
-		return "redirect:/users/home";
+
+		boolean loginResult = securityService.login(username, password);
+
+		return (loginResult ? "redirect:/users/home" : "redirect:/login?error=true");
 	}
 
 	@GetMapping(value = "/")
