@@ -47,6 +47,9 @@ public class User {
 	@OneToMany( mappedBy = "connection")
 	private Collection<Connections> connection;
 	
+	@OneToMany (mappedBy = "amount")
+	private Collection<Balance>balance;
+	
 	@Column (name ="create_time")
 	private Timestamp createTime;
 	

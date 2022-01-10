@@ -1,10 +1,17 @@
 package com.PayMyBuddy.models;
 
+import java.util.Collection;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,13 +25,20 @@ public class Balance {
 	@Column (name ="amount")
 	private double amount;
 	
-	@Column (name = "user_id")
-	private int userId;
+	@ManyToOne
+	@JoinColumn (name = "user_id")
+	private User user;
+	
+	@OneToMany (mappedBy = "balance", fetch = FetchType.LAZY)
+	private Collection<Transaction> transactions;
 
-	public Balance(double amount, int userId) {
+	public Balance(double amount, User user) {
 		super();
 		this.amount = amount;
-		this.userId = userId;
+		this.user = user;
+	}
+	public Balance() {
+		super();
 	}
 
 	public int getId() {
@@ -43,12 +57,12 @@ public class Balance {
 		this.amount = amount;
 	}
 
-	public int getUserId() {
-		return userId;
+	public User getUser() {
+		return user;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setuser(User user) {
+		this.user = user;
 	}
 
 }

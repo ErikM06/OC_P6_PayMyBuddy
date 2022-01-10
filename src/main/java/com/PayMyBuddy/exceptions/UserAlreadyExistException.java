@@ -1,4 +1,4 @@
-package com.PayMyBuddy.config;
+package com.PayMyBuddy.exceptions;
 
 import javax.naming.AuthenticationException;
 

@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.PayMyBuddy.config.UserAlreadyExistException;
 import com.PayMyBuddy.dto.ConnectionDTO;
 import com.PayMyBuddy.dto.UserDTO;
+import com.PayMyBuddy.exceptions.UserAlreadyExistException;
 import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.UserRepository;
@@ -42,8 +42,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@Autowired
-	private BalanceService balanceService;
+
 
 	@Autowired
 	private SecurityService securityService;
@@ -100,8 +99,7 @@ public class UserController {
 			Errors errors) {
 		try {
 			User registered = userService.registerNewUserAccount(userDto);
-			Balance setNewBalance = balanceService.setBalanceAtRegistration(registered);
-			logger.info("reach registration at /register" + " balance is " + setNewBalance);
+			logger.info("reach registration at /register : {}", registered);
 		} catch (UserAlreadyExistException e) {
 			logger.error(e.getMessage());
 			return new ModelAndView("ErrorRegister", "error", e.getMessage());

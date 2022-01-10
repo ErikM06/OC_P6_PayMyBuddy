@@ -11,6 +11,8 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import com.PayMyBuddy.services.UserDetailsServiceImpl;
 
 @Configuration
@@ -21,6 +23,9 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	@Bean(name = BeanIds.AUTHENTICATION_MANAGER)
 	@Override
@@ -33,7 +38,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	// https://github.com/Yoh0xFF/java-spring-security-example/blob/master/src/main/java/io/example/configuration/security/SecurityConfig.java
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(username -> userDetailsService.loadUserByUsername(username));
+		auth.userDetailsService(username -> userDetailsService.loadUserByUsername(username))
+		// grant authorities here
+		.passwordEncoder(passwordEncoder);
+	
 	}
 
 	@Override
@@ -44,7 +52,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 				// .antMatchers("/secure/*").hasAnyAuthority("ADMIN").anyRequest().authenticated()
 				.and().formLogin().loginPage("/login").permitAll().loginProcessingUrl("/login")
 				.defaultSuccessUrl("/user/home").and().logout().invalidateHttpSession(true).permitAll()
-				.logoutSuccessUrl("/index");
+				.logoutSuccessUrl("/");
 		// .oauth2Login();
 		// disabled csrf to permit post operation
 		http.csrf().disable();

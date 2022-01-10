@@ -14,15 +14,15 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.PayMyBuddy.config.UserAlreadyExistException;
 import com.PayMyBuddy.dto.UserDTO;
+import com.PayMyBuddy.exceptions.UserAlreadyExistException;
+import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.Role;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.RoleRepository;
 import com.PayMyBuddy.repo.UserRepository;
 
 @Service
-@Transactional
 public class UserService implements IUserService {
 
 	Logger logger = LoggerFactory.getLogger(UserService.class);
@@ -43,6 +43,8 @@ public class UserService implements IUserService {
 
 		List<Role> userRoleLs = new ArrayList<>();
 		userRoleLs.add(roleRepo.findRoleByRoleName("USER"));
+		
+		
 
 		User user = new User();
 		user.setUsername(userDto.getUsername());
