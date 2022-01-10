@@ -117,6 +117,7 @@ public class UserController {
 
 	@GetMapping(value = "/user/home")
 	public String getUserHome() {
+		
 		return "home";
 	}
 

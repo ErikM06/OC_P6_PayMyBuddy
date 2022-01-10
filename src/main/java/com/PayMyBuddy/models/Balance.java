@@ -20,7 +20,7 @@ public class Balance {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private int id;
+	private double id;
 	
 	@Column (name ="amount")
 	private double amount;
@@ -41,19 +41,19 @@ public class Balance {
 		super();
 	}
 
-	public int getId() {
+	public double getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(double id) {
 		this.id = id;
 	}
 
-	public double getBalance() {
+	public double getAmount() {
 		return amount;
 	}
 
-	public void setBalance(double amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 

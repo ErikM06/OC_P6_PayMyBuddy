@@ -25,7 +25,7 @@ public class User {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private int id;
+	private double id;
 	
 	@Column (name = "username")
 	private String username;
@@ -73,11 +73,11 @@ public class User {
 		
 	}
 
-	public int getId() {
+	public double getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(double id) {
 		this.id = id;
 	}
 
@@ -127,6 +127,22 @@ public class User {
 
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
+	}
+
+	public Collection<Connections> getConnection() {
+		return connection;
+	}
+
+	public void setConnection(Collection<Connections> connection) {
+		this.connection = connection;
+	}
+
+	public Collection<Balance> getBalance() {
+		return balance;
+	}
+
+	public void setBalance(Collection<Balance> balance) {
+		this.balance = balance;
 	}
 	
 } 

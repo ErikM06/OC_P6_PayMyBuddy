@@ -22,9 +22,5 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	
 	@Query(value ="Select u FROM User u WHERE u.id =?1")
 	public User findUserById (int id);
-	
-	@Query(value ="Select b FROM Balance b INNER JOIN User u ON b.user = u.id WHERE u = ?1")
-	public Balance getBalanceByUser(User user);
-	
 	 
 }
