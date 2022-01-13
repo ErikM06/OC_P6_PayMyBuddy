@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.User;
+import com.PayMyBuddy.repo.BalanceRepository;
 import com.PayMyBuddy.repo.UserRepository;
 
 
@@ -16,12 +17,12 @@ public class BalanceService implements IBalanceService {
 	Logger logger = LoggerFactory.getLogger(BalanceService.class);
 
 	@Autowired
-	UserRepository userRepository;
+	BalanceRepository balanceRepository;
 
 
 	public Balance getBalanceByUser(User user) {
 		
-		Balance userBalance = userRepository.getBalanceByUser(user);
+		Balance userBalance = balanceRepository.getBalanceByUser(user);
 		
 		return userBalance;
 		

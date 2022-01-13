@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import com.PayMyBuddy.dto.PaymentDTO;
+import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
 import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.Transaction;
 import com.PayMyBuddy.models.User;
@@ -38,21 +40,21 @@ public class TransactionService {
 		return user;
 	}
 
-	public Transaction paymentToConnection(double amount, String ConnectionName) {
+	public Transaction paymentToConnection(PaymentDTO paymentDTO) throws NotEnoughtBalanceException {
 
 		User user = getCurrentUser();
-		User connectionAccout = userRepository.findUserByUsername(ConnectionName);
+		User connectionAccout = userRepository.findUserByUsername(paymentDTO.getConnection());
 		Balance userBalance = balanceRepository.getBalanceByUser(user);
 		Balance connectionBalance = balanceRepository.getBalanceByUser(connectionAccout);
 		Transaction transaction = new Transaction();
 
-		double userNewBalanceAmount = userBalance.getAmount() - amount;
+		double userNewBalanceAmount = userBalance.getAmount() - (paymentDTO.getAmount());
 		if (userNewBalanceAmount < 0) {
-			throw new IllegalArgumentException("Not enought found");
+			throw new NotEnoughtBalanceException();
 		} else {
-			double connectionNewBalanceAmount = connectionBalance.getAmount() + amount;
+			double connectionNewBalanceAmount = connectionBalance.getAmount() + (paymentDTO.getAmount());
 
-			transaction.setAmount(amount);
+			transaction.setAmount(paymentDTO.getAmount());
 			transaction.setDateTime(new Timestamp(System.currentTimeMillis()));
 
 			userBalance.setAmount(userNewBalanceAmount);

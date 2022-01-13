@@ -23,11 +23,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.PayMyBuddy.dto.ConnectionDTO;
 import com.PayMyBuddy.dto.UserDTO;
+import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
 import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.UserRepository;
 import com.PayMyBuddy.services.BalanceService;
+import com.PayMyBuddy.services.TransactionService;
 import com.PayMyBuddy.services.UserService;
 import com.PayMyBuddy.services.util.SecurityService;
 
@@ -41,8 +43,6 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-
-
 
 	@Autowired
 	private SecurityService securityService;
@@ -117,7 +117,7 @@ public class UserController {
 
 	@GetMapping(value = "/user/home")
 	public String getUserHome() {
-		
+
 		return "home";
 	}
 
