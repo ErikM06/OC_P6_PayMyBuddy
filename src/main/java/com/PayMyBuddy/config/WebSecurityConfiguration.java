@@ -23,7 +23,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
-	
+
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
@@ -39,18 +39,17 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(username -> userDetailsService.loadUserByUsername(username))
-		// grant authorities here
-		.passwordEncoder(passwordEncoder);
-	
+				// grant authorities here
+				.passwordEncoder(passwordEncoder);
+		auth.inMemoryAuthentication().withUser("admin").password(passwordEncoder.encode("rootroot")).roles("ADMIN");
+
 	}
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-
-				.antMatchers("/", "/register").anonymous()
-				// .antMatchers("/secure/*").hasAnyAuthority("ADMIN").anyRequest().authenticated()
-				.and().formLogin().loginPage("/login").permitAll().loginProcessingUrl("/login")
+		http.authorizeRequests().antMatchers("/user/**").authenticated()
+				.antMatchers("/", "/register").anonymous().and()
+				.formLogin().loginPage("/login").permitAll().loginProcessingUrl("/login")
 				.defaultSuccessUrl("/user/home").and().logout().invalidateHttpSession(true).permitAll()
 				.logoutSuccessUrl("/");
 		// .oauth2Login();

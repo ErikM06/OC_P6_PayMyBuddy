@@ -34,25 +34,30 @@ public class TransactionService {
 	@Autowired
 	BalanceRepository balanceRepository;
 
-	public User getCurrentUser() {
-		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		logger.info("current User for transaction is : {}", user);
-		return user;
+	public String getCurrentUser() {
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+		String username = ((User) principal).getUsername();
+		logger.info("username is: {}",username);
+		return username;
 	}
 
 	public Transaction paymentToConnection(PaymentDTO paymentDTO) throws NotEnoughtBalanceException {
 
-		User user = getCurrentUser();
-		User connectionAccout = userRepository.findUserByUsername(paymentDTO.getConnection());
-		Balance userBalance = balanceRepository.getBalanceByUser(user);
+		User userAccount = userRepository.findUserByUsername(getCurrentUser());
+		User connectionAccout = userRepository.findUserByUsername(paymentDTO.getConnectionUsername());
+		Balance userBalance = balanceRepository.getBalanceByUser(userAccount);
 		Balance connectionBalance = balanceRepository.getBalanceByUser(connectionAccout);
 		Transaction transaction = new Transaction();
+		logger.info("current User for transaction is : {}", userAccount.toString());
+		System.out.println(userAccount.toString());
+		logger.info("current connection for transaction is : {}", connectionAccout.toString());
 
-		double userNewBalanceAmount = userBalance.getAmount() - (paymentDTO.getAmount());
+		float userNewBalanceAmount = userBalance.getAmount() - (paymentDTO.getAmount());
 		if (userNewBalanceAmount < 0) {
 			throw new NotEnoughtBalanceException();
 		} else {
-			double connectionNewBalanceAmount = connectionBalance.getAmount() + (paymentDTO.getAmount());
+			float connectionNewBalanceAmount = connectionBalance.getAmount() + (paymentDTO.getAmount());
 
 			transaction.setAmount(paymentDTO.getAmount());
 			transaction.setDateTime(new Timestamp(System.currentTimeMillis()));
@@ -63,6 +68,7 @@ public class TransactionService {
 			balanceRepository.save(userBalance);
 			balanceRepository.save(connectionBalance);
 			transactionRepository.save(transaction);
+			logger.info("transaction is :", transaction.toString());
 			return transaction;
 		}
 	}

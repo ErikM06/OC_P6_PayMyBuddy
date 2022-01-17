@@ -12,18 +12,18 @@
     <div class="row">
         <div class="col-md-8 mx-auto">
             <h2>Pay A Buddy </h2>
-            <form th:action="@{/user/operation/payment}" th:object="${PayABuddy}" method="post">
+            <form th:action="@{/user/operation/payment}" th:object="${transaction}" method="post">
                 <div class="form-row">
                     <div class="col-md-6 form-group">
                         <label>buddy's username</label>
-                        <input type="text" class="form-control" th:field="*{connection}">
+                        <input type="text" class="form-control" th:field="*{connectionUsername}">
                     </div>
                     <div class="col-md-6 form-group">
                         <label>choose the amount</label>
-                        <input type="integer" class="form-control" th:field="*{amount}">
+                        <input type="double" class="form-control" th:field="*{amount}">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block mt-3">OK</button>
+                <h3>PAYMENT SUCESSFULL</h3>
             </form>
         </div>
     </div>

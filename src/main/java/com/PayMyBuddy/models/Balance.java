@@ -20,10 +20,10 @@ public class Balance {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private double id;
+	private int id;
 	
 	@Column (name ="amount")
-	private double amount;
+	private float amount;
 	
 	@ManyToOne
 	@JoinColumn (name = "user_id")
@@ -32,7 +32,7 @@ public class Balance {
 	@OneToMany (mappedBy = "balance", fetch = FetchType.LAZY)
 	private Collection<Transaction> transactions;
 
-	public Balance(double amount, User user) {
+	public Balance(float amount, User user) {
 		super();
 		this.amount = amount;
 		this.user = user;
@@ -41,19 +41,19 @@ public class Balance {
 		super();
 	}
 
-	public double getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(double id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public double getAmount() {
+	public float getAmount() {
 		return amount;
 	}
 
-	public void setAmount(double amount) {
+	public void setAmount(float amount) {
 		this.amount = amount;
 	}
 

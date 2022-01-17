@@ -1,33 +1,37 @@
 package com.PayMyBuddy.dto;
 
-public class PaymentDTO {
-	
-	double amount;
-	
-	String connection;
+import org.springframework.stereotype.Component;
 
-	public PaymentDTO(String connection, double amount) {
+@Component
+public class PaymentDTO {
+
+	float amount;
+
+	String connectionUsername;
+
+	public PaymentDTO(String connectionUsername, float amount) {
 		super();
 		this.amount = amount;
-		this.connection = connection;
+		this.connectionUsername = connectionUsername;
+	}
+	public PaymentDTO () {
+		super();
 	}
 
-	public double getAmount() {
+	public float getAmount() {
 		return amount;
 	}
 
-	public void setAmount(double amount) {
+	public void setAmount(float amount) {
 		this.amount = amount;
 	}
 
-	public String getConnection() {
-		return connection;
+	public String getConnectionUsername() {
+		return connectionUsername;
 	}
 
-	public void setConnection(String connection) {
-		this.connection = connection;
+	public void setConnectionUsername (String connectionUsername) {
+		this.connectionUsername = connectionUsername;
 	}
-	
-	
 
 }

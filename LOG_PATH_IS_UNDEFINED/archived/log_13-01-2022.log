@@ -1,0 +1,1754 @@
+13-01-2022 13:23:15.723 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 7536 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:23:15.730 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:23:16.586 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:23:16.649 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 55 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:23:17.224 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:23:17.235 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:23:17.235 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:23:17.235 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:23:17.334 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:23:17.335 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1566 ms
+13-01-2022 13:23:17.608 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:23:17.761 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:23:17.904 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:23:17.972 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:23:18.167 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:23:18.303 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:23:18.979 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:23:18.986 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:23:19.036 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:23:19.557 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:23:19.805 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f0bf0ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ae26c59, org.springframework.security.web.header.HeaderWriterFilter@4a76c90, org.springframework.security.web.authentication.logout.LogoutFilter@1b1d93e9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@69d9d322, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d426e01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@585718dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f9e6a85, org.springframework.security.web.session.SessionManagementFilter@78d52d4c, org.springframework.security.web.access.ExceptionTranslationFilter@31d8352e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@213c812a]
+13-01-2022 13:23:20.150 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:23:20.663 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:23:20.699 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:23:20.723 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 13:23:20.733 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.328 seconds (JVM running for 6.307)
+13-01-2022 13:23:21.486 [RMI TCP Connection(1)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 13:23:21.487 [RMI TCP Connection(1)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 13:23:21.488 [RMI TCP Connection(1)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 13:25:47.778 [RMI TCP Connection(13)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 13:25:47.918 [RMI TCP Connection(13)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:25:47.920 [RMI TCP Connection(13)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 13:25:47.931 [RMI TCP Connection(13)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 13:25:50.676 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 5376 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:25:50.679 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:25:51.373 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:25:51.427 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:25:51.955 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:25:51.964 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:25:51.965 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:25:51.965 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:25:52.068 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:25:52.068 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1358 ms
+13-01-2022 13:25:52.317 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:25:52.437 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:25:52.548 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:25:52.597 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:25:52.730 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:25:52.839 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:25:53.436 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:25:53.443 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:25:53.488 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:25:53.943 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:25:54.165 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cda988, org.springframework.security.web.context.SecurityContextPersistenceFilter@268f126f, org.springframework.security.web.header.HeaderWriterFilter@44b5b54, org.springframework.security.web.authentication.logout.LogoutFilter@627cb3ed, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@413e8246, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@625c9248, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36e11b60, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e92e9a2, org.springframework.security.web.session.SessionManagementFilter@69862a1, org.springframework.security.web.access.ExceptionTranslationFilter@34907a49, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f3c27e9]
+13-01-2022 13:25:54.485 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:25:54.972 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:25:55.012 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:25:55.027 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 13:25:55.039 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.629 seconds (JVM running for 5.361)
+13-01-2022 13:25:56.935 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 13:25:56.936 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 13:25:56.938 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 13:26:08.186 [http-nio-8080-exec-6] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 13:26:08.391 [http-nio-8080-exec-6] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [126] milliseconds.
+13-01-2022 13:30:39.956 [RMI TCP Connection(16)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 13:30:40.097 [RMI TCP Connection(16)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:30:40.099 [RMI TCP Connection(16)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 13:30:40.107 [RMI TCP Connection(16)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 13:30:42.818 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 15468 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:30:42.821 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:30:43.515 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:30:43.569 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 46 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:30:44.067 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:30:44.075 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:30:44.076 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:30:44.076 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:30:44.163 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:30:44.163 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1313 ms
+13-01-2022 13:30:44.413 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:30:44.534 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:30:44.640 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:30:44.692 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:30:44.831 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:30:44.944 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:30:45.553 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:30:45.560 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:30:45.607 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:30:46.059 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:30:46.287 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a175162, org.springframework.security.web.context.SecurityContextPersistenceFilter@44b5b54, org.springframework.security.web.header.HeaderWriterFilter@47a90d2a, org.springframework.security.web.authentication.logout.LogoutFilter@20a7ce0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@59d7d574, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69862a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@467e7793, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7641c4e7, org.springframework.security.web.session.SessionManagementFilter@1ae26c59, org.springframework.security.web.access.ExceptionTranslationFilter@2c376461, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@701c413]
+13-01-2022 13:30:46.607 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:30:47.144 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:30:47.184 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:30:47.200 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 13:30:47.210 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.636 seconds (JVM running for 5.384)
+13-01-2022 13:30:48.490 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 13:30:48.491 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 13:30:48.492 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 13:31:00.684 [http-nio-8080-exec-6] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 13:31:00.892 [http-nio-8080-exec-6] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [131] milliseconds.
+13-01-2022 13:31:00.902 [http-nio-8080-exec-7] ERROR
+				org.thymeleaf.TemplateEngine.process - [THYMELEAF][http-nio-8080-exec-7] Exception processing template "home": Could not parse as expression: "" (template: "home" - line 13, col 16)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "" (template: "home" - line 13, col 16)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1400)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:219)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+13-01-2022 13:31:00.904 [http-nio-8080-exec-7] ERROR
+				o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "" (template: "home" - line 13, col 16)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "" (template: "home" - line 13, col 16)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1400)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:219)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+13-01-2022 13:31:20.279 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 13:31:20.412 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:31:20.414 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 13:31:20.421 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 13:31:23.140 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 14972 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:31:23.142 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:31:23.839 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:31:23.892 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:31:24.394 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:31:24.402 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:31:24.403 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:31:24.403 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:31:24.489 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:31:24.490 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1318 ms
+13-01-2022 13:31:24.737 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:31:24.857 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:31:24.964 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:31:25.015 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:31:25.153 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:31:25.265 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:31:25.869 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:31:25.876 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:31:25.919 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:31:26.370 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:31:26.591 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3811464b, org.springframework.security.web.context.SecurityContextPersistenceFilter@1cb7f2fe, org.springframework.security.web.header.HeaderWriterFilter@3d96b8fb, org.springframework.security.web.authentication.logout.LogoutFilter@7bbc11ed, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f5f892c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27244a88, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47a90d2a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f0a5848, org.springframework.security.web.session.SessionManagementFilter@20843604, org.springframework.security.web.access.ExceptionTranslationFilter@3f36c191, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1acd2a14]
+13-01-2022 13:31:26.909 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:31:27.432 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:31:27.471 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:31:27.486 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 13:31:27.497 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.599 seconds (JVM running for 5.328)
+13-01-2022 13:31:28.829 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 13:31:28.830 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 13:31:28.832 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
+13-01-2022 13:31:39.511 [http-nio-8080-exec-6] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 13:31:39.720 [http-nio-8080-exec-6] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [133] milliseconds.
+13-01-2022 13:31:45.822 [http-nio-8080-exec-9] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 13:31:47.516 [http-nio-8080-exec-4] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+13-01-2022 13:34:33.964 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 8388 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:34:33.968 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:34:34.797 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:34:34.860 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 54 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:34:35.460 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:34:35.470 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:34:35.470 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:34:35.470 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:34:35.569 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:34:35.569 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1560 ms
+13-01-2022 13:34:35.903 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:34:36.044 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:34:36.170 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:34:36.232 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:34:36.386 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:34:36.512 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:34:37.224 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:34:37.233 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:34:37.293 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:34:37.836 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:34:38.131 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18d8da77, org.springframework.security.web.context.SecurityContextPersistenceFilter@29897daf, org.springframework.security.web.header.HeaderWriterFilter@2643caa6, org.springframework.security.web.authentication.logout.LogoutFilter@276b68af, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@715ea64a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@299f9a81, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33aa4326, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@502dc93a, org.springframework.security.web.session.SessionManagementFilter@7c1f3125, org.springframework.security.web.access.ExceptionTranslationFilter@33a39d7e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e41e0c]
+13-01-2022 13:34:38.521 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:34:39.162 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:34:39.210 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:34:39.214 [main] WARN 
+				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+13-01-2022 13:34:39.219 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:34:39.220 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 13:34:39.231 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 13:34:39.233 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Pausing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:34:39.233 [main] INFO 
+				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+13-01-2022 13:34:39.237 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Stopping ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:34:39.237 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:34:39.247 [main] INFO 
+				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+13-01-2022 13:34:39.263 [main] ERROR
+				o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+13-01-2022 13:34:44.317 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 13:34:44.460 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:34:44.462 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 13:34:44.471 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 13:34:55.795 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 15080 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:34:55.800 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:34:56.758 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:34:56.826 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:34:57.414 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:34:57.425 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:34:57.425 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:34:57.425 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:34:57.520 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:34:57.521 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1686 ms
+13-01-2022 13:34:57.831 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:34:57.974 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:34:58.109 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:34:58.159 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:34:58.322 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:34:58.454 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:34:59.202 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:34:59.211 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:34:59.282 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:34:59.838 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:35:00.149 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6df0d030, org.springframework.security.web.context.SecurityContextPersistenceFilter@35b70f9d, org.springframework.security.web.header.HeaderWriterFilter@64e680c5, org.springframework.security.web.authentication.logout.LogoutFilter@30623109, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@24facb47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a577564, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66e27ac9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33319df0, org.springframework.security.web.session.SessionManagementFilter@72b689f6, org.springframework.security.web.access.ExceptionTranslationFilter@66c88fce, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36e95b7b]
+13-01-2022 13:35:00.577 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:35:01.258 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:35:01.306 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:35:01.323 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 13:35:01.334 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.847 seconds (JVM running for 6.765)
+13-01-2022 13:35:01.774 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 13:35:01.775 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 13:35:01.778 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 3 ms
+13-01-2022 13:35:42.986 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 14144 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:35:42.991 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:35:43.799 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:35:43.889 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 83 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:35:44.451 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:35:44.462 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:35:44.462 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:35:44.462 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:35:44.571 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:35:44.571 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1541 ms
+13-01-2022 13:35:44.882 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:35:45.028 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:35:45.175 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:35:45.228 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:35:45.393 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:35:45.524 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:35:46.286 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:35:46.296 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:35:46.361 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:35:46.941 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:35:47.240 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57f1fbae, org.springframework.security.web.context.SecurityContextPersistenceFilter@7bbe5548, org.springframework.security.web.header.HeaderWriterFilter@5f662dd, org.springframework.security.web.authentication.logout.LogoutFilter@67e37d25, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35fd03d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@adbc3bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1722ede1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28901fe7, org.springframework.security.web.session.SessionManagementFilter@6c4c32ff, org.springframework.security.web.access.ExceptionTranslationFilter@779cda39, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@33293b34]
+13-01-2022 13:35:47.692 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:35:48.320 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:35:48.370 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:35:48.386 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 13:35:48.397 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.713 seconds (JVM running for 6.623)
+13-01-2022 13:35:49.961 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 13:35:49.962 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 13:35:49.964 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
+13-01-2022 13:36:13.648 [http-nio-8080-exec-7] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 13:36:13.835 [http-nio-8080-exec-7] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [111] milliseconds.
+13-01-2022 13:36:21.143 [http-nio-8080-exec-2] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+13-01-2022 13:37:06.512 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.PayMyBuddy.PayMyBuddyApplicationTests], using SpringBootContextLoader
+13-01-2022 13:37:06.518 [main] INFO 
+				o.s.t.c.s.AbstractContextLoader.generateDefaultLocations - Could not detect default resource locations for test class [com.PayMyBuddy.PayMyBuddyApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+13-01-2022 13:37:06.519 [main] INFO 
+				o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.PayMyBuddy.PayMyBuddyApplicationTests]: PayMyBuddyApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13-01-2022 13:37:06.611 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses - Found @SpringBootConfiguration com.PayMyBuddy.PayMyBuddyApplication for test class com.PayMyBuddy.PayMyBuddyApplicationTests
+13-01-2022 13:37:06.711 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+13-01-2022 13:37:06.734 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getTestExecutionListeners - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@16423501, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efcf8a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7a138fc5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@379ab47b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@307765b4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4a9e6faf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2c95ac9e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4e4efc1b, org.springframework.test.context.event.EventPublishingTestExecutionListener@459f7aa3, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@7cc586a8, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@7db534f2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@44a2b17b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7a56812e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2a76b80a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7eb01b12, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f4854d6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@61d9efe0]
+13-01-2022 13:37:07.029 [main] INFO 
+				c.P.PayMyBuddyApplicationTests.logStarting - Starting PayMyBuddyApplicationTests using Java 11 on DESKTOP-Q0H09QF with PID 15464 (started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:37:07.030 [main] INFO 
+				c.P.PayMyBuddyApplicationTests.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:37:07.872 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:37:07.942 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:37:08.458 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:37:08.616 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:37:08.769 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:37:08.823 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:37:08.994 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:37:09.275 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:37:09.975 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:37:09.984 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:37:10.051 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:37:10.807 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:37:11.098 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@376bae20, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fce655d, org.springframework.security.web.header.HeaderWriterFilter@27c49f54, org.springframework.security.web.authentication.logout.LogoutFilter@19a4cdea, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2db75e32, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1aba8978, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@175745fc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37f0fb02, org.springframework.security.web.session.SessionManagementFilter@4a5c6b30, org.springframework.security.web.access.ExceptionTranslationFilter@48619f15, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7dbe858f]
+13-01-2022 13:37:11.638 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:37:12.263 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:37:12.312 [main] INFO 
+				c.P.PayMyBuddyApplicationTests.logStarted - Started PayMyBuddyApplicationTests in 5.517 seconds (JVM running for 6.532)
+13-01-2022 13:37:12.487 [SpringApplicationShutdownHook] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:37:12.493 [SpringApplicationShutdownHook] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 13:37:12.516 [SpringApplicationShutdownHook] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 13:37:20.571 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 14652 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:37:20.575 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:37:21.356 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:37:21.422 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 57 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:37:21.981 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:37:21.990 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:37:21.990 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:37:21.990 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:37:22.084 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:37:22.084 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1474 ms
+13-01-2022 13:37:22.389 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:37:22.542 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:37:22.680 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:37:22.732 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:37:22.908 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:37:23.035 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:37:23.751 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:37:23.760 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:37:23.821 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:37:24.371 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:37:24.687 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f113867, org.springframework.security.web.context.SecurityContextPersistenceFilter@42516ce2, org.springframework.security.web.header.HeaderWriterFilter@63574d76, org.springframework.security.web.authentication.logout.LogoutFilter@760b9444, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@48e859f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7aecff85, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4dd28982, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72cf159f, org.springframework.security.web.session.SessionManagementFilter@20bc3e7f, org.springframework.security.web.access.ExceptionTranslationFilter@1e8c9083, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@372c428]
+13-01-2022 13:37:25.083 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:37:25.727 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:37:25.776 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:37:25.792 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 13:37:25.803 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.537 seconds (JVM running for 6.438)
+13-01-2022 13:37:27.414 [http-nio-8080-exec-1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 13:37:27.415 [http-nio-8080-exec-1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 13:37:27.417 [http-nio-8080-exec-1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
+13-01-2022 13:37:34.517 [http-nio-8080-exec-6] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 13:37:34.724 [http-nio-8080-exec-6] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [131] milliseconds.
+13-01-2022 13:37:39.849 [http-nio-8080-exec-9] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 13:37:42.604 [http-nio-8080-exec-4] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+13-01-2022 13:48:18.369 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 7748 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:48:18.373 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:48:19.130 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:48:19.191 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 53 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:48:19.761 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:48:19.771 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:48:19.772 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:48:19.772 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:48:19.864 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:48:19.865 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1459 ms
+13-01-2022 13:48:20.176 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:48:20.328 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:48:20.472 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:48:20.527 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:48:20.710 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:48:20.836 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:48:21.531 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:48:21.540 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:48:21.595 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:51:43.291 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 15340 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 13:51:43.296 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 13:51:44.071 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 13:51:44.133 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 53 ms. Found 5 JPA repository interfaces.
+13-01-2022 13:51:44.679 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 13:51:44.688 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:51:44.688 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 13:51:44.688 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 13:51:44.778 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 13:51:44.778 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1445 ms
+13-01-2022 13:51:45.068 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 13:51:45.218 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 13:51:45.355 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 13:51:45.407 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 13:51:45.581 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 13:51:45.706 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 13:51:46.361 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 13:51:46.369 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 13:51:46.423 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 13:51:46.935 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 13:51:47.216 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@628e0403, org.springframework.security.web.context.SecurityContextPersistenceFilter@3dd8b40e, org.springframework.security.web.header.HeaderWriterFilter@7d453075, org.springframework.security.web.authentication.logout.LogoutFilter@43069adf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6015c745, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74597c37, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bab373c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a70acd5, org.springframework.security.web.session.SessionManagementFilter@628b1538, org.springframework.security.web.access.ExceptionTranslationFilter@4822d7a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@333d5a0c]
+13-01-2022 13:51:47.618 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 13:51:48.240 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 13:51:48.287 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 13:51:48.303 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 13:51:48.314 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.325 seconds (JVM running for 6.225)
+13-01-2022 13:51:48.912 [RMI TCP Connection(1)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 13:51:48.914 [RMI TCP Connection(1)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 13:51:48.915 [RMI TCP Connection(1)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 13:52:13.066 [http-nio-8080-exec-7] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 13:52:13.249 [http-nio-8080-exec-7] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [108] milliseconds.
+13-01-2022 13:52:15.639 [http-nio-8080-exec-3] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+13-01-2022 20:30:23.949 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 4384 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 20:30:23.952 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 20:30:24.615 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 20:30:24.670 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 48 ms. Found 5 JPA repository interfaces.
+13-01-2022 20:30:25.152 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 20:30:25.160 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 20:30:25.160 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 20:30:25.160 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 20:30:25.245 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 20:30:25.245 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1264 ms
+13-01-2022 20:30:25.481 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 20:30:25.603 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 20:30:25.711 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 20:30:25.764 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 20:30:25.905 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 20:30:26.019 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 20:30:26.610 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 20:30:26.618 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:30:26.664 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 20:30:27.124 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 20:30:27.340 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38eafdab, org.springframework.security.web.context.SecurityContextPersistenceFilter@59043128, org.springframework.security.web.header.HeaderWriterFilter@1de6f29d, org.springframework.security.web.authentication.logout.LogoutFilter@44b82007, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f14eb51, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c55e559, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a7f2d34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@373c8f35, org.springframework.security.web.session.SessionManagementFilter@55e02661, org.springframework.security.web.access.ExceptionTranslationFilter@627cb3ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d31fb6c]
+13-01-2022 20:30:27.649 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 20:30:28.110 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 20:30:28.160 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 20:30:28.175 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 20:30:28.185 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.471 seconds (JVM running for 5.189)
+13-01-2022 20:30:29.338 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 20:30:29.339 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 20:30:29.340 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 20:30:37.178 [RMI TCP Connection(9)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 20:30:37.311 [RMI TCP Connection(9)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:30:37.313 [RMI TCP Connection(9)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 20:30:37.322 [RMI TCP Connection(9)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 20:36:57.022 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 16248 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 20:36:57.025 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 20:36:57.695 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 20:36:57.748 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+13-01-2022 20:36:58.230 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 20:36:58.238 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 20:36:58.238 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 20:36:58.239 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 20:36:58.323 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 20:36:58.324 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1271 ms
+13-01-2022 20:36:58.562 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 20:36:58.683 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 20:36:58.789 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 20:36:58.841 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 20:36:58.976 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 20:36:59.084 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 20:36:59.672 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 20:36:59.680 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:36:59.726 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 20:37:00.186 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 20:37:00.405 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40273969, org.springframework.security.web.context.SecurityContextPersistenceFilter@659565ed, org.springframework.security.web.header.HeaderWriterFilter@1e6f7c25, org.springframework.security.web.authentication.logout.LogoutFilter@4c231f62, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2f650dae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c5c2a84, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@390e814c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ec25b61, org.springframework.security.web.session.SessionManagementFilter@770c3ca2, org.springframework.security.web.access.ExceptionTranslationFilter@642334d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72e9f0f7]
+13-01-2022 20:37:00.706 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 20:37:01.158 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 20:37:01.193 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 20:37:01.207 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 20:37:01.217 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.433 seconds (JVM running for 5.165)
+13-01-2022 20:37:03.435 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 20:37:03.436 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 20:37:03.437 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 20:37:21.647 [http-nio-8080-exec-8] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 20:37:21.845 [http-nio-8080-exec-8] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [121] milliseconds.
+13-01-2022 20:37:22.862 [http-nio-8080-exec-3] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+13-01-2022 20:38:41.729 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.PayMyBuddy.PayMyBuddyApplicationTests], using SpringBootContextLoader
+13-01-2022 20:38:41.736 [main] INFO 
+				o.s.t.c.s.AbstractContextLoader.generateDefaultLocations - Could not detect default resource locations for test class [com.PayMyBuddy.PayMyBuddyApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+13-01-2022 20:38:41.737 [main] INFO 
+				o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.PayMyBuddy.PayMyBuddyApplicationTests]: PayMyBuddyApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13-01-2022 20:38:41.828 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses - Found @SpringBootConfiguration com.PayMyBuddy.PayMyBuddyApplication for test class com.PayMyBuddy.PayMyBuddyApplicationTests
+13-01-2022 20:38:41.920 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+13-01-2022 20:38:41.938 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getTestExecutionListeners - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@16423501, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efcf8a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7a138fc5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@379ab47b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@307765b4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4a9e6faf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2c95ac9e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4e4efc1b, org.springframework.test.context.event.EventPublishingTestExecutionListener@459f7aa3, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@7cc586a8, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@7db534f2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@44a2b17b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7a56812e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2a76b80a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7eb01b12, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f4854d6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@61d9efe0]
+13-01-2022 20:38:42.192 [main] INFO 
+				c.P.PayMyBuddyApplicationTests.logStarting - Starting PayMyBuddyApplicationTests using Java 11 on DESKTOP-Q0H09QF with PID 15976 (started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 20:38:42.193 [main] INFO 
+				c.P.PayMyBuddyApplicationTests.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 20:38:43.012 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 20:38:43.079 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+13-01-2022 20:38:43.630 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 20:38:43.884 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 20:38:44.054 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 20:38:44.113 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 20:38:44.281 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 20:38:44.554 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 20:38:45.263 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 20:38:45.271 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:38:45.333 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 20:38:46.032 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 20:38:46.319 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5263f554, org.springframework.security.web.context.SecurityContextPersistenceFilter@4bb644dc, org.springframework.security.web.header.HeaderWriterFilter@1bcca516, org.springframework.security.web.authentication.logout.LogoutFilter@68908be7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@65b07b9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cf1b5fb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78a7fccd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d28efd5, org.springframework.security.web.session.SessionManagementFilter@1e4bf55b, org.springframework.security.web.access.ExceptionTranslationFilter@2c7ac998, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4767be27]
+13-01-2022 20:38:46.835 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 20:38:47.457 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 20:38:47.501 [main] INFO 
+				c.P.PayMyBuddyApplicationTests.logStarted - Started PayMyBuddyApplicationTests in 5.51 seconds (JVM running for 6.504)
+13-01-2022 20:38:47.666 [SpringApplicationShutdownHook] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:38:47.668 [SpringApplicationShutdownHook] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 20:38:47.679 [SpringApplicationShutdownHook] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 20:44:27.058 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.PayMyBuddy.controllers.TransactionControllerTest], using SpringBootContextLoader
+13-01-2022 20:44:27.064 [main] INFO 
+				o.s.t.c.s.AbstractContextLoader.generateDefaultLocations - Could not detect default resource locations for test class [com.PayMyBuddy.controllers.TransactionControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13-01-2022 20:44:27.065 [main] INFO 
+				o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.PayMyBuddy.controllers.TransactionControllerTest]: TransactionControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13-01-2022 20:44:27.164 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses - Found @SpringBootConfiguration com.PayMyBuddy.PayMyBuddyApplication for test class com.PayMyBuddy.controllers.TransactionControllerTest
+13-01-2022 20:44:27.247 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+13-01-2022 20:44:27.274 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getTestExecutionListeners - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@455351c4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@29876704, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4816c290, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4940809c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@16423501, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4efcf8a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7a138fc5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@379ab47b, org.springframework.test.context.event.EventPublishingTestExecutionListener@307765b4, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4a9e6faf, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@2c95ac9e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e4efc1b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@459f7aa3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7cc586a8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7db534f2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@44a2b17b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7a56812e]
+13-01-2022 20:44:27.326 [main] ERROR
+				o.s.test.context.TestContextManager.prepareTestInstance - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@455351c4] to prepare test instance [com.PayMyBuddy.controllers.TransactionControllerTest@52d10fb8]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:95)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:91)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:60)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.lang.IllegalStateException: Failed to add PropertySource to Environment
+	at org.springframework.test.context.support.TestPropertySourceUtils.addPropertiesFilesToEnvironment(TestPropertySourceUtils.java:229)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:115)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 71 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [test.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:159)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:110)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:81)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:67)
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:86)
+	at org.springframework.test.context.support.TestPropertySourceUtils.addPropertiesFilesToEnvironment(TestPropertySourceUtils.java:225)
+	... 74 common frames omitted
+13-01-2022 20:44:46.397 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.PayMyBuddy.controllers.TransactionControllerTest], using SpringBootContextLoader
+13-01-2022 20:44:46.404 [main] INFO 
+				o.s.t.c.s.AbstractContextLoader.generateDefaultLocations - Could not detect default resource locations for test class [com.PayMyBuddy.controllers.TransactionControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13-01-2022 20:44:46.404 [main] INFO 
+				o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.PayMyBuddy.controllers.TransactionControllerTest]: TransactionControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13-01-2022 20:44:46.506 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses - Found @SpringBootConfiguration com.PayMyBuddy.PayMyBuddyApplication for test class com.PayMyBuddy.controllers.TransactionControllerTest
+13-01-2022 20:44:46.589 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+13-01-2022 20:44:46.614 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getTestExecutionListeners - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3bd7f8dc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f2bf0e2, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1eba372c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@21ec5d87, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@25f9407e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@552518c3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a69561c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@59aa20b3, org.springframework.test.context.event.EventPublishingTestExecutionListener@363f6148, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4b21844c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1b28f282, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@138fe6ec, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5e77f0f4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@19b30c92, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@455351c4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29876704, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4816c290]
+13-01-2022 20:44:46.883 [main] INFO 
+				c.P.c.TransactionControllerTest.logStarting - Starting TransactionControllerTest using Java 11 on DESKTOP-Q0H09QF with PID 7252 (started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 20:44:46.884 [main] INFO 
+				c.P.c.TransactionControllerTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 20:44:47.669 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 20:44:47.752 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 75 ms. Found 5 JPA repository interfaces.
+13-01-2022 20:44:48.244 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 20:44:48.400 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 20:44:48.553 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 20:44:48.610 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 20:44:48.771 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 20:44:49.032 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 20:44:49.693 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 20:44:49.701 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:44:49.773 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 20:44:50.441 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 20:44:50.739 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@524b1e41, org.springframework.security.web.context.SecurityContextPersistenceFilter@240e61, org.springframework.security.web.header.HeaderWriterFilter@1e1d813a, org.springframework.security.web.authentication.logout.LogoutFilter@3531509c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5345552f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44c54463, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bf34912, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2da8ed80, org.springframework.security.web.session.SessionManagementFilter@3891db3a, org.springframework.security.web.access.ExceptionTranslationFilter@721fc228, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@363d29dd]
+13-01-2022 20:44:51.299 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 20:44:51.969 [main] INFO 
+				o.s.b.t.m.w.SpringBootMockServletContext.log - Initializing Spring TestDispatcherServlet ''
+13-01-2022 20:44:51.970 [main] INFO 
+				o.s.t.w.s.TestDispatcherServlet.initServletBean - Initializing Servlet ''
+13-01-2022 20:44:51.978 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 20:44:52.007 [main] INFO 
+				o.s.t.w.s.TestDispatcherServlet.initServletBean - Completed initialization in 37 ms
+13-01-2022 20:44:52.043 [main] INFO 
+				c.P.c.TransactionControllerTest.logStarted - Started TransactionControllerTest in 5.38 seconds (JVM running for 6.401)
+13-01-2022 20:44:52.260 [main] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.method.annotation.ModelAttributeMethodProcessor$1: org.springframework.validation.BeanPropertyBindingResult: 1 errors<LF>Field error in object 'PayABuddy' on field 'amount': rejected value [null]; codes [typeMismatch.PayABuddy.amount,typeMismatch.amount,typeMismatch.double,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [PayABuddy.amount,amount]; arguments []; default message [amount]]; default message [Failed to convert value of type 'null' to required type 'double'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [double] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type]]
+13-01-2022 20:44:52.295 [SpringApplicationShutdownHook] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:44:52.297 [SpringApplicationShutdownHook] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 20:44:52.307 [SpringApplicationShutdownHook] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 20:46:37.287 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.PayMyBuddy.controllers.TransactionControllerTest], using SpringBootContextLoader
+13-01-2022 20:46:37.295 [main] INFO 
+				o.s.t.c.s.AbstractContextLoader.generateDefaultLocations - Could not detect default resource locations for test class [com.PayMyBuddy.controllers.TransactionControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13-01-2022 20:46:37.295 [main] INFO 
+				o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.PayMyBuddy.controllers.TransactionControllerTest]: TransactionControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13-01-2022 20:46:37.405 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses - Found @SpringBootConfiguration com.PayMyBuddy.PayMyBuddyApplication for test class com.PayMyBuddy.controllers.TransactionControllerTest
+13-01-2022 20:46:37.492 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+13-01-2022 20:46:37.515 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getTestExecutionListeners - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3bd7f8dc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f2bf0e2, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1eba372c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@21ec5d87, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@25f9407e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@552518c3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a69561c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@59aa20b3, org.springframework.test.context.event.EventPublishingTestExecutionListener@363f6148, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4b21844c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1b28f282, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@138fe6ec, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5e77f0f4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@19b30c92, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@455351c4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29876704, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4816c290]
+13-01-2022 20:46:37.791 [main] INFO 
+				c.P.c.TransactionControllerTest.logStarting - Starting TransactionControllerTest using Java 11 on DESKTOP-Q0H09QF with PID 15640 (started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 20:46:37.792 [main] INFO 
+				c.P.c.TransactionControllerTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 20:46:38.585 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 20:46:38.666 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 73 ms. Found 5 JPA repository interfaces.
+13-01-2022 20:46:39.186 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 20:46:39.341 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 20:46:39.499 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 20:46:39.555 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 20:46:39.722 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 20:46:39.991 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 20:46:40.629 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 20:46:40.637 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:46:40.715 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 20:46:41.433 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 20:46:41.741 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@634d56eb, org.springframework.security.web.context.SecurityContextPersistenceFilter@41d8ac75, org.springframework.security.web.header.HeaderWriterFilter@134ec0f3, org.springframework.security.web.authentication.logout.LogoutFilter@6c120b00, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68aa1164, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c2e73ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@240e61, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cd7128, org.springframework.security.web.session.SessionManagementFilter@3d0ce151, org.springframework.security.web.access.ExceptionTranslationFilter@19a4cdea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1067bc4c]
+13-01-2022 20:46:42.322 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 20:46:43.030 [main] INFO 
+				o.s.b.t.m.w.SpringBootMockServletContext.log - Initializing Spring TestDispatcherServlet ''
+13-01-2022 20:46:43.031 [main] INFO 
+				o.s.t.w.s.TestDispatcherServlet.initServletBean - Initializing Servlet ''
+13-01-2022 20:46:43.038 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 20:46:43.068 [main] INFO 
+				o.s.t.w.s.TestDispatcherServlet.initServletBean - Completed initialization in 37 ms
+13-01-2022 20:46:43.103 [main] INFO 
+				c.P.c.TransactionControllerTest.logStarted - Started TransactionControllerTest in 5.536 seconds (JVM running for 6.587)
+13-01-2022 20:46:43.318 [main] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.method.annotation.ModelAttributeMethodProcessor$1: org.springframework.validation.BeanPropertyBindingResult: 1 errors<LF>Field error in object 'PayABuddy' on field 'amount': rejected value [null]; codes [typeMismatch.PayABuddy.amount,typeMismatch.amount,typeMismatch.double,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [PayABuddy.amount,amount]; arguments []; default message [amount]]; default message [Failed to convert value of type 'null' to required type 'double'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [double] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type]]
+13-01-2022 20:46:43.353 [SpringApplicationShutdownHook] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:46:43.356 [SpringApplicationShutdownHook] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 20:46:43.366 [SpringApplicationShutdownHook] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 20:47:20.204 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.PayMyBuddy.controllers.TransactionControllerTest], using SpringBootContextLoader
+13-01-2022 20:47:20.215 [main] INFO 
+				o.s.t.c.s.AbstractContextLoader.generateDefaultLocations - Could not detect default resource locations for test class [com.PayMyBuddy.controllers.TransactionControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13-01-2022 20:47:20.216 [main] INFO 
+				o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.PayMyBuddy.controllers.TransactionControllerTest]: TransactionControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13-01-2022 20:47:20.359 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses - Found @SpringBootConfiguration com.PayMyBuddy.PayMyBuddyApplication for test class com.PayMyBuddy.controllers.TransactionControllerTest
+13-01-2022 20:47:20.464 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+13-01-2022 20:47:20.487 [main] INFO 
+				o.s.b.t.c.SpringBootTestContextBootstrapper.getTestExecutionListeners - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6b530eb9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@328572f0, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@678040b3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@17f460bb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@64a1923a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7d2a6eac, org.springframework.test.context.transaction.TransactionalTestExecutionListener@18ca3c62, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2c0f7678, org.springframework.test.context.event.EventPublishingTestExecutionListener@44d70181, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@6aa648b9, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@23c650a3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@742d4e15, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@88a8218, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@50b1f030, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4163f1cd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5fa05212, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3e681bc]
+13-01-2022 20:47:20.789 [main] INFO 
+				c.P.c.TransactionControllerTest.logStarting - Starting TransactionControllerTest using Java 11 on DESKTOP-Q0H09QF with PID 9776 (started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 20:47:20.790 [main] INFO 
+				c.P.c.TransactionControllerTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 20:47:21.718 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 20:47:21.795 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+13-01-2022 20:47:40.888 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 20:47:52.871 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 20:48:05.109 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 20:48:08.799 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 20:48:18.475 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 20:48:28.225 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 20:49:08.518 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 20:49:09.013 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 20:49:15.709 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 20:50:16.197 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 20:50:46.227 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1134a934, org.springframework.security.web.context.SecurityContextPersistenceFilter@75c095a5, org.springframework.security.web.header.HeaderWriterFilter@67201eeb, org.springframework.security.web.authentication.logout.LogoutFilter@2b9a7211, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6b61a4b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@261c5d1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d9c69f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cbd855e, org.springframework.security.web.session.SessionManagementFilter@2eea0775, org.springframework.security.web.access.ExceptionTranslationFilter@75f9a35a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4557723a]
+13-01-2022 20:51:37.666 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 20:52:51.684 [main] INFO 
+				o.s.b.t.m.w.SpringBootMockServletContext.log - Initializing Spring TestDispatcherServlet ''
+13-01-2022 20:52:51.690 [main] INFO 
+				o.s.t.w.s.TestDispatcherServlet.initServletBean - Initializing Servlet ''
+13-01-2022 20:52:53.012 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 20:52:56.446 [main] INFO 
+				o.s.t.w.s.TestDispatcherServlet.initServletBean - Completed initialization in 4750 ms
+13-01-2022 20:53:02.035 [main] INFO 
+				c.P.c.TransactionControllerTest.logStarted - Started TransactionControllerTest in 341.487 seconds (JVM running for 342.804)
+13-01-2022 20:54:45.549 [main] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.method.annotation.ModelAttributeMethodProcessor$1: org.springframework.validation.BeanPropertyBindingResult: 1 errors<LF>Field error in object 'PayABuddy' on field 'amount': rejected value [null]; codes [typeMismatch.PayABuddy.amount,typeMismatch.amount,typeMismatch.double,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [PayABuddy.amount,amount]; arguments []; default message [amount]]; default message [Failed to convert value of type 'null' to required type 'double'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [double] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type]]
+13-01-2022 21:10:04.685 [RMI TCP Connection(42)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 21:10:04.827 [RMI TCP Connection(42)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:10:04.829 [RMI TCP Connection(42)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 21:10:04.834 [RMI TCP Connection(42)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 21:17:33.403 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 16048 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 21:17:33.405 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 21:17:34.112 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 21:17:34.171 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces.
+13-01-2022 21:17:34.700 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 21:17:34.709 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:17:34.709 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 21:17:34.709 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 21:17:34.797 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 21:17:34.797 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1358 ms
+13-01-2022 21:17:35.054 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 21:17:35.182 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 21:17:35.294 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 21:17:35.348 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 21:17:35.501 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 21:17:35.618 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 21:17:36.233 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 21:17:36.240 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:17:36.287 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 21:17:36.752 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 21:17:36.984 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d160161, org.springframework.security.web.context.SecurityContextPersistenceFilter@52a23575, org.springframework.security.web.header.HeaderWriterFilter@73eaae1e, org.springframework.security.web.authentication.logout.LogoutFilter@1f3310fc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1d86b636, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bb661e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44b82007, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c9e7af2, org.springframework.security.web.session.SessionManagementFilter@2ae0eb98, org.springframework.security.web.access.ExceptionTranslationFilter@1e6f7c25, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a0f1f9d]
+13-01-2022 21:17:37.312 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 21:17:37.810 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 21:17:37.851 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:17:37.866 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 21:17:37.877 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.738 seconds (JVM running for 5.481)
+13-01-2022 21:17:39.360 [RMI TCP Connection(1)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 21:17:39.361 [RMI TCP Connection(1)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 21:17:39.362 [RMI TCP Connection(1)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 21:17:47.084 [http-nio-8080-exec-6] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 21:17:47.292 [http-nio-8080-exec-6] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [133] milliseconds.
+13-01-2022 21:17:48.164 [http-nio-8080-exec-1] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+13-01-2022 21:19:22.724 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 21:19:22.866 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:19:22.869 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 21:19:22.878 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 21:19:25.647 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 12016 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 21:19:25.649 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 21:19:26.358 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 21:19:26.417 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+13-01-2022 21:19:26.945 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 21:19:26.955 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:19:26.956 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 21:19:26.956 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 21:19:27.047 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 21:19:27.047 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1368 ms
+13-01-2022 21:19:27.304 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 21:19:27.432 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 21:19:27.546 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 21:19:27.599 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 21:19:27.741 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 21:19:27.859 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 21:19:28.486 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 21:19:28.493 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:19:28.537 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 21:19:29.021 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 21:19:29.254 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4df8443f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f38545a, org.springframework.security.web.header.HeaderWriterFilter@90b9695, org.springframework.security.web.authentication.logout.LogoutFilter@1ed0128b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5e97da56, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59043128, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79d8075c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79aa675b, org.springframework.security.web.session.SessionManagementFilter@1de6f29d, org.springframework.security.web.access.ExceptionTranslationFilter@276eafad, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@650a0b50]
+13-01-2022 21:19:29.580 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 21:19:30.084 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 21:19:30.120 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:19:30.135 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 21:19:30.145 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.75 seconds (JVM running for 5.503)
+13-01-2022 21:19:31.848 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 21:19:31.849 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 21:19:31.850 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 21:25:19.990 [RMI TCP Connection(17)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 21:25:20.120 [RMI TCP Connection(17)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:25:20.122 [RMI TCP Connection(17)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 21:25:20.132 [RMI TCP Connection(17)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 21:25:22.824 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 15344 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 21:25:22.827 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 21:25:23.557 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 21:25:23.616 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+13-01-2022 21:25:24.130 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 21:25:24.138 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:25:24.139 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 21:25:24.139 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 21:25:24.228 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 21:25:24.229 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1368 ms
+13-01-2022 21:25:24.481 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 21:25:24.611 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 21:25:24.726 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 21:25:24.779 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 21:25:24.923 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 21:25:25.040 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 21:25:25.674 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 21:25:25.681 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:25:25.727 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 21:25:26.202 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 21:25:26.436 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74120029, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e6f7c25, org.springframework.security.web.header.HeaderWriterFilter@59043128, org.springframework.security.web.authentication.logout.LogoutFilter@193d73d3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4830c979, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@770c3ca2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@481eb705, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3031d9e9, org.springframework.security.web.session.SessionManagementFilter@7c55e559, org.springframework.security.web.access.ExceptionTranslationFilter@488c608a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6195ce27]
+13-01-2022 21:25:26.770 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 21:25:27.268 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 21:25:27.307 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:25:27.322 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 21:25:27.333 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.766 seconds (JVM running for 5.529)
+13-01-2022 21:25:28.688 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 21:25:28.689 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 21:25:28.690 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 21:25:40.232 [http-nio-8080-exec-6] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 21:25:40.439 [http-nio-8080-exec-6] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [131] milliseconds.
+13-01-2022 21:25:41.527 [http-nio-8080-exec-1] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+13-01-2022 21:26:14.625 [RMI TCP Connection(10)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 21:26:14.757 [RMI TCP Connection(10)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:26:14.759 [RMI TCP Connection(10)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 21:26:14.768 [RMI TCP Connection(10)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 21:26:17.473 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 6736 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 21:26:17.475 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 21:26:18.207 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 21:26:18.266 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 50 ms. Found 5 JPA repository interfaces.
+13-01-2022 21:26:18.786 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 21:26:18.795 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:26:18.795 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 21:26:18.795 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 21:26:18.884 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 21:26:18.885 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1371 ms
+13-01-2022 21:26:19.149 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 21:26:19.280 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 21:26:19.396 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 21:26:19.453 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 21:26:19.600 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 21:26:19.715 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 21:26:20.352 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 21:26:20.360 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:26:20.409 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 21:26:20.920 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 21:26:21.158 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f650dae, org.springframework.security.web.context.SecurityContextPersistenceFilter@55e02661, org.springframework.security.web.header.HeaderWriterFilter@7c4697fc, org.springframework.security.web.authentication.logout.LogoutFilter@18fcfe7e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@18356d9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d03cdc7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@420068a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4df8443f, org.springframework.security.web.session.SessionManagementFilter@55d776ac, org.springframework.security.web.access.ExceptionTranslationFilter@76d220eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7641c4e7]
+13-01-2022 21:26:21.490 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 21:26:21.987 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 21:26:22.023 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:26:22.039 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+13-01-2022 21:26:22.050 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.835 seconds (JVM running for 5.6)
+13-01-2022 21:26:23.958 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13-01-2022 21:26:23.959 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+13-01-2022 21:26:23.960 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+13-01-2022 21:26:34.775 [http-nio-8080-exec-6] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: 
+13-01-2022 21:26:34.982 [http-nio-8080-exec-6] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [131] milliseconds.
+13-01-2022 21:26:35.909 [http-nio-8080-exec-2] WARN 
+				o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+13-01-2022 21:30:00.432 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 12276 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+13-01-2022 21:30:00.435 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-01-2022 21:30:01.278 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+13-01-2022 21:30:01.343 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 57 ms. Found 5 JPA repository interfaces.
+13-01-2022 21:30:01.929 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+13-01-2022 21:30:01.939 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:30:01.939 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+13-01-2022 21:30:01.939 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+13-01-2022 21:30:02.033 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+13-01-2022 21:30:02.034 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1563 ms
+13-01-2022 21:30:02.341 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+13-01-2022 21:30:02.507 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+13-01-2022 21:30:02.633 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-01-2022 21:30:02.690 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+13-01-2022 21:30:02.846 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+13-01-2022 21:30:02.974 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+13-01-2022 21:30:03.683 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-01-2022 21:30:03.692 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:30:03.752 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-01-2022 21:30:04.300 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+13-01-2022 21:31:20.975 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f0deba2, org.springframework.security.web.context.SecurityContextPersistenceFilter@73ccdfc1, org.springframework.security.web.header.HeaderWriterFilter@8a0a1d1, org.springframework.security.web.authentication.logout.LogoutFilter@50e32998, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5bb24266, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@486d1868, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17a89cb1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ddf9fd, org.springframework.security.web.session.SessionManagementFilter@173da924, org.springframework.security.web.access.ExceptionTranslationFilter@16bbb59c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@541c76fd]
+13-01-2022 21:32:13.331 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+13-01-2022 21:33:29.488 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+13-01-2022 21:33:37.094 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:33:37.237 [main] WARN 
+				o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+13-01-2022 21:33:38.472 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:33:38.751 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 21:33:39.106 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+13-01-2022 21:33:39.386 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Pausing ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:33:39.392 [main] INFO 
+				o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+13-01-2022 21:33:39.549 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Stopping ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:33:39.557 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]
+13-01-2022 21:33:42.072 [main] INFO 
+				o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+13-01-2022 21:33:43.033 [main] ERROR
+				o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+13-01-2022 21:34:13.933 [RMI TCP Connection(19)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+13-01-2022 21:34:14.086 [RMI TCP Connection(19)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+13-01-2022 21:34:14.089 [RMI TCP Connection(19)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+13-01-2022 21:34:14.101 [RMI TCP Connection(19)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.

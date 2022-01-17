@@ -14,6 +14,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 
@@ -21,11 +24,11 @@ import javax.persistence.JoinTable;
 @Entity
 @Table (name="user")
 
-public class User {
+public class User implements UserDetails {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private double id;
+	private int id;
 	
 	@Column (name = "username")
 	private String username;
@@ -73,11 +76,11 @@ public class User {
 		
 	}
 
-	public double getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(double id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -143,6 +146,36 @@ public class User {
 
 	public void setBalance(Collection<Balance> balance) {
 		this.balance = balance;
+	}
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 	
 } 

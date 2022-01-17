@@ -17,19 +17,19 @@ public class Transaction {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private double id;
+	private int id;
 	
 	@Column
 	private Timestamp dateTime;
 	
 	@Column (name = "transaction_amount")
-	private double amount;
+	private float amount;
 	
 	@ManyToOne
 	@JoinColumn (name = "balance_id")
 	private Balance balance;
 
-	public Transaction( Timestamp dateTime, double amount, Balance balance) {
+	public Transaction( Timestamp dateTime, float amount, Balance balance) {
 		super();
 		
 		this.dateTime = dateTime;
@@ -41,11 +41,11 @@ public class Transaction {
 		super();
 	}
 
-	public double getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(double id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -58,11 +58,11 @@ public class Transaction {
 		this.dateTime = dateTime;
 	}
 
-	public double getAmount() {
+	public float getAmount() {
 		return amount;
 	}
 
-	public void setAmount(double amount) {
+	public void setAmount(float amount) {
 		this.amount = amount;
 	}
 
