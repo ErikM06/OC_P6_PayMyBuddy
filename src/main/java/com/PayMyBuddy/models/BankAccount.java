@@ -1,24 +1,31 @@
 package com.PayMyBuddy.models;
 
-import java.util.Collection;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table (name = "Bank_Account")
 public class BankAccount {
 	
+	@Id
+	@GeneratedValue (strategy = GenerationType.AUTO)
 	private int id;
 	
 	private String bankAccountNumber;
 	
-	private Collection<User> userid;
+	@ManyToOne
+	@JoinColumn (name = "user_id")
+	private User userId;
 
-	public BankAccount(String bankAccountNumber, Collection<User> userid) {
+	public BankAccount(String bankAccountNumber, User userId) {
 		super();
 		this.bankAccountNumber = bankAccountNumber;
-		this.userid = userid;
+		this.userId = userId;
 	}
 	public BankAccount() {
 		super();
@@ -40,12 +47,12 @@ public class BankAccount {
 		this.bankAccountNumber = bankAccountNumber;
 	}
 
-	public Collection<User> getUserid() {
-		return userid;
+	public User getUserid() {
+		return userId;
 	}
 
-	public void setUserid(Collection<User> userid) {
-		this.userid = userid;
+	public void setUserid(User userid) {
+		this.userId = userid;
 	}
 
 }

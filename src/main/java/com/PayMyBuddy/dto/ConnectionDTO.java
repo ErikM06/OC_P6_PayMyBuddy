@@ -11,10 +11,6 @@ public class ConnectionDTO {
 	
 	private String note;
 	
-	private Timestamp createTime;
-	
-	private int userId;
-	
 	private int connectionId;
 
 	public ConnectionDTO(String username, String note) {
@@ -39,21 +35,6 @@ public class ConnectionDTO {
 		this.note = note;
 	}
 
-	public Timestamp getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Timestamp createTime) {
-		this.createTime = createTime;
-	}
-
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
 
 	public int getConnectionId() {
 		return connectionId;

@@ -62,7 +62,7 @@ public class User implements UserDetails {
 	
 	
 	public User(String username, String email, String password, List<Role> roles, Timestamp createTime,
-			boolean enable) {
+			boolean enable, Collection<Balance> balance) {
 		super();
 		this.username = username;
 		this.email = email;
@@ -70,6 +70,7 @@ public class User implements UserDetails {
 		this.roles = roles;
 		this.createTime = createTime;
 		this.enable = enable;
+		this.balance = balance;
 	}
 
 	public User () {

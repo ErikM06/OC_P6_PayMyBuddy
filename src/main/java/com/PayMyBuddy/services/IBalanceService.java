@@ -6,5 +6,7 @@ import com.PayMyBuddy.models.User;
 public interface IBalanceService {
 	
 	public Balance getBalanceByUser(User user);
+	
+	public Balance initBalance (User user);
 
 }

@@ -18,6 +18,7 @@ import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.BalanceRepository;
 import com.PayMyBuddy.repo.TransactionRepository;
 import com.PayMyBuddy.repo.UserRepository;
+import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
 @Transactional
@@ -33,18 +34,14 @@ public class TransactionService {
 
 	@Autowired
 	BalanceRepository balanceRepository;
+	
+	@Autowired
+	GetCurrentUser currentUser;
 
-	public String getCurrentUser() {
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
-		String username = ((User) principal).getUsername();
-		logger.info("username is: {}",username);
-		return username;
-	}
-
+	
 	public Transaction paymentToConnection(PaymentDTO paymentDTO) throws NotEnoughtBalanceException {
 
-		User userAccount = userRepository.findUserByUsername(getCurrentUser());
+		User userAccount = userRepository.findUserByUsername(currentUser.getCurrentUser());
 		User connectionAccout = userRepository.findUserByUsername(paymentDTO.getConnectionUsername());
 		Balance userBalance = balanceRepository.getBalanceByUser(userAccount);
 		Balance connectionBalance = balanceRepository.getBalanceByUser(connectionAccout);

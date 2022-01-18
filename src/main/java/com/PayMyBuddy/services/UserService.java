@@ -33,6 +33,9 @@ public class UserService implements IUserService {
 	@Autowired
 	private RoleRepository roleRepo;
 
+	@Autowired
+	private IBalanceService iBalanceService;
+
 	// method from Spring doc to avoid circular references error
 
 	public User registerNewUserAccount(UserDTO userDto) throws UserAlreadyExistException {
@@ -40,24 +43,24 @@ public class UserService implements IUserService {
 			logger.info("ok");
 			throw new UserAlreadyExistException("user already exist " + userDto.getEmail());
 		}
-
-		List<Role> userRoleLs = new ArrayList<>();
-		userRoleLs.add(roleRepo.findRoleByRoleName("USER"));
-		
-		
-
 		User user = new User();
+		List<Role> userRoleLs = new ArrayList<>();
+		List<Balance> userBalance = new ArrayList<>();
+
 		user.setUsername(userDto.getUsername());
 		user.setPassword(passwordEncoder().encode(userDto.getPassword()));
 		user.setEmail(userDto.getEmail());
 		user.setCreateTime(new Timestamp(System.currentTimeMillis()));
 		user.setEnable(true);
+		userRoleLs.add(roleRepo.findRoleByRoleName("USER"));
+		userBalance.add(iBalanceService.initBalance(user));
 		user.setRoles(userRoleLs);
+		user.setBalance(userBalance);
 		logger.info("UserService user is: " + user);
 		return userRepo.save(user);
 	}
 
-    // Check if email already exist
+	// Check if email already exist
 	private boolean emailExists(String email) {
 		logger.info(email);
 		return userRepo.findByEmail(email) != null;
@@ -65,6 +68,11 @@ public class UserService implements IUserService {
 
 	public User findByUsername(String username) {
 		return userRepo.findUserByUsername(username);
+	}
+	
+	public void deleteUser (String username) {
+		User user = findByUsername(username);
+		userRepo.delete(user);
 	}
 
 	@Bean

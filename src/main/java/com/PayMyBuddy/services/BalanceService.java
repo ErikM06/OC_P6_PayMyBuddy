@@ -27,5 +27,14 @@ public class BalanceService implements IBalanceService {
 		return userBalance;
 		
 	}
+	
+	public Balance initBalance (User user) {
+		
+		Balance initUserBalance = new Balance();
+		initUserBalance.setuser(user);
+		initUserBalance.setAmount(0);
+		
+		return initUserBalance;
+	}
 
 }
