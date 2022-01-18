@@ -29,8 +29,11 @@ public class Balance {
 	@JoinColumn (name = "user_id")
 	private User user;
 	
-	@OneToMany (mappedBy = "balance", fetch = FetchType.LAZY)
-	private Collection<Transaction> transactions;
+	@OneToMany (mappedBy = "userBalance", fetch = FetchType.LAZY)
+	private Collection<Transaction> transactionsUser;
+	
+	@OneToMany (mappedBy = "connectionBalance", fetch = FetchType.LAZY)
+	private Collection<Transaction> transactionsConnection;
 
 	public Balance(float amount, User user) {
 		super();

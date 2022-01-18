@@ -26,15 +26,20 @@ public class Transaction {
 	private float amount;
 	
 	@ManyToOne
-	@JoinColumn (name = "balance_id")
-	private Balance balance;
+	@JoinColumn (name = "user_balance_id")
+	private Balance userBalance;
+	
+	@ManyToOne
+	@JoinColumn (name ="connection_balance_id")
+	private Balance connectionBalance;
 
-	public Transaction( Timestamp dateTime, float amount, Balance balance) {
+	public Transaction( Timestamp dateTime, float amount, Balance userBalance, Balance connectionBalance ) {
 		super();
 		
 		this.dateTime = dateTime;
 		this.amount = amount;
-		this.balance = balance;
+		this.userBalance = userBalance;
+		this.connectionBalance = connectionBalance;
 	}
 	
 	public Transaction() {
@@ -66,12 +71,20 @@ public class Transaction {
 		this.amount = amount;
 	}
 
-	public Balance getBalance() {
-		return balance;
+	public Balance getUserBalance() {
+		return userBalance;
 	}
 
-	public void setBalance(Balance balance) {
-		this.balance = balance;
+	public void setUserBalance(Balance userBalance) {
+		this.userBalance = userBalance;
+	}
+
+	public Balance getConnectionBalance() {
+		return connectionBalance;
+	}
+
+	public void setConnectionBalance(Balance connectionBalance) {
+		this.connectionBalance = connectionBalance;
 	}
 	
 	

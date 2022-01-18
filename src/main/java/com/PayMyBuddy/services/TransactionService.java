@@ -64,7 +64,8 @@ public class TransactionService {
 
 			userBalance.setAmount(userNewBalanceAmount);
 			connectionBalance.setAmount(connectionNewBalanceAmount);
-			transaction.setBalance(userBalance);
+			transaction.setUserBalance(userBalance);
+			transaction.setConnectionBalance(connectionBalance);
 			balanceRepository.save(userBalance);
 			balanceRepository.save(connectionBalance);
 			transactionRepository.save(transaction);
