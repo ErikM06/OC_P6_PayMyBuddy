@@ -46,8 +46,8 @@ public class TransactionService {
 	public Transaction paymentToConnection(PaymentDTO paymentDTO)
 			throws NotEnoughtBalanceException, NotAConnectionException {
 
-		User userAccount = userService.findByUsername(currentUser.getCurrentUser());
-		User connectionAccount = userService.findByUsername(paymentDTO.getConnectionUsername());
+		User userAccount = userService.findByEmail(currentUser.getCurrentUser());
+		User connectionAccount = userService.findByEmail(paymentDTO.getConnectionEmail());
 		Transaction transaction = new Transaction();
 		/* if (connectionService.assertConnection(userAccount.getId(), connectionAccount.getId()) == false) {
 			throw new NotAConnectionException();

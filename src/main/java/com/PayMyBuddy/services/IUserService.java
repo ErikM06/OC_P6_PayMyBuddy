@@ -8,7 +8,7 @@ public interface IUserService {
 	
 	public User registerNewUserAccount(UserDTO userDto) throws UserAlreadyExistException, Exception;
 	
-	public User findByUsername(String username);
+	public User findByEmail(String username);
 	
 	public void deleteUser (String username);
 	

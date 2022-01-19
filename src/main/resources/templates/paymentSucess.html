@@ -15,8 +15,8 @@
             <form th:action="@{/user/operation/payment}" th:object="${transaction}" method="post">
                 <div class="form-row">
                     <div class="col-md-6 form-group">
-                        <label>buddy's username</label>
-                        <input type="text" class="form-control" th:field="*{connectionUsername}">
+                        <label>buddy's email</label>
+                        <input type="text" class="form-control" th:field="*{connectionEmail}">
                     </div>
                     <div class="col-md-6 form-group">
                         <label>choose the amount</label>

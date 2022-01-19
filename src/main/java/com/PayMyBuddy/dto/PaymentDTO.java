@@ -7,12 +7,12 @@ public class PaymentDTO {
 
 	float amount;
 
-	String connectionUsername;
+	String connectionEmail;
 
-	public PaymentDTO(String connectionUsername, float amount) {
+	public PaymentDTO(String connectionEmail, float amount) {
 		super();
 		this.amount = amount;
-		this.connectionUsername = connectionUsername;
+		this.connectionEmail = connectionEmail;
 	}
 	public PaymentDTO () {
 		super();
@@ -26,12 +26,12 @@ public class PaymentDTO {
 		this.amount = amount;
 	}
 
-	public String getConnectionUsername() {
-		return connectionUsername;
+	public String getConnectionEmail() {
+		return connectionEmail;
 	}
 
-	public void setConnectionUsername (String connectionUsername) {
-		this.connectionUsername = connectionUsername;
+	public void setConnectionUsername (String connectionEmail) {
+		this.connectionEmail = connectionEmail;
 	}
 
 }

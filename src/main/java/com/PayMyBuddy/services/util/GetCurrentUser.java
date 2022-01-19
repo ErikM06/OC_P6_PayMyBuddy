@@ -16,9 +16,9 @@ public class GetCurrentUser {
 	public String getCurrentUser() {
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
-		String username = ((User) principal).getUsername();
-		logger.info("username is: {}",username);
-		return username;
+		String email = ((User) principal).getEmail();
+		logger.info("username is: {}",email);
+		return email;
 	}
 
 

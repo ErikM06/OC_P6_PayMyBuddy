@@ -1,21 +1,17 @@
 package com.PayMyBuddy.dto;
 
-import java.sql.Timestamp;
-
-import org.springframework.stereotype.Component;
-
 
 public class ConnectionDTO {
 	
-	private String username;
+	private String email;
 	
 	private String note;
 	
 	private int connectionId;
 
-	public ConnectionDTO(String username, String note) {
+	public ConnectionDTO(String email, String note) {
 		super();
-		this.username = username;
+		this.email = email;
 		this.note = note;
 	}
 
@@ -23,12 +19,12 @@ public class ConnectionDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getUsername() {
-		return username;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getNote() {

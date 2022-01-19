@@ -63,15 +63,15 @@ public class UserService implements IUserService {
 	// Check if email already exist
 	private boolean emailExists(String email) {
 		logger.info(email);
-		return userRepo.findByEmail(email) != null;
+		return userRepo.findEmail(email) != null;
 	}
 
-	public User findByUsername(String username) {
-		return userRepo.findUserByUsername(username);
+	public User findByEmail(String email) {
+		return userRepo.findUserByEmail(email);
 	}
 	
 	public void deleteUser (String username) {
-		User user = findByUsername(username);
+		User user = findByEmail(username);
 		userRepo.deleteById(user.getId());
 		logger.info(username, "deleted");
 	}

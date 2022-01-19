@@ -29,8 +29,8 @@ public class ConnectionService  implements IConnectionService{
 
 		Connections connection = new Connections();
 
-		connection.setUser(iUserService.findByUsername(currentUser.getCurrentUser()));
-		connection.setConnection(iUserService.findByUsername(connectionDTO.getUsername()));
+		connection.setUser(iUserService.findByEmail(currentUser.getCurrentUser()));
+		connection.setConnection(iUserService.findByEmail(connectionDTO.getUsername()));
 		connection.setCreateTime(new Timestamp(System.currentTimeMillis()));
 		connection.setNote(connectionDTO.getNote());
 		
@@ -41,14 +41,14 @@ public class ConnectionService  implements IConnectionService{
 	
 	public void deleteConnection (String connectionUsername) throws UsernameNotFoundException {
 		String currrentUsername = currentUser.getCurrentUser();
-		User currentUser = iUserService.findByUsername(currrentUsername);
+		User currentUser = iUserService.findByEmail(currrentUsername);
 		Connections connection = connectionRepository.findByUsername(connectionUsername, currentUser.getId());
 		connectionRepository.delete(connection);
 	}
 	
 	public List<Connections> getAllConnections () {
 		String currrentUsername = currentUser.getCurrentUser();
-		User currentUser = iUserService.findByUsername(currrentUsername);
+		User currentUser = iUserService.findByEmail(currrentUsername);
 		List <Connections> allConnectionFromCurrentUser = connectionRepository
 				.getAllConnectionsFromCurrentUser(currentUser.getId());
 		return allConnectionFromCurrentUser;
