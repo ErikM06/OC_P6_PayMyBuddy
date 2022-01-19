@@ -30,7 +30,7 @@ public class ConnectionService  implements IConnectionService{
 		Connections connection = new Connections();
 
 		connection.setUser(iUserService.findByEmail(currentUser.getCurrentUser()));
-		connection.setConnection(iUserService.findByEmail(connectionDTO.getUsername()));
+		connection.setConnection(iUserService.findByEmail(connectionDTO.getEmail()));
 		connection.setCreateTime(new Timestamp(System.currentTimeMillis()));
 		connection.setNote(connectionDTO.getNote());
 		

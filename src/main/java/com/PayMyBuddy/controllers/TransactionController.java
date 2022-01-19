@@ -54,14 +54,22 @@ public class TransactionController {
 			
 			Transaction transaction = transactionService.paymentToConnection(paymentDTO);
 		} catch (NotEnoughtBalanceException e) {
-			logger.error(e.getMessage());
+			logger.error(e.getMessage(), errors);
 			return new ModelAndView("paymentFailed");
 		} catch (NotAConnectionException e) {
-			logger.error(e.getMessage());
+			logger.error(e.getMessage(), errors);
 			return new ModelAndView("paymentFailed");
 		}
 
 		return new ModelAndView("paymentSucess", "transaction", paymentDTO);
+	}
+	
+
+	@GetMapping(value ="/user/operation/self_payment")
+	private String selfPayment (Model model,@RequestParam (value ="error", required = false) String error) {
+		model.addAttribute("selfPayment", new PaymentDTO());
+	
+		return "selfPayment";
 	}
 
 }

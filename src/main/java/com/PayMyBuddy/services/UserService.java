@@ -75,6 +75,10 @@ public class UserService implements IUserService {
 		userRepo.deleteById(user.getId());
 		logger.info(username, "deleted");
 	}
+	public User findUserByUsername (String username) {
+		return	userRepo.findByUsername(username);
+		
+	}
 	
 
 	@Bean

@@ -24,7 +24,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 	Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
 	
-	private final UserService userService;
+	private final IUserService userService;
 	
 
 	@Autowired
@@ -34,7 +34,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userService.findByEmail(username);
+		User user = userService.findUserByUsername(username);
 		logger.info("loading User by username: ", username);
 		if (user == null) {
 			throw new UsernameNotFoundException("user with "+username+" not found!");

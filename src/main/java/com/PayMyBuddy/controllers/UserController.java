@@ -1,5 +1,7 @@
 package com.PayMyBuddy.controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -17,12 +19,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.PayMyBuddy.dto.BankAccountDTO;
 import com.PayMyBuddy.dto.ConnectionDTO;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
+import com.PayMyBuddy.models.BankAccount;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.services.IUserService;
 import com.PayMyBuddy.services.util.SecurityService;
+
+
+
+import com.PayMyBuddy.services.IBankAccountService;
 import com.PayMyBuddy.services.IConnectionService;
 
 @Controller
@@ -39,6 +47,9 @@ public class UserController {
 
 	@Autowired
 	private IConnectionService IConnectionService;
+	
+	@Autowired
+	private IBankAccountService bankAccountService;
 
 	@GetMapping(value = "/admin/delete_user")
 	private void deleteUserByAdmin(@RequestParam (value ="user") String username) {
@@ -126,6 +137,33 @@ public class UserController {
 		}
 		return new ModelAndView("connectionDeleted", "connection", connection);
 
+	}
+	
+	@GetMapping(value ="/user/get_bank_account")
+	private ModelAndView getAddBankAccount (Model model, @RequestParam (value ="error", required = false) String error) {
+		List<BankAccount> bankAccountls = bankAccountService.getAllBankAccountFromUser();
+		model.addAttribute("bankAccountls",bankAccountls);
+		model.addAttribute("bankAccount", new BankAccountDTO());
+		if (null != error && error.equalsIgnoreCase("true")) {
+			model.addAttribute("Error", "Unable to launch /user/add_bank_account");
+		}
+		return new ModelAndView("BankAccount" );
+	}
+	
+	@PostMapping(value="/user/add_bank_account")
+	private ModelAndView addBankAccount (@ModelAttribute("bank_account") BankAccountDTO bankAccountDTO, 
+			HttpServletRequest request, Errors errors) {
+		bankAccountService.addBankAccount(bankAccountDTO.getBankAccountNumber());
+		return new ModelAndView("home", "bankaccount", bankAccountDTO);
+	}
+	
+	@GetMapping(value ="/user/delete_bank_account")
+	private ModelAndView deleteBankAccount (@ModelAttribute("bankAccount") BankAccountDTO bankAccountDTO,
+			HttpServletRequest request, Errors errors) throws Exception {
+	
+		bankAccountService.deleteBankAccount(bankAccountDTO.getBankAccountNumber());
+
+		return new ModelAndView("BankAccount", "bankAccount", bankAccountDTO);
 	}
 
 	@GetMapping(value = "/user/home")

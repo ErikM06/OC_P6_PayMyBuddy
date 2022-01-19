@@ -10,6 +10,8 @@ public interface IUserService {
 	
 	public User findByEmail(String username);
 	
+	public User findUserByUsername (String username);
+	
 	public void deleteUser (String username);
 	
 	
