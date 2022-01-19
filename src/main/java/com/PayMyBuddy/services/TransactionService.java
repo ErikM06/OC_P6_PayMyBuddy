@@ -11,8 +11,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import com.PayMyBuddy.dto.PaymentDTO;
+import com.PayMyBuddy.exceptions.NotAConnectionException;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
 import com.PayMyBuddy.models.Balance;
+import com.PayMyBuddy.models.Connections;
 import com.PayMyBuddy.models.Transaction;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.BalanceRepository;
@@ -30,44 +32,53 @@ public class TransactionService {
 	TransactionRepository transactionRepository;
 
 	@Autowired
-	UserRepository userRepository;
+	IUserService userService;
 
 	@Autowired
 	BalanceRepository balanceRepository;
-	
+
+	@Autowired
+	IConnectionService connectionService;
+
 	@Autowired
 	GetCurrentUser currentUser;
 
-	
-	public Transaction paymentToConnection(PaymentDTO paymentDTO) throws NotEnoughtBalanceException {
+	public Transaction paymentToConnection(PaymentDTO paymentDTO)
+			throws NotEnoughtBalanceException, NotAConnectionException {
 
-		User userAccount = userRepository.findUserByUsername(currentUser.getCurrentUser());
-		User connectionAccout = userRepository.findUserByUsername(paymentDTO.getConnectionUsername());
-		Balance userBalance = balanceRepository.getBalanceByUser(userAccount);
-		Balance connectionBalance = balanceRepository.getBalanceByUser(connectionAccout);
+		User userAccount = userService.findByUsername(currentUser.getCurrentUser());
+		User connectionAccount = userService.findByUsername(paymentDTO.getConnectionUsername());
 		Transaction transaction = new Transaction();
-		logger.info("current User for transaction is : {}", userAccount.toString());
-		System.out.println(userAccount.toString());
-		logger.info("current connection for transaction is : {}", connectionAccout.toString());
+		/* if (connectionService.assertConnection(userAccount.getId(), connectionAccount.getId()) == false) {
+			throw new NotAConnectionException();
+		} else { */
+			Balance userBalance = balanceRepository.getBalanceByUser(userAccount);
+			Balance connectionBalance = balanceRepository.getBalanceByUser(connectionAccount);
 
-		float userNewBalanceAmount = userBalance.getAmount() - (paymentDTO.getAmount());
-		if (userNewBalanceAmount < 0) {
-			throw new NotEnoughtBalanceException();
-		} else {
-			float connectionNewBalanceAmount = connectionBalance.getAmount() + (paymentDTO.getAmount());
+			logger.info("current User for transaction is : {}", userAccount.toString());
+			System.out.println(userAccount.toString());
+			logger.info("current connection for transaction is : {}", connectionAccount.toString());
 
-			transaction.setAmount(paymentDTO.getAmount());
-			transaction.setDateTime(new Timestamp(System.currentTimeMillis()));
+			float userNewBalanceAmount = userBalance.getAmount() - (paymentDTO.getAmount());
+			if (userNewBalanceAmount < 0) {
+				throw new NotEnoughtBalanceException();
+			} else {
+				float connectionNewBalanceAmount = connectionBalance.getAmount() + (paymentDTO.getAmount());
 
-			userBalance.setAmount(userNewBalanceAmount);
-			connectionBalance.setAmount(connectionNewBalanceAmount);
-			transaction.setUserBalance(userBalance);
-			transaction.setConnectionBalance(connectionBalance);
-			balanceRepository.save(userBalance);
-			balanceRepository.save(connectionBalance);
-			transactionRepository.save(transaction);
-			logger.info("transaction is :", transaction.toString());
-			return transaction;
+				transaction.setAmount(paymentDTO.getAmount());
+				transaction.setDateTime(new Timestamp(System.currentTimeMillis()));
+
+				userBalance.setAmount(userNewBalanceAmount);
+				connectionBalance.setAmount(connectionNewBalanceAmount);
+				transaction.setUserBalance(userBalance);
+				transaction.setConnectionBalance(connectionBalance);
+				balanceRepository.save(userBalance);
+				balanceRepository.save(connectionBalance);
+				transactionRepository.save(transaction);
+				logger.info("transaction is :", transaction.toString());
+
+				return transaction;
+			//}
 		}
 	}
 

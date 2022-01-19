@@ -19,6 +19,10 @@ public class ConnectionDTO {
 		this.note = note;
 	}
 
+	public ConnectionDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getUsername() {
 		return username;
 	}

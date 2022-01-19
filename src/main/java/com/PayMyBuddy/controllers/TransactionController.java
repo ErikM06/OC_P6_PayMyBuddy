@@ -1,5 +1,7 @@
 package com.PayMyBuddy.controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -15,8 +17,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.PayMyBuddy.dto.PaymentDTO;
+import com.PayMyBuddy.exceptions.NotAConnectionException;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
+import com.PayMyBuddy.models.Connections;
 import com.PayMyBuddy.models.Transaction;
+import com.PayMyBuddy.services.IConnectionService;
 import com.PayMyBuddy.services.TransactionService;
 
 @Controller
@@ -26,10 +31,15 @@ public class TransactionController {
 
 	@Autowired
 	private TransactionService transactionService;
+	
+	@Autowired
+	private IConnectionService iConnectionService;
 
 	@GetMapping(value = "/user/operation/payment")
 	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error) {
+		List<Connections> connections = iConnectionService.getAllConnections();
 		model.addAttribute("transaction", new PaymentDTO());
+		model.addAttribute("connections", connections);
 		if (null != error && error.equalsIgnoreCase("true")) {
 			model.addAttribute("Error", "Unable to launch /user/operation/payment");
 		}
@@ -44,6 +54,9 @@ public class TransactionController {
 			
 			Transaction transaction = transactionService.paymentToConnection(paymentDTO);
 		} catch (NotEnoughtBalanceException e) {
+			logger.error(e.getMessage());
+			return new ModelAndView("paymentFailed");
+		} catch (NotAConnectionException e) {
 			logger.error(e.getMessage());
 			return new ModelAndView("paymentFailed");
 		}

@@ -52,7 +52,7 @@ public class UserService implements IUserService {
 		user.setEmail(userDto.getEmail());
 		user.setCreateTime(new Timestamp(System.currentTimeMillis()));
 		user.setEnable(true);
-		userRoleLs.add(roleRepo.findRoleByRoleName("USER"));
+		userRoleLs.add(roleRepo.findRoleByRoleName("ROLE_USER"));
 		userBalance.add(iBalanceService.initBalance(user));
 		user.setRoles(userRoleLs);
 		user.setBalance(userBalance);
@@ -72,8 +72,10 @@ public class UserService implements IUserService {
 	
 	public void deleteUser (String username) {
 		User user = findByUsername(username);
-		userRepo.delete(user);
+		userRepo.deleteById(user.getId());
+		logger.info(username, "deleted");
 	}
+	
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {

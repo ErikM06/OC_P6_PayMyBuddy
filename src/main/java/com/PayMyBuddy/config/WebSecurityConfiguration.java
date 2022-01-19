@@ -41,14 +41,16 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 		auth.userDetailsService(username -> userDetailsService.loadUserByUsername(username))
 				// grant authorities here
 				.passwordEncoder(passwordEncoder);
-		auth.inMemoryAuthentication().withUser("admin").password(passwordEncoder.encode("rootroot")).roles("ADMIN");
+	
 
 	}
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/user/**").authenticated()
-				.antMatchers("/", "/register").anonymous().and()
+		http.authorizeRequests()
+				.antMatchers("/", "/register").anonymous()
+				.antMatchers("/user/**").authenticated()
+				.antMatchers("/admin/**").hasRole("ADMIN").and()
 				.formLogin().loginPage("/login").permitAll().loginProcessingUrl("/login")
 				.defaultSuccessUrl("/user/home").and().logout().invalidateHttpSession(true).permitAll()
 				.logoutSuccessUrl("/");

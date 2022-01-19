@@ -12,6 +12,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -39,11 +40,11 @@ public class UserController {
 	@Autowired
 	private IConnectionService IConnectionService;
 
-	@DeleteMapping(value = "/admin/deleteUser")
-	private void deleteUserByAdmin(String username) {
-
+	@GetMapping(value = "/admin/delete_user")
+	private void deleteUserByAdmin(@RequestParam (value ="user") String username) {
+		logger.info("in /admin/delete_user?user=");
 		IUserService.deleteUser(username);
-
+		
 	}
 
 	@GetMapping(value = "/login")
@@ -95,16 +96,23 @@ public class UserController {
 		}
 		return new ModelAndView("successRegister", "user", userDto);
 	}
-
-	@PostMapping("/user/addConnection")
-	private ModelAndView addConnection(@ModelAttribute("connections") ConnectionDTO connectionDto,
+	
+	@GetMapping ("/user/add_connection")
+	private ModelAndView getAddConnection (Model model, @RequestParam (value ="error", required = false) String error) {
+		model.addAttribute("connection", new ConnectionDTO());
+		return new ModelAndView("addConnection");
+		
+	}
+	
+	@PostMapping("/user/add_connection")
+	private ModelAndView addConnection(@ModelAttribute("connection") ConnectionDTO connectionDto,
 			HttpServletRequest request, Errors errors) {
 		try {
 			IConnectionService.addConnections(connectionDto);
 		} catch (UsernameNotFoundException e) {
 			logger.error(e.getMessage());
 		}
-		return new ModelAndView("successRegister", "connections", connectionDto);
+		return new ModelAndView("home", "connection", connectionDto);
 
 	}
 

@@ -1,6 +1,7 @@
 package com.PayMyBuddy.services;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -43,6 +44,19 @@ public class ConnectionService  implements IConnectionService{
 		User currentUser = iUserService.findByUsername(currrentUsername);
 		Connections connection = connectionRepository.findByUsername(connectionUsername, currentUser.getId());
 		connectionRepository.delete(connection);
+	}
+	
+	public List<Connections> getAllConnections () {
+		String currrentUsername = currentUser.getCurrentUser();
+		User currentUser = iUserService.findByUsername(currrentUsername);
+		List <Connections> allConnectionFromCurrentUser = connectionRepository
+				.getAllConnectionsFromCurrentUser(currentUser.getId());
+		return allConnectionFromCurrentUser;
+	}
+	
+	public boolean assertConnection (int userId, int connectionId) {
+		boolean assertConnection = connectionRepository.existsWithIds(userId, connectionId);
+		return assertConnection;
 	}
 
 }

@@ -30,7 +30,7 @@ public class Connections {
 	private User user;
 
 	@ManyToOne
-	@JoinColumn(name = "user_username")
+	@JoinColumn(name = "connection_id")
 	private User connection;
 
 	public Connections(Timestamp createTime, String note, User user, User connection) {

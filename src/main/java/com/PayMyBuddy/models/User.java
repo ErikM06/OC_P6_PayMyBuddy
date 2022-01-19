@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -26,6 +27,11 @@ import javax.persistence.JoinTable;
 
 public class User implements UserDetails {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int id;
@@ -44,13 +50,13 @@ public class User implements UserDetails {
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "roleId"))
     private List<Role> roles;
 	
-	@OneToMany( mappedBy = "user")
+	@OneToMany( mappedBy = "user", cascade = CascadeType.ALL)
 	private Collection<Connections> user;
 	
-	@OneToMany( mappedBy = "connection")
+	@OneToMany( mappedBy = "connection", cascade = CascadeType.ALL)
 	private Collection<Connections> connection;
 	
-	@OneToMany (mappedBy = "amount")
+	@OneToMany (mappedBy = "amount", cascade = CascadeType.ALL)
 	private Collection<Balance>balance;
 	
 	@Column (name ="create_time")

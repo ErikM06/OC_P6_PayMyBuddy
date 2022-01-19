@@ -19,8 +19,8 @@ public class InitRoles {
 		if (roleRepository.count() == 0) {
 			Role user = new Role();
 			Role admin = new Role();
-			user.setRoleName("USER");
-			admin.setRoleName("ADMIN");
+			user.setRoleName("ROLE_USER");
+			admin.setRoleName("ROLE_ADMIN");
 			roleRepository.save(user);
 			roleRepository.save(admin);
 
