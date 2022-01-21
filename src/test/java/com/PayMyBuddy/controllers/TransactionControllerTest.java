@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @AutoConfigureMockMvc
 class TransactionControllerTest {
 
-	@Autowired
+/*	@Autowired
 	private MockMvc mockMvc;
 
 	public static String asJsonString(final Object obj) {
@@ -44,6 +44,6 @@ class TransactionControllerTest {
 			e.printStackTrace();
 		}
 
-	}
+	} */
 
 }

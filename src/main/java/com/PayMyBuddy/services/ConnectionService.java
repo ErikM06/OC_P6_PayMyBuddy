@@ -17,7 +17,7 @@ import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
 public class ConnectionService  implements IConnectionService{
-
+	
 	@Autowired
 	ConnectionRepository connectionRepository;
 

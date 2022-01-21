@@ -68,7 +68,7 @@ public class UserService implements IUserService {
 		return userRepo.findEmail(email) != null;
 	}
 
-	public User findByEmail(String email) {
+	public User findByEmail(String email){
 		return userRepo.findUserByEmail(email);
 	}
 	

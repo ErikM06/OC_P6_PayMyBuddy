@@ -22,8 +22,6 @@ public class BalanceService implements IBalanceService {
 	@Autowired
 	BalanceRepository balanceRepository;
 	
-	@Autowired
-	IUserService userService;
 
 
 	public Balance getBalanceByUser(User user) {
@@ -50,6 +48,7 @@ public class BalanceService implements IBalanceService {
 	public Balance addToBalance (User user, float amount) throws NotEnoughtBalanceException {
 		Balance userBalance = getBalanceByUser(user);
 		Balance userNewBalance = new Balance();
+		
 		float userNewBalanceAmount = userBalance.getAmount() + (amount);
 		if (userBalance.getAmount() < 0) {
 			throw new NotEnoughtBalanceException();

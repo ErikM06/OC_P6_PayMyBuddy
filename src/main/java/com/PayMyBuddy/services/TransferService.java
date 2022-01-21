@@ -20,6 +20,7 @@ import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.Transfer;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.TransferRepository;
+import com.PayMyBuddy.services.util.DeductFromOperation;
 import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
@@ -43,28 +44,33 @@ public class TransferService implements ITransferService {
 	@Autowired
 	GetCurrentUser currentUser;
 
+	@Autowired
+	DeductFromOperation deductFromOperation;
+
 	public Transfer transferToConnection(TransferDTO transferDTO)
 			throws NotEnoughtBalanceException, NotAConnectionException {
-
-		User userAccount = userService.findByEmail(currentUser.getCurrentUser());
-		User connectionAccount = userService.findByEmail(transferDTO.getConnectionEmail());
+		User userAccount = new User();
+		User connectionAccount = new User();
+		
+		userAccount = userService.findByEmail(currentUser.getCurrentUser());
+		connectionAccount = userService.findByEmail(transferDTO.getConnectionEmail());
+		
 		Transfer transfer = new Transfer();
 		/*
 		 * if (connectionService.assertConnection(userAccount.getId(),
 		 * connectionAccount.getId()) == false) { throw new NotAConnectionException(); }
 		 * else {
 		 */
-
-		Balance userBalance = balanceService.takeFromBalance(userAccount, transferDTO.getAmount());
-		Balance connectionBalance = balanceService.addToBalance(connectionAccount, transferDTO.getAmount());
+		float deductedAmount = deductFromOperation.deductedFromTransferOperation(transferDTO.getAmount(), transfer);
+		Balance userBalance = balanceService.takeFromBalance(userAccount, deductedAmount);
+		Balance connectionBalance = balanceService.addToBalance(connectionAccount, deductedAmount);
 
 		logger.info("current User for transfer is : {}", userAccount.toString());
 		System.out.println(userAccount.toString());
 		logger.info("current connection for transfer is : {}", connectionAccount.toString());
 
-		transfer.setAmount(transferDTO.getAmount());
+		transfer.setAmount(deductedAmount);
 		transfer.setDateTime(new Timestamp(System.currentTimeMillis()));
-
 		transfer.setUserBalance(userBalance);
 		transfer.setConnectionBalance(connectionBalance);
 

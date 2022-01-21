@@ -16,6 +16,7 @@ import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.Payment;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.PaymentRepository;
+import com.PayMyBuddy.services.util.DeductFromOperation;
 import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
@@ -37,13 +38,17 @@ public class PaymentService implements IPaymentService {
 	
 	@Autowired
 	IBalanceService balanceService;
+	
+	@Autowired
+	DeductFromOperation deductFromOperation;
 
 	public Payment selfPaymentToAccount(String bankAccountNumber, float amount) throws NotEnoughtBalanceException {
 		User user = userService.findByEmail(currentUser.getCurrentUser());
 		Payment payment = new Payment();
-		Balance balance = balanceService.takeFromBalance(user, amount);
-		logger.info("user is : ",user, "amount is : ", amount);
-		payment.setAmount(amount);
+		float deductedAmount = deductFromOperation.deductedFromPaymentOperation(amount, payment);
+		Balance balance = balanceService.takeFromBalance(user, deductedAmount);
+		logger.info("user is : ",user, "amount is : ", deductedAmount);
+		payment.setAmount(deductedAmount);
 		payment.setUserBalance(balance);
 		payment.setDateTime(new Timestamp(System.currentTimeMillis()));
 		payment.setPaymentDirection("To bank account");
@@ -57,8 +62,9 @@ public class PaymentService implements IPaymentService {
 	public Payment selfPaymentToApp(String bankAccountNumber, float amount) throws NotEnoughtBalanceException {
 		User user = userService.findByEmail(currentUser.getCurrentUser());
 		Payment payment = new Payment();
-		Balance balance = balanceService.addToBalance(user, amount);
-		payment.setAmount(amount);
+		float deductedAmount = deductFromOperation.deductedFromPaymentOperation(amount, payment);
+		Balance balance = balanceService.addToBalance(user, deductedAmount);
+		payment.setAmount(deductedAmount);
 		payment.setUserBalance(balance);
 		payment.setDateTime(new Timestamp(System.currentTimeMillis()));
 		payment.setPaymentDirection("To app account");
