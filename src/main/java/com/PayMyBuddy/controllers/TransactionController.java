@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.PayMyBuddy.dto.PaymentDTO;
+import com.PayMyBuddy.dto.TransferDTO;
 import com.PayMyBuddy.exceptions.NotAConnectionException;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
+import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.models.Connections;
-import com.PayMyBuddy.models.Transaction;
-import com.PayMyBuddy.services.IConnectionService;
-import com.PayMyBuddy.services.TransactionService;
+import com.PayMyBuddy.models.Transfer;
+import com.PayMyBuddy.services.TransferService;
 
 @Controller
 public class TransactionController {
@@ -30,7 +30,7 @@ public class TransactionController {
 	Logger logger = LoggerFactory.getLogger(TransactionController.class);
 
 	@Autowired
-	private TransactionService transactionService;
+	private TransferService transferService;
 	
 	@Autowired
 	private IConnectionService iConnectionService;
@@ -38,7 +38,7 @@ public class TransactionController {
 	@GetMapping(value = "/user/operation/payment")
 	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error) {
 		List<Connections> connections = iConnectionService.getAllConnections();
-		model.addAttribute("transaction", new PaymentDTO());
+		model.addAttribute("transaction", new TransferDTO());
 		model.addAttribute("connections", connections);
 		if (null != error && error.equalsIgnoreCase("true")) {
 			model.addAttribute("Error", "Unable to launch /user/operation/payment");
@@ -47,12 +47,12 @@ public class TransactionController {
 	}
 
 	@PostMapping(value = "/user/operation/payment")
-	private ModelAndView paymentToConnection(@ModelAttribute(value = "transaction") PaymentDTO paymentDTO,
+	private ModelAndView paymentToConnection(@ModelAttribute(value = "transaction") TransferDTO transferDTO,
 			HttpServletRequest httpServletRequest, Errors errors) {
-		logger.info("entering payment with : {}", paymentDTO.toString());
+		logger.info("entering payment with : {}", transferDTO.toString());
 		try {
 			
-			Transaction transaction = transactionService.paymentToConnection(paymentDTO);
+			Transfer transfer = transferService.transferToConnection(transferDTO);
 		} catch (NotEnoughtBalanceException e) {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("paymentFailed");
@@ -61,13 +61,13 @@ public class TransactionController {
 			return new ModelAndView("paymentFailed");
 		}
 
-		return new ModelAndView("paymentSucess", "transaction", paymentDTO);
+		return new ModelAndView("paymentSucess", "transaction", transferDTO);
 	}
 	
 
 	@GetMapping(value ="/user/operation/self_payment")
 	private String selfPayment (Model model,@RequestParam (value ="error", required = false) String error) {
-		model.addAttribute("selfPayment", new PaymentDTO());
+		model.addAttribute("selfPayment", new TransferDTO());
 	
 		return "selfPayment";
 	}

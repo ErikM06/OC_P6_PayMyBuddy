@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.PayMyBuddy.interfaces.IBankAccountService;
+import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.BankAccount;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.BankAccountRepository;
@@ -41,6 +43,10 @@ public class BankAccountService implements IBankAccountService {
 		
 		List<BankAccount> allBankAccountFromUser = bankAccountRepository.findAllForCurrentUser(currentUser.getCurrentUser());
 		return allBankAccountFromUser;
+	}
+	
+	public BankAccount getBankAccountByBankAccountNumber (String bankAccountNumber) {
+		return bankAccountRepository.findByBankAccountNumber(bankAccountNumber);
 	}
 
 }

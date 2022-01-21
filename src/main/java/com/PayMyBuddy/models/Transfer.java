@@ -2,6 +2,7 @@ package com.PayMyBuddy.models;
 
 import java.sql.Timestamp;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,8 +13,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "Transaction")
-public class Transaction {
+@Table (name = "Transfer")
+public class Transfer {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -22,18 +23,18 @@ public class Transaction {
 	@Column
 	private Timestamp dateTime;
 	
-	@Column (name = "transaction_amount")
+	@Column (name = "transfer_amount")
 	private float amount;
 	
-	@ManyToOne
+	@ManyToOne (cascade = CascadeType.ALL)
 	@JoinColumn (name = "user_balance_id")
 	private Balance userBalance;
 	
-	@ManyToOne
+	@ManyToOne (cascade = CascadeType.ALL)
 	@JoinColumn (name ="connection_balance_id")
 	private Balance connectionBalance;
 
-	public Transaction( Timestamp dateTime, float amount, Balance userBalance, Balance connectionBalance ) {
+	public Transfer( Timestamp dateTime, float amount, Balance userBalance, Balance connectionBalance ) {
 		super();
 		
 		this.dateTime = dateTime;
@@ -42,7 +43,7 @@ public class Transaction {
 		this.connectionBalance = connectionBalance;
 	}
 	
-	public Transaction() {
+	public Transfer() {
 		super();
 	}
 

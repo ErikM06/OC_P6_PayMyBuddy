@@ -59,6 +59,9 @@ public class User implements UserDetails {
 	@OneToMany (mappedBy = "amount", cascade = CascadeType.ALL)
 	private Collection<Balance>balance;
 	
+	@OneToMany (mappedBy ="userId", cascade = CascadeType.ALL)
+	private Collection<BankAccount> bankAccount;
+	
 	@Column (name ="create_time")
 	private Timestamp createTime;
 	
@@ -153,6 +156,22 @@ public class User implements UserDetails {
 
 	public void setBalance(Collection<Balance> balance) {
 		this.balance = balance;
+	}
+
+	public Collection<Connections> getUser() {
+		return user;
+	}
+
+	public void setUser(Collection<Connections> user) {
+		this.user = user;
+	}
+
+	public Collection<BankAccount> getBankAccount() {
+		return bankAccount;
+	}
+
+	public void setBankAccount(Collection<BankAccount> bankAccount) {
+		this.bankAccount = bankAccount;
 	}
 
 	@Override

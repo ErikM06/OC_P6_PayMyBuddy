@@ -1,4 +1,4 @@
-package com.PayMyBuddy.services;
+package com.PayMyBuddy.interfaces;
 
 import java.util.List;
 
@@ -11,4 +11,6 @@ public interface IBankAccountService {
 	public void deleteBankAccount(String bankAccountNumber);
 
 	public List<BankAccount> getAllBankAccountFromUser();
+	
+	public BankAccount getBankAccountByBankAccountNumber (String bankAccountNumber);
 }

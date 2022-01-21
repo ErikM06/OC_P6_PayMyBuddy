@@ -5,10 +5,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.PayMyBuddy.models.Balance;
-import com.PayMyBuddy.models.Transaction;
+import com.PayMyBuddy.models.Transfer;
 
 @Repository
-public interface TransactionRepository extends JpaRepository<Transaction, Double> {
+public interface TransferRepository extends JpaRepository<Transfer, Double> {
 	
 	 /* @Query (value ="UPDATE User u SET balance.u = ?1 "
 			+ "INNER JOIN Balance b "

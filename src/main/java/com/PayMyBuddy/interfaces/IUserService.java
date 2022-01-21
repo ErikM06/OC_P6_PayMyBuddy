@@ -1,4 +1,4 @@
-package com.PayMyBuddy.services;
+package com.PayMyBuddy.interfaces;
 
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;

@@ -16,6 +16,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
+import com.PayMyBuddy.interfaces.IBalanceService;
+import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.Role;
 import com.PayMyBuddy.models.User;

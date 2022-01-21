@@ -5,6 +5,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
+import com.PayMyBuddy.interfaces.IBalanceService;
+import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.BalanceRepository;
@@ -18,6 +21,9 @@ public class BalanceService implements IBalanceService {
 
 	@Autowired
 	BalanceRepository balanceRepository;
+	
+	@Autowired
+	IUserService userService;
 
 
 	public Balance getBalanceByUser(User user) {
@@ -35,6 +41,37 @@ public class BalanceService implements IBalanceService {
 		initUserBalance.setAmount(0);
 		
 		return initUserBalance;
+	}
+	/*
+	 * userBalance the imaginary bank account api
+	 * in this method user can add as many as he want.
+	 * balance to newBalance is just an example of payment comming from an other api
+	 */
+	public Balance addToBalance (User user, float amount) throws NotEnoughtBalanceException {
+		Balance userBalance = getBalanceByUser(user);
+		Balance userNewBalance = new Balance();
+		float userNewBalanceAmount = userBalance.getAmount() + (amount);
+		if (userBalance.getAmount() < 0) {
+			throw new NotEnoughtBalanceException();
+		} 
+		userNewBalance.setAmount(userNewBalanceAmount);
+		balanceRepository.save(userNewBalance);
+		return userNewBalance;
+	}
+	/*
+	 * userBalance the imaginary bank account api
+	 */
+	public Balance takeFromBalance (User user, float amount) throws NotEnoughtBalanceException {
+		Balance userBalance = getBalanceByUser(user);
+		Balance userNewBalance = new Balance();
+		float userNewBalanceAmount = userBalance.getAmount() - (amount);
+		if (userNewBalanceAmount < 0) {
+			throw new NotEnoughtBalanceException();
+		} 
+		userNewBalance.setAmount(userNewBalanceAmount);
+		balanceRepository.save(userNewBalance);
+		return userNewBalance;
+		
 	}
 
 }

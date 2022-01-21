@@ -8,6 +8,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.PayMyBuddy.dto.ConnectionDTO;
+import com.PayMyBuddy.interfaces.IConnectionService;
+import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.Connections;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.ConnectionRepository;

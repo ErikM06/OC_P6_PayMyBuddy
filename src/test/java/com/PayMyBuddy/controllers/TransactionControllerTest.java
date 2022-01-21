@@ -12,7 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.PayMyBuddy.dto.PaymentDTO;
+import com.PayMyBuddy.dto.TransferDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringRunner.class)
@@ -36,7 +36,7 @@ class TransactionControllerTest {
 	public void paymentToConnectionTest() {
 		float amount = (float) Math.random();
 		try {
-			mockMvc.perform(post("/user/operation/payment").content(asJsonString(new PaymentDTO("test", amount)))
+			mockMvc.perform(post("/user/operation/payment").content(asJsonString(new TransferDTO("test", amount)))
 					.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON))
 					.andExpect(status().isCreated());
 		} catch (Exception e) {

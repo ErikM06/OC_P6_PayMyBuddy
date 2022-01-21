@@ -3,18 +3,18 @@ package com.PayMyBuddy.dto;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PaymentDTO {
+public class TransferDTO {
 
 	float amount;
 
 	String connectionEmail;
 
-	public PaymentDTO(String connectionEmail, float amount) {
+	public TransferDTO(String connectionEmail, float amount) {
 		super();
 		this.amount = amount;
 		this.connectionEmail = connectionEmail;
 	}
-	public PaymentDTO () {
+	public TransferDTO () {
 		super();
 	}
 

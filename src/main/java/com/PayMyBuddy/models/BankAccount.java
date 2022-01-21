@@ -1,5 +1,6 @@
 package com.PayMyBuddy.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +19,7 @@ public class BankAccount {
 	
 	private String bankAccountNumber;
 	
-	@ManyToOne
+	@ManyToOne (cascade = CascadeType.ALL)
 	@JoinColumn (name = "user_id")
 	private User userId;
 

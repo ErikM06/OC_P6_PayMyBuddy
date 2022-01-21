@@ -6,12 +6,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 import com.PayMyBuddy.models.User;
-import com.PayMyBuddy.services.TransactionService;
+import com.PayMyBuddy.services.TransferService;
 
 @Component
 public class GetCurrentUser {
 	
-	Logger logger = LoggerFactory.getLogger(TransactionService.class);
+	Logger logger = LoggerFactory.getLogger(TransferService.class);
 	
 	public String getCurrentUser() {
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();

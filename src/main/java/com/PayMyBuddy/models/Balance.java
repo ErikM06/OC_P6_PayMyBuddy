@@ -3,6 +3,7 @@ package com.PayMyBuddy.models;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -25,15 +26,15 @@ public class Balance {
 	@Column (name ="amount")
 	private float amount;
 	
-	@ManyToOne
+	@ManyToOne (cascade = CascadeType.ALL)
 	@JoinColumn (name = "user_id")
 	private User user;
 	
 	@OneToMany (mappedBy = "userBalance", fetch = FetchType.LAZY)
-	private Collection<Transaction> transactionsUser;
+	private Collection<Transfer> transactionsUser;
 	
 	@OneToMany (mappedBy = "connectionBalance", fetch = FetchType.LAZY)
-	private Collection<Transaction> transactionsConnection;
+	private Collection<Transfer> transactionsConnection;
 
 	public Balance(float amount, User user) {
 		super();

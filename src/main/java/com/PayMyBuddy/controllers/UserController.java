@@ -23,15 +23,12 @@ import com.PayMyBuddy.dto.BankAccountDTO;
 import com.PayMyBuddy.dto.ConnectionDTO;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
+import com.PayMyBuddy.interfaces.IBankAccountService;
+import com.PayMyBuddy.interfaces.IConnectionService;
+import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.BankAccount;
 import com.PayMyBuddy.models.User;
-import com.PayMyBuddy.services.IUserService;
 import com.PayMyBuddy.services.util.SecurityService;
-
-
-
-import com.PayMyBuddy.services.IBankAccountService;
-import com.PayMyBuddy.services.IConnectionService;
 
 @Controller
 public class UserController {
@@ -151,7 +148,7 @@ public class UserController {
 	}
 	
 	@PostMapping(value="/user/add_bank_account")
-	private ModelAndView addBankAccount (@ModelAttribute("bank_account") BankAccountDTO bankAccountDTO, 
+	private ModelAndView addBankAccount (@ModelAttribute("bankAccount") BankAccountDTO bankAccountDTO, 
 			HttpServletRequest request, Errors errors) {
 		bankAccountService.addBankAccount(bankAccountDTO.getBankAccountNumber());
 		return new ModelAndView("home", "bankaccount", bankAccountDTO);

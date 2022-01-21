@@ -1,4 +1,4 @@
-package com.PayMyBuddy.services;
+package com.PayMyBuddy.interfaces;
 
 import java.util.List;
 
