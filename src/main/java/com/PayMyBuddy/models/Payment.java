@@ -13,42 +13,48 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "Payment")
+@Table(name = "Payment")
 public class Payment {
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	
+
 	@Column
 	private float amount;
-	
+
 	@Column
 	private Timestamp dateTime;
-	
-	@ManyToOne (cascade = CascadeType.ALL)
-	@JoinColumn (name ="bank_Account_id")
+
+	@Column
+	private String description;
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "bank_Account_id")
 	private BankAccount bankAccount;
-	
-	@ManyToOne (cascade = CascadeType.ALL)
-	@JoinColumn (name = "user_balance_id")
-	private Balance userBalance; 
-	
-	@ManyToOne (cascade = CascadeType.ALL)
-	@JoinColumn (name ="user_id")
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "user_balance_id")
+	private Balance userBalance;
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "user_id")
 	private User userId;
-	
-	@Column (name = "payment_direction")
+
+	@Column(name = "payment_direction")
 	private String paymentDirection;
 
-	public Payment(float amount, Timestamp dateTime, BankAccount bankAccount, User userId, String paymentDirection) {
+	public Payment(float amount, Timestamp dateTime, String description, BankAccount bankAccount, User userId,
+			String paymentDirection) {
 		super();
 		this.amount = amount;
 		this.dateTime = dateTime;
+		this.description = description;
 		this.bankAccount = bankAccount;
 		this.userId = userId;
 		this.paymentDirection = paymentDirection;
 	}
-	public Payment () {
+
+	public Payment() {
 		super();
 	}
 
@@ -71,15 +77,27 @@ public class Payment {
 	public Timestamp getDateTime() {
 		return dateTime;
 	}
+
 	public void setDateTime(Timestamp dateTime) {
 		this.dateTime = dateTime;
 	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	public Balance getUserBalance() {
 		return userBalance;
 	}
+
 	public void setUserBalance(Balance userBalance) {
 		this.userBalance = userBalance;
 	}
+
 	public BankAccount getBankAccount() {
 		return bankAccount;
 	}
@@ -103,8 +121,5 @@ public class Payment {
 	public void setPaymentDirection(String paymentDirection) {
 		this.paymentDirection = paymentDirection;
 	}
-	
-	
-	
-	
+
 }

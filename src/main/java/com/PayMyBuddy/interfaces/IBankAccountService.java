@@ -13,4 +13,6 @@ public interface IBankAccountService {
 	public List<BankAccount> getAllBankAccountFromUser();
 	
 	public BankAccount getBankAccountByBankAccountNumber (String bankAccountNumber);
+	
+	public boolean assertBankAccountExist (String bankAccountNumber);
 }

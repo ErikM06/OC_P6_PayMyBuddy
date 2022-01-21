@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.PayMyBuddy.dto.PaymentDTO;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
 import com.PayMyBuddy.interfaces.IBalanceService;
 import com.PayMyBuddy.interfaces.IBankAccountService;
@@ -23,7 +24,7 @@ import com.PayMyBuddy.services.util.GetCurrentUser;
 public class PaymentService implements IPaymentService {
 
 	private Logger logger = LoggerFactory.getLogger(PaymentService.class);
-	
+
 	@Autowired
 	IUserService userService;
 
@@ -35,44 +36,56 @@ public class PaymentService implements IPaymentService {
 
 	@Autowired
 	PaymentRepository paymentRepository;
-	
+
 	@Autowired
 	IBalanceService balanceService;
-	
+
 	@Autowired
 	DeductFromOperation deductFromOperation;
 
-	public Payment selfPaymentToAccount(String bankAccountNumber, float amount) throws NotEnoughtBalanceException {
-		User user = userService.findByEmail(currentUser.getCurrentUser());
+	public Payment selfPaymentToAccount(PaymentDTO paymentDTO) throws NotEnoughtBalanceException {
 		Payment payment = new Payment();
-		float deductedAmount = deductFromOperation.deductedFromPaymentOperation(amount, payment);
+		if (bankAccountService.assertBankAccountExist(paymentDTO.getBankAccountNumber()) == true) {
+		User user = userService.findByEmail(currentUser.getCurrentUser());
+		float deductedAmount = deductFromOperation.deductedFromPaymentOperation(paymentDTO.getAmount(), payment);
 		Balance balance = balanceService.takeFromBalance(user, deductedAmount);
-		logger.info("user is : ",user, "amount is : ", deductedAmount);
+		logger.info("user is : ", user, "amount is : ", deductedAmount);
+		
 		payment.setAmount(deductedAmount);
 		payment.setUserBalance(balance);
+		payment.setDescription(paymentDTO.getDescription());
 		payment.setDateTime(new Timestamp(System.currentTimeMillis()));
 		payment.setPaymentDirection("To bank account");
 		payment.setUserId(user);
-		payment.setBankAccount(bankAccountService.getBankAccountByBankAccountNumber(bankAccountNumber));
+		payment.setBankAccount(bankAccountService.getBankAccountByBankAccountNumber(paymentDTO.getBankAccountNumber()));
+		
 		paymentRepository.save(payment);
+		}
 
 		return payment;
 	}
 
-	public Payment selfPaymentToApp(String bankAccountNumber, float amount) throws NotEnoughtBalanceException {
-		User user = userService.findByEmail(currentUser.getCurrentUser());
+	public Payment selfPaymentToApp(PaymentDTO paymentDTO) throws NotEnoughtBalanceException {
 		Payment payment = new Payment();
-		float deductedAmount = deductFromOperation.deductedFromPaymentOperation(amount, payment);
-		Balance balance = balanceService.addToBalance(user, deductedAmount);
-		payment.setAmount(deductedAmount);
-		payment.setUserBalance(balance);
-		payment.setDateTime(new Timestamp(System.currentTimeMillis()));
-		payment.setPaymentDirection("To app account");
-		payment.setUserId(user);
-		payment.setBankAccount(bankAccountService.getBankAccountByBankAccountNumber(bankAccountNumber));
-		paymentRepository.save(payment);
+		if (bankAccountService.assertBankAccountExist(paymentDTO.getBankAccountNumber()) == true) {
+			User user = userService.findByEmail(currentUser.getCurrentUser());
+			float deductedAmount = deductFromOperation.deductedFromPaymentOperation(paymentDTO.getAmount(), payment);
+			Balance balance = balanceService.addToBalance(user, deductedAmount);
+			logger.info("user is : ", user, "amount is : ", deductedAmount);
+			
+			payment.setAmount(deductedAmount);
+			payment.setUserBalance(balance);
+			payment.setDescription(paymentDTO.getDescription());
+			payment.setDateTime(new Timestamp(System.currentTimeMillis()));
+			payment.setPaymentDirection("To app account");
+			payment.setUserId(user);
+			payment.setBankAccount(bankAccountService.getBankAccountByBankAccountNumber(paymentDTO.getBankAccountNumber()));
+			
+			paymentRepository.save(payment);
+		}
 
 		return payment;
+
 	}
 
 }

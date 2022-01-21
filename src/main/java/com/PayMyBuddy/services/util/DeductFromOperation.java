@@ -15,8 +15,8 @@ public class DeductFromOperation {
 	CompanyAccountRepository companyAccountRepository;
 
 	public float deductedFromTransferOperation(float amount, Transfer transfer) {
-		CompanyAccount companyAccount = new CompanyAccount();
-		float amountTodeduct = amount * (float) 0.5;
+		CompanyAccount companyAccount = companyAccountRepository.getCompanyAccount();
+		float amountTodeduct = amount * (float) 0.005;
 		float deductedAmount = amount - amountTodeduct;
 		float compagnyAccountSold = companyAccount.getSold();
 		companyAccount.setSold(compagnyAccountSold+amountTodeduct);
@@ -26,8 +26,8 @@ public class DeductFromOperation {
 	}
 
 	public float deductedFromPaymentOperation(float amount, Payment payment) {
-		CompanyAccount companyAccount = new CompanyAccount();
-		float amountTodeduct = amount * (float) 0.5;
+		CompanyAccount companyAccount = companyAccountRepository.getCompanyAccount();
+		float amountTodeduct = amount * (float) 0.005;
 		float deductedAmount = amount - amountTodeduct;
 		float compagnyAccountSold = companyAccount.getSold();
 		companyAccount.setSold(compagnyAccountSold+amountTodeduct);

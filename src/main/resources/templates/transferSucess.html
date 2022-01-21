@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>ADD_CONNECTION</title>
+    <title>Pay a Buddy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
@@ -11,20 +11,19 @@
 <div class="container my-3">
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <h2>User add connection</h2>
-            <form th:action="@{/user/add_connection}" th:object="${connection}" method="post">
+            <h2>Pay A Buddy </h2>
+            <form th:action="@{/user/operation/transfer}" th:object="${transaction}" method="post">
                 <div class="form-row">
                     <div class="col-md-6 form-group">
-                        <label>email</label>
-                        <input type="text" class="form-control" th:field="*{email}">
+                        <label>buddy's email</label>
+                        <input type="text" class="form-control" th:field="*{connectionEmail}">
                     </div>
-                   <div class="col-md-6 form-group">
-                        <label>description</label>
-                        <input type="text" class="form-control" th:field="*{note}">
+                    <div class="col-md-6 form-group">
+                        <label>choose the amount</label>
+                        <input type="real" class="form-control" th:field="*{amount}">
                     </div>
-                    
                 </div>
-                <button type="submit" class="btn btn-primary btn-block mt-3">ADD</button>
+                <h3>PAYMENT SUCESSFULL</h3>
             </form>
         </div>
     </div>

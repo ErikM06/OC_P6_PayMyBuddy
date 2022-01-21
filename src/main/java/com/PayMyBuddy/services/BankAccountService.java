@@ -48,5 +48,9 @@ public class BankAccountService implements IBankAccountService {
 	public BankAccount getBankAccountByBankAccountNumber (String bankAccountNumber) {
 		return bankAccountRepository.findByBankAccountNumber(bankAccountNumber);
 	}
+	
+	public boolean assertBankAccountExist (String bankAccountNumber) {
+		return bankAccountRepository.existsWithBankAccountNumber(bankAccountNumber);
+	}
 
 }

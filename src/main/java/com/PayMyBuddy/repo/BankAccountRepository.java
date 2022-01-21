@@ -15,5 +15,9 @@ public interface BankAccountRepository extends JpaRepository<BankAccount, Intege
 	
 	@Query (value =" SELECT b FROM BankAccount b INNER JOIN User u ON u.id = b.userId WHERE u.email = ?1 ")
 	List<BankAccount> findAllForCurrentUser(String currentUser);
+	
+	@Query (value ="SELECT case when count(b) =1 then true else false end from BankAccount b "
+			+ "WHERE b.bankAccountNumber =?1 ")
+	public boolean existsWithBankAccountNumber(String bankAccountNumber);
 
 }

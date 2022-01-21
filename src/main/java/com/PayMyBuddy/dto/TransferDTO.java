@@ -30,7 +30,7 @@ public class TransferDTO {
 		return connectionEmail;
 	}
 
-	public void setConnectionUsername (String connectionEmail) {
+	public void setConnectionEmail (String connectionEmail) {
 		this.connectionEmail = connectionEmail;
 	}
 

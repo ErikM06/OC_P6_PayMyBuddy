@@ -78,7 +78,6 @@ public class TransferService implements ITransferService {
 		logger.info("transaction is :", transfer.toString());
 
 		return transfer;
-
 	}
 
 }
