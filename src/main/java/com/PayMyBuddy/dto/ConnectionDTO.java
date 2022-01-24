@@ -7,6 +7,8 @@ public class ConnectionDTO {
 	
 	private String note;
 	
+	private String connectionUsername;
+	
 	private int connectionId;
 
 	public ConnectionDTO(String email, String note) {
@@ -25,6 +27,14 @@ public class ConnectionDTO {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getConnectionUsername() {
+		return connectionUsername;
+	}
+
+	public void setConnectionUsername(String connectionUsername) {
+		this.connectionUsername = connectionUsername;
 	}
 
 	public String getNote() {

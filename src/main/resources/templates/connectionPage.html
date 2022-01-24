@@ -11,7 +11,7 @@
 <div class="container my-3">
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <h2>User add connection</h2>
+            <h2>add a buddy</h2>
             <form th:action="@{/user/add_connection}" th:object="${connection}" method="post">
                 <div class="form-row">
                     <div class="col-md-6 form-group">
@@ -25,6 +25,19 @@
                     
                 </div>
                 <button type="submit" class="btn btn-primary btn-block mt-3">ADD</button>
+            </form>
+            
+             <h2>Delete a buddy</h2>
+            <form th:action="@{/user/delete_connection}" th:object="${connection}" method="delete">
+                <div class="form-row">
+                    <div class="col-md-6 form-group">
+                        <label>buddy username</label>
+                        <input type="text" class="form-control" th:field="*{connectionUsername}">
+                    </div>
+                   
+                    
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">DELETE</button>
             </form>
         </div>
     </div>

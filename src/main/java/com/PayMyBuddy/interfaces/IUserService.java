@@ -6,7 +6,7 @@ import com.PayMyBuddy.models.User;
 
 public interface IUserService {
 	
-	public User registerNewUserAccount(UserDTO userDto) throws UserAlreadyExistException, Exception;
+	public User registerNewUserAccount(UserDTO userDto) throws UserAlreadyExistException;
 	
 	public User findByEmail(String username);
 	

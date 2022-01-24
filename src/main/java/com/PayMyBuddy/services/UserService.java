@@ -41,25 +41,26 @@ public class UserService implements IUserService {
 	// method from Spring doc to avoid circular references error
 
 	public User registerNewUserAccount(UserDTO userDto) throws UserAlreadyExistException {
-		if (emailExists(userDto.getEmail())) {
-			logger.info("ok");
-			throw new UserAlreadyExistException("user already exist " + userDto.getEmail());
-		}
 		User user = new User();
 		List<Role> userRoleLs = new ArrayList<>();
 		List<Balance> userBalance = new ArrayList<>();
+		if (emailExists(userDto.getEmail())) {
+			logger.info("ok");
+			throw new UserAlreadyExistException("user already exist " + userDto.getEmail());
+		} else {
+			user.setUsername(userDto.getUsername());
+			user.setPassword(passwordEncoder().encode(userDto.getPassword()));
+			user.setEmail(userDto.getEmail());
+			user.setCreateTime(new Timestamp(System.currentTimeMillis()));
+			user.setEnable(true);
+			userRoleLs.add(roleRepo.findRoleByRoleName("ROLE_USER"));
+			userBalance.add(iBalanceService.initBalance(user));
+			user.setRoles(userRoleLs);
+			user.setBalance(userBalance);
+			logger.info("UserService user is: " + user);
 
-		user.setUsername(userDto.getUsername());
-		user.setPassword(passwordEncoder().encode(userDto.getPassword()));
-		user.setEmail(userDto.getEmail());
-		user.setCreateTime(new Timestamp(System.currentTimeMillis()));
-		user.setEnable(true);
-		userRoleLs.add(roleRepo.findRoleByRoleName("ROLE_USER"));
-		userBalance.add(iBalanceService.initBalance(user));
-		user.setRoles(userRoleLs);
-		user.setBalance(userBalance);
-		logger.info("UserService user is: " + user);
-		return userRepo.save(user);
+			return userRepo.save(user);
+		}
 	}
 
 	// Check if email already exist
@@ -68,20 +69,20 @@ public class UserService implements IUserService {
 		return userRepo.findEmail(email) != null;
 	}
 
-	public User findByEmail(String email){
+	public User findByEmail(String email) {
 		return userRepo.findUserByEmail(email);
 	}
-	
-	public void deleteUser (String username) {
+
+	public void deleteUser(String username) {
 		User user = findByEmail(username);
 		userRepo.deleteById(user.getId());
 		logger.info(username, "deleted");
 	}
-	public User findUserByUsername (String username) {
-		return	userRepo.findByUsername(username);
-		
+
+	public User findUserByUsername(String username) {
+		return userRepo.findByUsername(username);
+
 	}
-	
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {

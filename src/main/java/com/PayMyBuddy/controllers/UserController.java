@@ -35,7 +35,6 @@ public class UserController {
 
 	private static Logger logger = LoggerFactory.getLogger(UserController.class);
 
-
 	@Autowired
 	private IUserService IUserService;
 
@@ -44,15 +43,15 @@ public class UserController {
 
 	@Autowired
 	private IConnectionService IConnectionService;
-	
+
 	@Autowired
 	private IBankAccountService bankAccountService;
 
 	@GetMapping(value = "/admin/delete_user")
-	private void deleteUserByAdmin(@RequestParam (value ="user") String username) {
+	private void deleteUserByAdmin(@RequestParam(value = "user") String username) {
 		logger.info("in /admin/delete_user?user=");
 		IUserService.deleteUser(username);
-		
+
 	}
 
 	@GetMapping(value = "/login")
@@ -90,7 +89,7 @@ public class UserController {
 
 	@PostMapping(value = "/register")
 	private ModelAndView userRegistration(@ModelAttribute("user") UserDTO userDto, HttpServletRequest request,
-			Errors errors) {
+			Errors errors) throws UserAlreadyExistException {
 		try {
 			User registered = IUserService.registerNewUserAccount(userDto);
 			logger.info("reach registration at /register : {}", registered);
@@ -104,14 +103,14 @@ public class UserController {
 		}
 		return new ModelAndView("successRegister", "user", userDto);
 	}
-	
-	@GetMapping ("/user/add_connection")
-	private ModelAndView getAddConnection (Model model, @RequestParam (value ="error", required = false) String error) {
+
+	@GetMapping("/user/connection")
+	private ModelAndView getAddConnection(Model model, @RequestParam(value = "error", required = false) String error) {
 		model.addAttribute("connection", new ConnectionDTO());
-		return new ModelAndView("addConnection");
-		
+		return new ModelAndView("connectionPage");
+
 	}
-	
+
 	@PostMapping("/user/add_connection")
 	private ModelAndView addConnection(@ModelAttribute("connection") ConnectionDTO connectionDto,
 			HttpServletRequest request, Errors errors) {
@@ -124,40 +123,42 @@ public class UserController {
 
 	}
 
-	@DeleteMapping(value = "/user/delete_connection")
-	private ModelAndView deleteConnection(@ModelAttribute("connection") String connection, HttpServletRequest request,
-			Errors errors) {
+	@GetMapping(value = "/user/delete_connection")
+	private ModelAndView deleteConnection(@ModelAttribute("connection") ConnectionDTO connectionDto,
+			HttpServletRequest request, Errors errors) throws Exception, NullPointerException {
 		try {
-		IConnectionService.deleteConnection(connection);
+			IConnectionService.deleteConnection(connectionDto.getConnectionUsername());
+		} catch (NullPointerException e) {
+			e.printStackTrace();
 		} catch (Exception e) {
-			logger.error(e.getMessage());
+			e.printStackTrace();
 		}
-		return new ModelAndView("connectionDeleted", "connection", connection);
+		return new ModelAndView("home");
 
 	}
-	
-	@GetMapping(value ="/user/get_bank_account")
-	private ModelAndView getAddBankAccount (Model model, @RequestParam (value ="error", required = false) String error) {
+
+	@GetMapping(value = "/user/get_bank_account")
+	private ModelAndView getAddBankAccount(Model model, @RequestParam(value = "error", required = false) String error) {
 		List<BankAccount> bankAccountls = bankAccountService.getAllBankAccountFromUser();
-		model.addAttribute("bankAccountls",bankAccountls);
+		model.addAttribute("bankAccountls", bankAccountls);
 		model.addAttribute("bankAccount", new BankAccountDTO());
 		if (null != error && error.equalsIgnoreCase("true")) {
 			model.addAttribute("Error", "Unable to launch /user/add_bank_account");
 		}
-		return new ModelAndView("BankAccount" );
+		return new ModelAndView("BankAccount");
 	}
-	
-	@PostMapping(value="/user/add_bank_account")
-	private ModelAndView addBankAccount (@ModelAttribute("bankAccount") BankAccountDTO bankAccountDTO, 
+
+	@PostMapping(value = "/user/add_bank_account")
+	private ModelAndView addBankAccount(@ModelAttribute("bankAccount") BankAccountDTO bankAccountDTO,
 			HttpServletRequest request, Errors errors) {
 		bankAccountService.addBankAccount(bankAccountDTO.getBankAccountNumber());
 		return new ModelAndView("home", "bankaccount", bankAccountDTO);
 	}
-	
-	@GetMapping(value ="/user/delete_bank_account")
-	private ModelAndView deleteBankAccount (@ModelAttribute("bankAccount") BankAccountDTO bankAccountDTO,
+
+	@GetMapping(value = "/user/delete_bank_account")
+	private ModelAndView deleteBankAccount(@ModelAttribute("bankAccount") BankAccountDTO bankAccountDTO,
 			HttpServletRequest request, Errors errors) throws Exception {
-	
+
 		bankAccountService.deleteBankAccount(bankAccountDTO.getBankAccountNumber());
 
 		return new ModelAndView("BankAccount", "bankAccount", bankAccountDTO);

@@ -13,7 +13,7 @@ public interface IConnectionService {
 
 	public Connections addConnections(ConnectionDTO connectionDTO) throws UsernameNotFoundException;
 	
-	public void deleteConnection (String username ) throws UsernameNotFoundException;
+	public void deleteConnection (String username ) throws Exception;
 	
 	public List<Connections> getAllConnections ();
 

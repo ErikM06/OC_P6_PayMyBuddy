@@ -11,7 +11,7 @@ import com.PayMyBuddy.services.TransferService;
 @Component
 public class GetCurrentUser {
 	
-	Logger logger = LoggerFactory.getLogger(TransferService.class);
+	Logger logger = LoggerFactory.getLogger(GetCurrentUser.class);
 	
 	public String getCurrentUser() {
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
