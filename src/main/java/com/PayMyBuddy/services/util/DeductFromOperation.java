@@ -20,7 +20,7 @@ public class DeductFromOperation {
 		float deductedAmount = amount - amountTodeduct;
 		float compagnyAccountSold = companyAccount.getSold();
 		companyAccount.setSold(compagnyAccountSold+amountTodeduct);
-		companyAccount.setTransferId(transfer);
+		companyAccount.setTransfer(transfer);
 		companyAccountRepository.save(companyAccount);
 		return deductedAmount;
 	}

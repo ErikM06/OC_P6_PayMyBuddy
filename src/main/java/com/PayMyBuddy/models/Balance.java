@@ -26,14 +26,14 @@ public class Balance {
 	@Column (name ="amount")
 	private float amount;
 	
-	@ManyToOne (cascade = CascadeType.ALL)
+	@ManyToOne 
 	@JoinColumn (name = "user_id")
 	private User user;
 	
-	@OneToMany (mappedBy = "userBalance", fetch = FetchType.LAZY)
+	@OneToMany (mappedBy = "userBalance", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Collection<Transfer> transactionsUser;
 	
-	@OneToMany (mappedBy = "connectionBalance", fetch = FetchType.LAZY)
+	@OneToMany (mappedBy = "connectionBalance", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Collection<Transfer> transactionsConnection;
 
 	public Balance(float amount, User user) {

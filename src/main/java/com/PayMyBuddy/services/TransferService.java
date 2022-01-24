@@ -49,18 +49,16 @@ public class TransferService implements ITransferService {
 
 	public Transfer transferToConnection(TransferDTO transferDTO)
 			throws NotEnoughtBalanceException, NotAConnectionException {
+		Transfer transfer = new Transfer();
 		User userAccount = new User();
 		User connectionAccount = new User();
-		
+
 		userAccount = userService.findByEmail(currentUser.getCurrentUser());
 		connectionAccount = userService.findByEmail(transferDTO.getConnectionEmail());
-		
-		Transfer transfer = new Transfer();
-		/*
-		 * if (connectionService.assertConnection(userAccount.getId(),
-		 * connectionAccount.getId()) == false) { throw new NotAConnectionException(); }
-		 * else {
-		 */
+		if (connectionAccount == null) {
+			throw new NotAConnectionException();
+		}
+		try {
 		float deductedAmount = deductFromOperation.deductedFromTransferOperation(transferDTO.getAmount(), transfer);
 		Balance userBalance = balanceService.takeFromBalance(userAccount, deductedAmount);
 		Balance connectionBalance = balanceService.addToBalance(connectionAccount, deductedAmount);
@@ -76,8 +74,14 @@ public class TransferService implements ITransferService {
 
 		transferRepository.save(transfer);
 		logger.info("transaction is :", transfer.toString());
+		} catch (NotEnoughtBalanceException e) {
+			
+		} catch (Exception e) {
+			
+		}
 
 		return transfer;
+		
 	}
 
 }

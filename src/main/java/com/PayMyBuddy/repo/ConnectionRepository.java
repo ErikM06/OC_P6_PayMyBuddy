@@ -22,10 +22,10 @@ public interface ConnectionRepository extends JpaRepository<Connections, Integer
 	public void deleteConnectionById (int connectionId);
 	
 	@Query (value ="SElECT c FROM Connections c WHERE c.user =?1")
-	public List<Connections> getAllConnectionsFromCurrentUser(int id);
+	public List<Connections> getAllConnectionsFromCurrentUser(User user);
 
 	@Query (value ="SELECT case when count(c) =1 then true else false end from Connections c "
 			+ "WHERE c.user =?1 AND c.connection = ?2 ")
-	public boolean existsWithIds(@Param("?1") int userId, @Param("?2") int connectionId);
+	public boolean existsWithIds(@Param("?1") User user, @Param("?2") User connection);
 
 }

@@ -26,11 +26,11 @@ public class Transfer {
 	@Column (name = "transfer_amount")
 	private float amount;
 	
-	@ManyToOne (cascade = CascadeType.ALL)
+	@ManyToOne 
 	@JoinColumn (name = "user_balance_id")
 	private Balance userBalance;
 	
-	@ManyToOne (cascade = CascadeType.ALL)
+	@ManyToOne 
 	@JoinColumn (name ="connection_balance_id")
 	private Balance connectionBalance;
 

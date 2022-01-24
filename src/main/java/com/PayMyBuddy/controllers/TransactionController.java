@@ -35,31 +35,38 @@ public class TransactionController {
 
 	@Autowired
 	private ITransferService transferService;
-	
+
 	@Autowired
 	private IPaymentService paymentService;
-	
+
 	@Autowired
 	private IConnectionService iConnectionService;
 
 	@GetMapping(value = "/user/operation/transfer")
-	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error) {
-		List<Connections> connections = iConnectionService.getAllConnections();
-		model.addAttribute("transaction", new TransferDTO());
-		model.addAttribute("connections", connections);
-		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("Error", "Unable to launch /user/operation/transfer");
+	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error)
+			throws Exception {
+		try {
+			List<Connections> connections = iConnectionService.getAllConnections();
+			model.addAttribute("transaction", new TransferDTO());
+			model.addAttribute(connections);
+			if (null != error && error.equalsIgnoreCase("true")) {
+				model.addAttribute("Error", "Unable to launch /user/operation/transfer");
+			}
+		} catch (Exception e) {
+			e.getMessage();
+			e.printStackTrace();
 		}
 		return "transferPage";
 	}
 
 	@PostMapping(value = "/user/operation/transfer")
 	private ModelAndView transferToConnection(@ModelAttribute(value = "transaction") TransferDTO transferDTO,
-			HttpServletRequest httpServletRequest, Errors errors) {
+			HttpServletRequest httpServletRequest, Errors errors)
+			throws NotEnoughtBalanceException, NotAConnectionException {
 		logger.info("entering transfer with : {}", transferDTO.toString());
+		Transfer transfer = new Transfer();
 		try {
-			
-			Transfer transfer = transferService.transferToConnection(transferDTO);
+			transfer = transferService.transferToConnection(transferDTO);
 		} catch (NotEnoughtBalanceException e) {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("transferFailed");
@@ -67,47 +74,42 @@ public class TransactionController {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("transferFailed");
 		}
-
-		return new ModelAndView("transferSucess", "transaction", transferDTO);
+		return new ModelAndView("transferSucess", "transaction", transfer);
 	}
-	
 
-	@GetMapping(value ="/user/operation/payment")
-	private String selfPayment (Model model,@RequestParam (value ="error", required = false) String error) {
+	@GetMapping(value = "/user/operation/payment")
+	private String selfPayment(Model model, @RequestParam(value = "error", required = false) String error) {
 		model.addAttribute("payment", new PaymentDTO());
-	
+
 		return "paymentPage";
 	}
-	
+
 	@PostMapping(value = "/user/operation/paymentToBankAccount")
 	private ModelAndView paymentToBankAccount(@ModelAttribute(value = "payment") PaymentDTO paymentDTO,
-			HttpServletRequest httpServletRequest, Errors errors) {
+			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException {
 		logger.info("entering payment with : {}", paymentDTO.toString());
+		Payment payment = new Payment();
 		try {
-			
-			Payment payment = paymentService.selfPaymentToAccount(paymentDTO);
+			payment = paymentService.selfPaymentToAccount(paymentDTO);
 		} catch (NotEnoughtBalanceException e) {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("paymentFailed");
-		} 
-
-		return new ModelAndView("paymentSucess", "payment", paymentDTO);
+		}
+		return new ModelAndView("paymentSucess", "payment", payment);
 	}
-	
+
 	@PostMapping(value = "/user/operation/paymentToAppAccount")
 	private ModelAndView paymentToAppAccount(@ModelAttribute(value = "payment") PaymentDTO paymentDTO,
-			HttpServletRequest httpServletRequest, Errors errors) {
+			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException {
 		logger.info("entering payment with : {}", paymentDTO.toString());
+		Payment payment = new Payment();
 		try {
-			
-			Payment payment = paymentService.selfPaymentToApp(paymentDTO);
+			payment = paymentService.selfPaymentToApp(paymentDTO);
 		} catch (NotEnoughtBalanceException e) {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("paymentFailed");
-		} 
-
-		return new ModelAndView("paymentSucess", "payment", paymentDTO);
+		}
+		return new ModelAndView("paymentSucess", "payment", payment);
 	}
-	
 
 }

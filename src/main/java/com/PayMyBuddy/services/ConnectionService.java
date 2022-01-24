@@ -34,11 +34,11 @@ public class ConnectionService implements IConnectionService {
 	@Autowired
 	GetCurrentUser currentUser;
 
-	public Connections addConnections(ConnectionDTO connectionDTO) throws UsernameNotFoundException {
+	public Connections addConnections(ConnectionDTO connectionDTO) throws NullPointerException{
 
 		Connections connection = new Connections();
 		if (iUserService.findByEmail(connectionDTO.getEmail()) == null) {
-			throw new UsernameNotFoundException("User not found");
+			throw new NullPointerException("User not found");
 		} else {
 			connection.setUser(iUserService.findByEmail(currentUser.getCurrentUser()));
 			connection.setConnection(iUserService.findByEmail(connectionDTO.getEmail()));
@@ -52,7 +52,7 @@ public class ConnectionService implements IConnectionService {
 	}
 
 	@Transactional
-	public void deleteConnection(String connectionUsername) throws Exception, NullPointerException{
+	public void deleteConnection(String connectionUsername) throws Exception, NullPointerException {
 		User user = new User();
 		User connectionProfil = new User();
 		List<Connections> connection = new ArrayList<>();
@@ -61,7 +61,7 @@ public class ConnectionService implements IConnectionService {
 			connectionProfil = iUserService.findUserByUsername(connectionUsername);
 			logger.info("connection to delete with buddy as : {}", connectionProfil.getUsername());
 			logger.info("connection to delete with user as  : {}", user.getUsername());
-		
+
 			connection = connectionRepository.selectByUsers(user, connectionProfil);
 
 			if (connection.isEmpty()) {
@@ -75,21 +75,24 @@ public class ConnectionService implements IConnectionService {
 		} catch (NullPointerException e) {
 			throw new NullPointerException("this username don't exist");
 		} catch (Exception e) {
-			throw new Exception (e.getMessage());	
+			throw new Exception(e.getMessage());
 		}
 
 	}
 
-	public List<Connections> getAllConnections() {
+	public List<Connections> getAllConnections() throws Exception {
 		String currrentUsername = currentUser.getCurrentUser();
 		User currentUser = iUserService.findByEmail(currrentUsername);
 		List<Connections> allConnectionFromCurrentUser = connectionRepository
-				.getAllConnectionsFromCurrentUser(currentUser.getId());
+				.getAllConnectionsFromCurrentUser(currentUser);
+		if (allConnectionFromCurrentUser.isEmpty()) {
+			throw new Exception("No buddies");
+		}
 		return allConnectionFromCurrentUser;
 	}
 
-	public boolean assertConnection(int userId, int connectionId) {
-		boolean assertConnection = connectionRepository.existsWithIds(userId, connectionId);
+	public boolean assertConnection(User user, User connection) {
+		boolean assertConnection = connectionRepository.existsWithIds(user, connection);
 		return assertConnection;
 	}
 

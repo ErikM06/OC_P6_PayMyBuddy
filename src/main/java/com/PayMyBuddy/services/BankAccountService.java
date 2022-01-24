@@ -2,18 +2,27 @@ package com.PayMyBuddy.services;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
+import com.PayMyBuddy.dto.BankAccountDTO;
 import com.PayMyBuddy.interfaces.IBankAccountService;
 import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.BankAccount;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.BankAccountRepository;
 import com.PayMyBuddy.services.util.GetCurrentUser;
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 
 @Service
 public class BankAccountService implements IBankAccountService {
+
+	private static Logger logger = LoggerFactory.getLogger(BankAccountService.class);
 
 	@Autowired
 	BankAccountRepository bankAccountRepository;
@@ -24,7 +33,7 @@ public class BankAccountService implements IBankAccountService {
 	@Autowired
 	IUserService userService;
 
-	public BankAccount addBankAccount(String bankAccountNumber) {
+	public BankAccount addBankAccount(String bankAccountNumber) throws InvalidFormatException {
 		BankAccount bankAccount = new BankAccount();
 		User user = userService.findByEmail(currentUser.getCurrentUser());
 		bankAccount.setUserid(user);
@@ -32,24 +41,29 @@ public class BankAccountService implements IBankAccountService {
 		bankAccountRepository.save(bankAccount);
 		return bankAccount;
 	}
-
-	public void deleteBankAccount(String bankAccountNumber) {
-		BankAccount bankAccount = bankAccountRepository.findByBankAccountNumber(bankAccountNumber);
-		bankAccountRepository.deleteById(bankAccount.getId());
+	
+	@Transactional
+	@Modifying
+	public void deleteBankAccount(BankAccountDTO bankAccountDTO) throws NullPointerException {
+		if (bankAccountRepository.existsWithBankAccountNumber(bankAccountDTO.getBankAccountNumber()) == false) {
+			throw new NullPointerException("Bank Account don't existe : {}");
+		} else {
+			bankAccountRepository.deleteByBankAccountNumber(bankAccountDTO.getBankAccountNumber());
+		}
 	}
 
-	
 	public List<BankAccount> getAllBankAccountFromUser() {
-		
-		List<BankAccount> allBankAccountFromUser = bankAccountRepository.findAllForCurrentUser(currentUser.getCurrentUser());
+
+		List<BankAccount> allBankAccountFromUser = bankAccountRepository
+				.findAllForCurrentUser(currentUser.getCurrentUser());
 		return allBankAccountFromUser;
 	}
-	
-	public BankAccount getBankAccountByBankAccountNumber (String bankAccountNumber) {
+
+	public BankAccount getBankAccountByBankAccountNumber(String bankAccountNumber) {
 		return bankAccountRepository.findByBankAccountNumber(bankAccountNumber);
 	}
-	
-	public boolean assertBankAccountExist (String bankAccountNumber) {
+
+	public boolean assertBankAccountExist(String bankAccountNumber) {
 		return bankAccountRepository.existsWithBankAccountNumber(bankAccountNumber);
 	}
 

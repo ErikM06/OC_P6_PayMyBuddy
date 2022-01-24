@@ -1,6 +1,5 @@
 package com.PayMyBuddy.models;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,11 +20,11 @@ public class CompanyAccount {
 	@Column (name="sold")
 	private float sold;
 	
-	@ManyToOne (cascade = CascadeType.ALL)
+	@ManyToOne 
 	@JoinColumn
 	private Payment paymentId;
 	
-	@ManyToOne (cascade = CascadeType.ALL)
+	@ManyToOne 
 	@JoinColumn
 	private Transfer transferId;
 
@@ -67,7 +66,7 @@ public class CompanyAccount {
 		return transferId;
 	}
 
-	public void setTransferId(Transfer transferId) {
+	public void setTransfer(Transfer transferId) {
 		this.transferId = transferId;
 	}
 }

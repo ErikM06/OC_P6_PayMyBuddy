@@ -2,19 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>ADD_CONNECTION</title>
+    <title>Bank_account</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 </head>
 <body>
-<div class="container mt-3">
- <div class="row">
-        <div class="col-md-8 mx-auto">
-   <h2>Bank Account list </h2>
-   <div class="list-group" th:object="${bankAccountls}">
-   </div>
-   </div>
+	<div class="container mt-3">
+ 		<div class="row">
+       	 <div class="col-md-8 mx-auto">
+   			<h2>Bank Account list </h2>
+   				<div class="list-group" th:object="${bankAccountls}">
+   		 </div>
+ 	    </div>
     
    </div>
 </div>
@@ -40,7 +40,7 @@
     <div class="row">
         <div class="col-md-8 mx-auto">
             <h2>Delete a bank account</h2>
-            <form th:action="@{/user/delete_bank_account}" th:object="${bankAccount}" method="delete">
+            <form th:action="@{/user/delete_bank_account}" th:object="${bankAccountToDelete}" method="delete">
                 <div class="form-row">
                     <div class="col-md-6 form-group">
                         <label>Bank account number </label>
