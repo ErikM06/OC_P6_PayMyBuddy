@@ -20,6 +20,7 @@ import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.Payment;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.PaymentRepository;
+import com.PayMyBuddy.services.util.DebitAmount;
 import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Transactional
@@ -27,7 +28,8 @@ import com.PayMyBuddy.services.util.GetCurrentUser;
 public class PaymentService implements IPaymentService {
 
 	private Logger logger = LoggerFactory.getLogger(PaymentService.class);
-
+	
+	
 	@Autowired
 	IUserService userService;
 
@@ -52,7 +54,7 @@ public class PaymentService implements IPaymentService {
 
 		if (bankAccountService.assertBankAccountExist(paymentDTO.getBankAccountNumber()) == true) {
 			User user = userService.findByEmail(currentUser.getCurrentUser());
-			float amountToDeduct = paymentDTO.getAmount() * (float) 0.005;
+			float amountToDeduct = (float) (paymentDTO.getAmount() * (DebitAmount.DEBIT_AMOUNT));
 			float deductedAmount = paymentDTO.getAmount() - amountToDeduct;
 			Balance balance = balanceService.takeFromBalance(user, deductedAmount);
 			logger.info("user is : ", user, "amount is : ", deductedAmount);
@@ -77,7 +79,7 @@ public class PaymentService implements IPaymentService {
 		Payment payment = new Payment();
 		if (bankAccountService.assertBankAccountExist(paymentDTO.getBankAccountNumber()) == true) {
 			User user = userService.findByEmail(currentUser.getCurrentUser());
-			float amountToDeduct = paymentDTO.getAmount() * (float) 0.005;
+			float amountToDeduct = (float) (paymentDTO.getAmount() * (DebitAmount.DEBIT_AMOUNT));
 			float deductedAmount = paymentDTO.getAmount() - amountToDeduct;
 			Balance balance = balanceService.addToBalance(user, deductedAmount);
 			logger.info("user is : ", user, "amount is : ", deductedAmount);

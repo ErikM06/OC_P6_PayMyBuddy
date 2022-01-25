@@ -21,6 +21,7 @@ import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.Transfer;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.TransferRepository;
+import com.PayMyBuddy.services.util.DebitAmount;
 import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
@@ -28,6 +29,8 @@ import com.PayMyBuddy.services.util.GetCurrentUser;
 public class TransferService implements ITransferService {
 
 	Logger logger = LoggerFactory.getLogger(TransferService.class);
+	
+	
 
 	@Autowired
 	TransferRepository transferRepository;
@@ -46,7 +49,8 @@ public class TransferService implements ITransferService {
 
 	@Autowired
 	GetCurrentUser currentUser;
-
+	
+	
 	public Transfer transferToConnection(TransferDTO transferDTO)
 			throws NotEnoughtBalanceException, NotAConnectionException {
 		Transfer transfer = new Transfer();
@@ -59,7 +63,7 @@ public class TransferService implements ITransferService {
 			throw new NotAConnectionException();
 		}
 
-		float amountToDeduct = transferDTO.getAmount() * (float) 0.005;
+		float amountToDeduct = (float) (transferDTO.getAmount() * (DebitAmount.DEBIT_AMOUNT));
 		float deductedAmount = transferDTO.getAmount() - amountToDeduct;
 		Balance userBalance = balanceService.takeFromBalance(userAccount, deductedAmount);
 		if (userBalance.getAmount() <= 0) {
