@@ -81,7 +81,7 @@ public class UserController {
 		model.addAttribute("user", new UserDTO());
 		logger.info("reach /register");
 		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("registerError", "Unable to register");
+			model.addAttribute("registerError", "Unable to get /register");
 		}
 		return "signup";
 	}
@@ -93,11 +93,15 @@ public class UserController {
 			User registered = IUserService.registerNewUserAccount(userDto);
 			logger.info("reach registration at /register : {}", registered);
 		} catch (UserAlreadyExistException e) {
-			logger.error(e.getMessage());
+			e.getMessage();
+			e.printStackTrace();
+			errors.getGlobalErrors();
 			return new ModelAndView("ErrorRegister", "error", e.getMessage());
 
 		} catch (Exception e) {
-			logger.error(e.getMessage());
+			e.getMessage();
+			e.printStackTrace();
+			errors.getGlobalErrors();
 			return new ModelAndView("ErrorRegister", "error", e.getMessage());
 		}
 		return new ModelAndView("successRegister", "user", userDto);
@@ -106,6 +110,9 @@ public class UserController {
 	@GetMapping("/user/connection")
 	private ModelAndView getAddConnection(Model model, @RequestParam(value = "error", required = false) String error) {
 		model.addAttribute("connection", new ConnectionDTO());
+		if (null != error && error.equalsIgnoreCase("true")) {
+			model.addAttribute("Error", "Unable to launch /connection");
+		}
 		return new ModelAndView("connectionPage");
 
 	}
@@ -118,6 +125,7 @@ public class UserController {
 		} catch (NullPointerException e) {
 			e.getMessage();
 			e.printStackTrace();
+			errors.getGlobalErrors();
 		}
 		return new ModelAndView("home", "connection", connectionDto);
 
@@ -131,9 +139,11 @@ public class UserController {
 		} catch (NullPointerException e) {
 			e.getMessage();
 			e.printStackTrace();
+			errors.getGlobalErrors();
 		} catch (Exception e) {
 			e.getMessage();
 			e.printStackTrace();
+			errors.getGlobalErrors();
 		}
 		return new ModelAndView("home");
 
@@ -146,7 +156,7 @@ public class UserController {
 		model.addAttribute("bankAccount", new BankAccountDTO());
 		model.addAttribute("bankAccountToDelete", new BankAccountDTO());
 		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("Error", "Unable to launch /user/add_bank_account");
+			model.addAttribute("Error", "Unable to launch /user/get_bank_account");
 		}
 		return new ModelAndView("BankAccount");
 	}
@@ -159,6 +169,7 @@ public class UserController {
 		} catch (InvalidFormatException e) {
 			e.getMessage();
 			e.printStackTrace();
+			errors.getGlobalErrors();
 		}
 		return new ModelAndView("home", "bankaccount", bankAccountDTO);
 	}
@@ -171,6 +182,7 @@ public class UserController {
 		} catch (NullPointerException e) {
 			e.getMessage();
 			e.printStackTrace();
+			errors.getGlobalErrors();
 		}
 
 		return new ModelAndView("home", "bankAccount", bankAccountDTO);

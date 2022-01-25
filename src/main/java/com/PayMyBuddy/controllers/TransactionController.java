@@ -50,29 +50,36 @@ public class TransactionController {
 			model.addAttribute("transaction", new TransferDTO());
 			model.addAttribute(connections);
 			if (null != error && error.equalsIgnoreCase("true")) {
-				model.addAttribute("Error", "Unable to launch /user/operation/transfer");
+				model.addAttribute("error", "Unable to launch /user/operation/transfer");
 			}
 		} catch (Exception e) {
 			e.getMessage();
 			e.printStackTrace();
-		}
+		} 
 		return "transferPage";
 	}
 
 	@PostMapping(value = "/user/operation/transfer")
 	private ModelAndView transferToConnection(@ModelAttribute(value = "transaction") TransferDTO transferDTO,
 			HttpServletRequest httpServletRequest, Errors errors)
-			throws NotEnoughtBalanceException, NotAConnectionException {
+			throws NotEnoughtBalanceException, NotAConnectionException, Exception {
 		logger.info("entering transfer with : {}", transferDTO.toString());
-		Transfer transfer = new Transfer();
+		
 		try {
-			transfer = transferService.transferToConnection(transferDTO);
+			transferService.transferToConnection(transferDTO);
 		} catch (NotEnoughtBalanceException e) {
-			logger.error(e.getMessage(), errors);
+			e.getMessage();
+			e.printStackTrace();
 			return new ModelAndView("transferFailed");
 		} catch (NotAConnectionException e) {
-			logger.error(e.getMessage(), errors);
+			e.getMessage();
+			e.printStackTrace();
+			errors.getGlobalErrors();
 			return new ModelAndView("transferFailed");
+		} catch (Exception e) {
+			e.getMessage();
+			e.printStackTrace();
+			errors.getGlobalErrors();
 		}
 		return new ModelAndView("transferSucess", "transaction", transferDTO);
 	}
@@ -80,34 +87,50 @@ public class TransactionController {
 	@GetMapping(value = "/user/operation/payment")
 	private ModelAndView selfPayment(Model model, @RequestParam(value = "error", required = false) String error) {
 		model.addAttribute("payment", new PaymentDTO());
+		if (null != error && error.equalsIgnoreCase("true")) {
+			model.addAttribute("error", "Unable to launch /user/operation/payment");
+		}
 
 		return new ModelAndView("paymentPage") ;
+		
 	}
 
 	@PostMapping(value = "/user/operation/paymentToBankAccount")
 	private ModelAndView paymentToBankAccount(@ModelAttribute(value = "payment") PaymentDTO paymentDTO,
-			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException {
+			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException, Exception {
 		logger.info("entering payment with : {}", paymentDTO.toString());
 		
 		try {
 			 paymentService.selfPaymentToAccount(paymentDTO);
 		} catch (NotEnoughtBalanceException e) {
-			logger.error(e.getMessage(), errors);
+			e.getMessage();
+			e.printStackTrace();
+			errors.getGlobalErrors();
 			return new ModelAndView("paymentFailed");
+		} catch (Exception e) {
+			e.getMessage();
+			e.printStackTrace();
+			errors.getGlobalErrors();
 		}
 		return new ModelAndView("paymentSucess", "payment", paymentDTO);
 	}
 
 	@PostMapping(value = "/user/operation/paymentToAppAccount")
 	private ModelAndView paymentToAppAccount(@ModelAttribute(value = "payment") PaymentDTO paymentDTO,
-			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException {
+			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException, Exception {
 		logger.info("entering payment with : {}", paymentDTO.toString());
 		
 		try {
 			paymentService.selfPaymentToApp(paymentDTO);
 		} catch (NotEnoughtBalanceException e) {
-			logger.error(e.getMessage(), errors);
+			e.getMessage();
+			e.printStackTrace();
+			errors.getGlobalErrors();
 			return new ModelAndView("paymentFailed");
+		} catch (Exception e) {
+			e.getMessage();
+			e.printStackTrace();
+			errors.getGlobalErrors();
 		}
 		return new ModelAndView("paymentSucess", "payment", paymentDTO);
 	}
