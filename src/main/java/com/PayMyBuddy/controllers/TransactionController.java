@@ -78,19 +78,19 @@ public class TransactionController {
 	}
 
 	@GetMapping(value = "/user/operation/payment")
-	private String selfPayment(Model model, @RequestParam(value = "error", required = false) String error) {
+	private ModelAndView selfPayment(Model model, @RequestParam(value = "error", required = false) String error) {
 		model.addAttribute("payment", new PaymentDTO());
 
-		return "paymentPage";
+		return new ModelAndView("paymentPage") ;
 	}
 
 	@PostMapping(value = "/user/operation/paymentToBankAccount")
 	private ModelAndView paymentToBankAccount(@ModelAttribute(value = "payment") PaymentDTO paymentDTO,
 			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException {
 		logger.info("entering payment with : {}", paymentDTO.toString());
-		Payment payment = new Payment();
+		
 		try {
-			payment = paymentService.selfPaymentToAccount(paymentDTO);
+			 paymentService.selfPaymentToAccount(paymentDTO);
 		} catch (NotEnoughtBalanceException e) {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("paymentFailed");
@@ -102,9 +102,9 @@ public class TransactionController {
 	private ModelAndView paymentToAppAccount(@ModelAttribute(value = "payment") PaymentDTO paymentDTO,
 			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException {
 		logger.info("entering payment with : {}", paymentDTO.toString());
-		Payment payment = new Payment();
+		
 		try {
-			payment = paymentService.selfPaymentToApp(paymentDTO);
+			paymentService.selfPaymentToApp(paymentDTO);
 		} catch (NotEnoughtBalanceException e) {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("paymentFailed");

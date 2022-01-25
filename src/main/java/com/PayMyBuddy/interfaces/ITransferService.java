@@ -10,6 +10,4 @@ public interface ITransferService {
 	public Transfer transferToConnection(TransferDTO transferDTO)
 			throws NotEnoughtBalanceException, NotAConnectionException;
 	
-	 //public Payment selfpaymentToAccount (float amount)
-
 }

@@ -18,12 +18,9 @@ import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.ITransferService;
 import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.Balance;
-import com.PayMyBuddy.models.CompanyAccount;
 import com.PayMyBuddy.models.Transfer;
 import com.PayMyBuddy.models.User;
-import com.PayMyBuddy.repo.CompanyAccountRepository;
 import com.PayMyBuddy.repo.TransferRepository;
-import com.PayMyBuddy.services.util.DeductFromOperation;
 import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
@@ -49,9 +46,6 @@ public class TransferService implements ITransferService {
 
 	@Autowired
 	GetCurrentUser currentUser;
-
-	@Autowired
-	DeductFromOperation deductFromOperation;
 
 	public Transfer transferToConnection(TransferDTO transferDTO)
 			throws NotEnoughtBalanceException, NotAConnectionException {

@@ -23,6 +23,7 @@ public class CompanyAccountService implements ICompanyAccountService {
 	public void initCompanyAccount() {
 		if (companyAccountRepository.count() == 0) {
 			CompanyAccount companyAccount = new CompanyAccount();
+			companyAccount.setId(1);
 			companyAccount.setSold(1000);
 			companyAccount.setBankAccountNumber("company bank account");
 			companyAccountRepository.save(companyAccount);
@@ -30,7 +31,7 @@ public class CompanyAccountService implements ICompanyAccountService {
 	}
 
 	public void transferToCompanyAccount(float amount, Transfer transfer) {
-		CompanyAccount companyAccount = companyAccountRepository.getCompanyAccount();
+		CompanyAccount companyAccount = companyAccountRepository.getLastCompanyAccountOperation();
 		CompanyAccount newTransfertOnCompanyAccount = new CompanyAccount();
 		newTransfertOnCompanyAccount.setSold(companyAccount.getSold() + amount);
 		newTransfertOnCompanyAccount.setBankAccountNumber(companyAccount.getBankAccountNumber());
@@ -40,7 +41,7 @@ public class CompanyAccountService implements ICompanyAccountService {
 	}
 
 	public void paymentToCompanyAccount(float amount, Payment payment) {
-		CompanyAccount companyAccount = companyAccountRepository.getCompanyAccount();
+		CompanyAccount companyAccount = companyAccountRepository.getLastCompanyAccountOperation();
 		CompanyAccount newPaymentOnCompanyAccount = new CompanyAccount();
 		newPaymentOnCompanyAccount.setSold(companyAccount.getSold() + amount);
 		newPaymentOnCompanyAccount.setBankAccountNumber(companyAccount.getBankAccountNumber());

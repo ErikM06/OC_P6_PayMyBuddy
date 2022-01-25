@@ -9,6 +9,6 @@ import com.PayMyBuddy.models.CompanyAccount;
 @Repository
 public interface CompanyAccountRepository extends JpaRepository<CompanyAccount, Integer>{
 	
-		@Query (value ="SELECT c FROM CompanyAccount c")
-		public CompanyAccount getCompanyAccount ();
+		@Query (value ="SELECT c FROM CompanyAccount c WHERE id=(SELECT max(id) FROM CompanyAccount)")
+		public CompanyAccount getLastCompanyAccountOperation ();
 }
