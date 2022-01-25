@@ -1,15 +1,18 @@
 package com.PayMyBuddy.models;
 
 import java.sql.Timestamp;
+import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -39,6 +42,9 @@ public class Payment {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id")
 	private User userId;
+	
+	@OneToMany (mappedBy = "paymentId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Collection<CompanyAccount> companyAccount;
 
 	@Column(name = "payment_direction")
 	private String paymentDirection;
@@ -121,5 +127,15 @@ public class Payment {
 	public void setPaymentDirection(String paymentDirection) {
 		this.paymentDirection = paymentDirection;
 	}
+
+	public Collection<CompanyAccount> getCompanyAccount() {
+		return companyAccount;
+	}
+
+	public void setCompanyAccount(Collection<CompanyAccount> companyAccount) {
+		this.companyAccount = companyAccount;
+	}
+
+	
 
 }

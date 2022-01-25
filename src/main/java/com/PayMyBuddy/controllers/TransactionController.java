@@ -74,7 +74,7 @@ public class TransactionController {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("transferFailed");
 		}
-		return new ModelAndView("transferSucess", "transaction", transfer);
+		return new ModelAndView("transferSucess", "transaction", transferDTO);
 	}
 
 	@GetMapping(value = "/user/operation/payment")
@@ -95,7 +95,7 @@ public class TransactionController {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("paymentFailed");
 		}
-		return new ModelAndView("paymentSucess", "payment", payment);
+		return new ModelAndView("paymentSucess", "payment", paymentDTO);
 	}
 
 	@PostMapping(value = "/user/operation/paymentToAppAccount")
@@ -109,7 +109,7 @@ public class TransactionController {
 			logger.error(e.getMessage(), errors);
 			return new ModelAndView("paymentFailed");
 		}
-		return new ModelAndView("paymentSucess", "payment", payment);
+		return new ModelAndView("paymentSucess", "payment", paymentDTO);
 	}
 
 }

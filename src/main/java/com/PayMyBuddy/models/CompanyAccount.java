@@ -20,12 +20,15 @@ public class CompanyAccount {
 	@Column (name="sold")
 	private float sold;
 	
-	@ManyToOne 
-	@JoinColumn
-	private Payment paymentId;
+	@Column (name="bank_account_number")
+	private String bankAccountNumber;
 	
 	@ManyToOne 
-	@JoinColumn
+	@JoinColumn (name ="payment_id")
+	private Payment paymentId;
+	
+	@ManyToOne  
+	@JoinColumn (name ="transfer_id")
 	private Transfer transferId;
 
 	public CompanyAccount(float sold, Payment paymentId, Transfer transferId) {
@@ -46,6 +49,12 @@ public class CompanyAccount {
 		this.id = id;
 	}
 
+	public String getBankAccountNumber() {
+		return bankAccountNumber;
+	}
+	public void setBankAccountNumber(String bankAccountNumber) {
+		this.bankAccountNumber = bankAccountNumber;
+	}
 	public float getSold() {
 		return sold;
 	}
@@ -66,7 +75,7 @@ public class CompanyAccount {
 		return transferId;
 	}
 
-	public void setTransfer(Transfer transferId) {
+	public void setTransferId(Transfer transferId) {
 		this.transferId = transferId;
 	}
 }

@@ -1,15 +1,18 @@
 package com.PayMyBuddy.models;
 
 import java.sql.Timestamp;
+import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -33,6 +36,9 @@ public class Transfer {
 	@ManyToOne 
 	@JoinColumn (name ="connection_balance_id")
 	private Balance connectionBalance;
+	
+	@OneToMany (mappedBy = "transferId" , cascade = CascadeType.ALL)
+	private Collection< CompanyAccount> compagnyAccount;
 
 	public Transfer( Timestamp dateTime, float amount, Balance userBalance, Balance connectionBalance ) {
 		super();
@@ -87,6 +93,15 @@ public class Transfer {
 	public void setConnectionBalance(Balance connectionBalance) {
 		this.connectionBalance = connectionBalance;
 	}
+
+	public Collection<CompanyAccount> getCompagnyAccount() {
+		return compagnyAccount;
+	}
+
+	public void setCompagnyAccount(Collection<CompanyAccount> compagnyAccount) {
+		this.compagnyAccount = compagnyAccount;
+	}
+
 	
 	
 }

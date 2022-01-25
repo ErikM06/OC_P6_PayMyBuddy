@@ -2,6 +2,8 @@ package com.PayMyBuddy.services;
 
 import java.sql.Timestamp;
 
+import javax.transaction.Transactional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import com.PayMyBuddy.dto.PaymentDTO;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
 import com.PayMyBuddy.interfaces.IBalanceService;
 import com.PayMyBuddy.interfaces.IBankAccountService;
+import com.PayMyBuddy.interfaces.ICompanyAccountService;
 import com.PayMyBuddy.interfaces.IPaymentService;
 import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.Balance;
@@ -20,6 +23,7 @@ import com.PayMyBuddy.repo.PaymentRepository;
 import com.PayMyBuddy.services.util.DeductFromOperation;
 import com.PayMyBuddy.services.util.GetCurrentUser;
 
+@Transactional
 @Service
 public class PaymentService implements IPaymentService {
 
@@ -39,6 +43,9 @@ public class PaymentService implements IPaymentService {
 
 	@Autowired
 	IBalanceService balanceService;
+	
+	@Autowired
+	ICompanyAccountService companyAccountService;
 
 	@Autowired
 	DeductFromOperation deductFromOperation;
@@ -47,7 +54,8 @@ public class PaymentService implements IPaymentService {
 		Payment payment = new Payment();
 		if (bankAccountService.assertBankAccountExist(paymentDTO.getBankAccountNumber()) == true) {
 		User user = userService.findByEmail(currentUser.getCurrentUser());
-		float deductedAmount = deductFromOperation.deductedFromPaymentOperation(paymentDTO.getAmount(), payment);
+		float amountToDeduct = paymentDTO.getAmount() * (float)0.005;
+		float deductedAmount = paymentDTO.getAmount() - amountToDeduct;
 		Balance balance = balanceService.takeFromBalance(user, deductedAmount);
 		logger.info("user is : ", user, "amount is : ", deductedAmount);
 		
@@ -59,6 +67,7 @@ public class PaymentService implements IPaymentService {
 		payment.setUserId(user);
 		payment.setBankAccount(bankAccountService.getBankAccountByBankAccountNumber(paymentDTO.getBankAccountNumber()));
 		
+		companyAccountService.paymentToCompanyAccount(deductedAmount, payment);
 		paymentRepository.save(payment);
 		}
 
@@ -69,7 +78,8 @@ public class PaymentService implements IPaymentService {
 		Payment payment = new Payment();
 		if (bankAccountService.assertBankAccountExist(paymentDTO.getBankAccountNumber()) == true) {
 			User user = userService.findByEmail(currentUser.getCurrentUser());
-			float deductedAmount = deductFromOperation.deductedFromPaymentOperation(paymentDTO.getAmount(), payment);
+			float amountToDeduct = paymentDTO.getAmount() * (float)0.005;
+			float deductedAmount = paymentDTO.getAmount() - amountToDeduct;
 			Balance balance = balanceService.addToBalance(user, deductedAmount);
 			logger.info("user is : ", user, "amount is : ", deductedAmount);
 			
@@ -81,6 +91,7 @@ public class PaymentService implements IPaymentService {
 			payment.setUserId(user);
 			payment.setBankAccount(bankAccountService.getBankAccountByBankAccountNumber(paymentDTO.getBankAccountNumber()));
 			
+			companyAccountService.paymentToCompanyAccount(deductedAmount, payment);
 			paymentRepository.save(payment);
 		}
 

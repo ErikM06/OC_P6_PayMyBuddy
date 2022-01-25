@@ -13,12 +13,15 @@ import com.PayMyBuddy.dto.TransferDTO;
 import com.PayMyBuddy.exceptions.NotAConnectionException;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
 import com.PayMyBuddy.interfaces.IBalanceService;
+import com.PayMyBuddy.interfaces.ICompanyAccountService;
 import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.ITransferService;
 import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.Balance;
+import com.PayMyBuddy.models.CompanyAccount;
 import com.PayMyBuddy.models.Transfer;
 import com.PayMyBuddy.models.User;
+import com.PayMyBuddy.repo.CompanyAccountRepository;
 import com.PayMyBuddy.repo.TransferRepository;
 import com.PayMyBuddy.services.util.DeductFromOperation;
 import com.PayMyBuddy.services.util.GetCurrentUser;
@@ -42,6 +45,9 @@ public class TransferService implements ITransferService {
 	IBalanceService balanceService;
 
 	@Autowired
+	ICompanyAccountService companyAccountService;
+
+	@Autowired
 	GetCurrentUser currentUser;
 
 	@Autowired
@@ -58,9 +64,13 @@ public class TransferService implements ITransferService {
 		if (connectionAccount == null) {
 			throw new NotAConnectionException();
 		}
-		try {
-		float deductedAmount = deductFromOperation.deductedFromTransferOperation(transferDTO.getAmount(), transfer);
+
+		float amountToDeduct = transferDTO.getAmount() * (float) 0.005;
+		float deductedAmount = transferDTO.getAmount() - amountToDeduct;
 		Balance userBalance = balanceService.takeFromBalance(userAccount, deductedAmount);
+		if (userBalance.getAmount() <= 0) {
+			throw new NotEnoughtBalanceException();
+		}
 		Balance connectionBalance = balanceService.addToBalance(connectionAccount, deductedAmount);
 
 		logger.info("current User for transfer is : {}", userAccount.toString());
@@ -72,16 +82,12 @@ public class TransferService implements ITransferService {
 		transfer.setUserBalance(userBalance);
 		transfer.setConnectionBalance(connectionBalance);
 
+		companyAccountService.transferToCompanyAccount(amountToDeduct, transfer);
 		transferRepository.save(transfer);
 		logger.info("transaction is :", transfer.toString());
-		} catch (NotEnoughtBalanceException e) {
-			
-		} catch (Exception e) {
-			
-		}
 
 		return transfer;
-		
+
 	}
 
 }
