@@ -62,8 +62,12 @@ public class User implements UserDetails {
 	@OneToMany (mappedBy ="userId", cascade = CascadeType.ALL)
 	private Collection<BankAccount> bankAccount;
 	
+	@OneToMany (mappedBy ="user")
+	private Collection<Transfer> transfer;
+	
 	@Column (name ="create_time")
 	private Timestamp createTime;
+	
 	
 	@Column (name ="enable")
 	private boolean enable;
@@ -164,6 +168,14 @@ public class User implements UserDetails {
 
 	public void setUser(Collection<Connections> user) {
 		this.user = user;
+	}
+
+	public Collection<Transfer> getTransfer() {
+		return transfer;
+	}
+
+	public void setTransfer(Collection<Transfer> transfer) {
+		this.transfer = transfer;
 	}
 
 	public Collection<BankAccount> getBankAccount() {

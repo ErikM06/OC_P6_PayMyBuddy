@@ -17,5 +17,7 @@ public interface IConnectionService {
 	public void deleteConnection (String username ) throws Exception;
 	
 	public List<Connections> getAllConnections () throws Exception;
+	
+	public List<User> getConnectionsAsUserLs() throws Exception;
 
 }

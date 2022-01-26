@@ -34,7 +34,7 @@ public class ConnectionService implements IConnectionService {
 	@Autowired
 	GetCurrentUser currentUser;
 
-	public Connections addConnections(ConnectionDTO connectionDTO) throws NullPointerException{
+	public Connections addConnections(ConnectionDTO connectionDTO) throws NullPointerException {
 
 		Connections connection = new Connections();
 		if (iUserService.findByEmail(connectionDTO.getEmail()) == null) {
@@ -89,6 +89,16 @@ public class ConnectionService implements IConnectionService {
 			throw new Exception("No buddies");
 		}
 		return allConnectionFromCurrentUser;
+	}
+	
+	public List<User> getConnectionsAsUserLs() throws Exception {
+		List<User> connectionsListAsUserLs = new ArrayList<>();
+		for (Connections connection : getAllConnections()) {
+			User user = connection.getConnection();
+			connectionsListAsUserLs.add(user);
+		}
+		logger.info("Connection list is : {}", connectionsListAsUserLs.toString());
+		return connectionsListAsUserLs;
 	}
 
 	public boolean assertConnection(User user, User connection) {

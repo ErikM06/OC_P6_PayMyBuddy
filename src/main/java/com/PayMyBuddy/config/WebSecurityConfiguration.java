@@ -49,6 +49,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 				.antMatchers("/", "/register").anonymous()
+				.antMatchers("/","/register","/css/**").permitAll()
 				.antMatchers("/user/**").authenticated()
 				.antMatchers("/admin/**").hasRole("ADMIN").and()
 				.formLogin().loginPage("/login").permitAll().loginProcessingUrl("/login")

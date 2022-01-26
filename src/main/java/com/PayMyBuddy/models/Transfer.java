@@ -29,6 +29,13 @@ public class Transfer {
 	@Column (name = "transfer_amount")
 	private float amount;
 	
+	@Column (name = "description")
+	private String description;
+	
+	@ManyToOne 
+	@JoinColumn (name = "user_id")
+	private User user;
+	
 	@ManyToOne 
 	@JoinColumn (name = "user_balance_id")
 	private Balance userBalance;
@@ -40,11 +47,12 @@ public class Transfer {
 	@OneToMany (mappedBy = "transferId" , cascade = CascadeType.ALL)
 	private Collection< CompanyAccount> compagnyAccount;
 
-	public Transfer( Timestamp dateTime, float amount, Balance userBalance, Balance connectionBalance ) {
+	public Transfer( Timestamp dateTime, float amount, String description, Balance userBalance, Balance connectionBalance ) {
 		super();
 		
 		this.dateTime = dateTime;
 		this.amount = amount;
+		this.description = description;
 		this.userBalance = userBalance;
 		this.connectionBalance = connectionBalance;
 	}
@@ -62,6 +70,14 @@ public class Transfer {
 	}
 
 
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	public Timestamp getDateTime() {
 		return dateTime;
 	}
@@ -76,6 +92,14 @@ public class Transfer {
 
 	public void setAmount(float amount) {
 		this.amount = amount;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public Balance getUserBalance() {

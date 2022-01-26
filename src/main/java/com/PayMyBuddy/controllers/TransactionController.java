@@ -17,12 +17,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.PayMyBuddy.dto.PaymentDTO;
+import com.PayMyBuddy.dto.TransactionRecordDto;
 import com.PayMyBuddy.dto.TransferDTO;
 import com.PayMyBuddy.exceptions.NotAConnectionException;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
 import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.IPaymentService;
 import com.PayMyBuddy.interfaces.ITransferService;
+import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.Connections;
 import com.PayMyBuddy.models.Payment;
 import com.PayMyBuddy.models.Transfer;
@@ -38,25 +40,30 @@ public class TransactionController {
 
 	@Autowired
 	private IPaymentService paymentService;
-
+	
 	@Autowired
-	private IConnectionService iConnectionService;
+	private IConnectionService connectionService;
 
 	@GetMapping(value = "/user/operation/transfer")
 	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error)
-			throws Exception {
+			throws Exception, NullPointerException {
 		try {
-			List<Connections> connections = iConnectionService.getAllConnections();
+			List<TransactionRecordDto> transactionRecordLs = transferService.getAllUserTransfer();
 			model.addAttribute("transaction", new TransferDTO());
-			model.addAttribute(connections);
+			model.addAttribute("connections",connectionService.getConnectionsAsUserLs());
+			model.addAttribute("transactionRecordLs", transactionRecordLs);
 			if (null != error && error.equalsIgnoreCase("true")) {
 				model.addAttribute("error", "Unable to launch /user/operation/transfer");
 			}
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
+			e.getMessage();
+			e.printStackTrace();
+		}
+		catch (Exception e) {
 			e.getMessage();
 			e.printStackTrace();
 		} 
-		return "transferPage";
+		return "homeTest";
 	}
 
 	@PostMapping(value = "/user/operation/transfer")

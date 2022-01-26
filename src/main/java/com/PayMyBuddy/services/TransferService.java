@@ -1,6 +1,8 @@
 package com.PayMyBuddy.services;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -9,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.PayMyBuddy.dto.TransactionRecordDto;
 import com.PayMyBuddy.dto.TransferDTO;
 import com.PayMyBuddy.exceptions.NotAConnectionException;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
@@ -29,8 +32,6 @@ import com.PayMyBuddy.services.util.GetCurrentUser;
 public class TransferService implements ITransferService {
 
 	Logger logger = LoggerFactory.getLogger(TransferService.class);
-	
-	
 
 	@Autowired
 	TransferRepository transferRepository;
@@ -49,8 +50,7 @@ public class TransferService implements ITransferService {
 
 	@Autowired
 	GetCurrentUser currentUser;
-	
-	
+
 	public Transfer transferToConnection(TransferDTO transferDTO)
 			throws NotEnoughtBalanceException, NotAConnectionException {
 		Transfer transfer = new Transfer();
@@ -58,7 +58,7 @@ public class TransferService implements ITransferService {
 		User connectionAccount = new User();
 
 		userAccount = userService.findByEmail(currentUser.getCurrentUser());
-		connectionAccount = userService.findByEmail(transferDTO.getConnectionEmail());
+		connectionAccount = userService.findByEmail(transferDTO.getConnection().getEmail());
 		if (connectionAccount == null) {
 			throw new NotAConnectionException();
 		}
@@ -71,20 +71,40 @@ public class TransferService implements ITransferService {
 		}
 		Balance connectionBalance = balanceService.addToBalance(connectionAccount, deductedAmount);
 
+		transfer.setAmount(deductedAmount);
+		transfer.setDateTime(new Timestamp(System.currentTimeMillis()));
+		if (transferDTO.getDescription().isEmpty()) {
+			transfer.setDescription("No description !");
+		} else {
+			transfer.setDescription(transferDTO.getDescription());
+		}
+		transfer.setUserBalance(userBalance);
+		transfer.setConnectionBalance(connectionBalance);
+		transfer.setUser(userService.findByEmail(currentUser.getCurrentUser()));
+
+		companyAccountService.transferToCompanyAccount(amountToDeduct, transfer);
+		transferRepository.save(transfer);
+
+		logger.info("transaction is :", transfer.toString());
 		logger.info("current User for transfer is : {}", userAccount.toString());
 		System.out.println(userAccount.toString());
 		logger.info("current connection for transfer is : {}", connectionAccount.toString());
 
-		transfer.setAmount(deductedAmount);
-		transfer.setDateTime(new Timestamp(System.currentTimeMillis()));
-		transfer.setUserBalance(userBalance);
-		transfer.setConnectionBalance(connectionBalance);
-
-		companyAccountService.transferToCompanyAccount(amountToDeduct, transfer);
-		transferRepository.save(transfer);
-		logger.info("transaction is :", transfer.toString());
-
 		return transfer;
+	}
+
+	public List<TransactionRecordDto> getAllUserTransfer() throws NullPointerException {
+		User user = userService.findByEmail(currentUser.getCurrentUser());
+
+		List<TransactionRecordDto> transactionRecordLs = transferRepository.getTransactionRecordFromUser(user);
+		logger.info("transferDtoLs lenght is : {}", transactionRecordLs.size());
+		if (transactionRecordLs.isEmpty()) {
+			throw new NullPointerException("No transaction for current user");
+		} else {
+			
+
+			return transactionRecordLs;
+		}
 
 	}
 

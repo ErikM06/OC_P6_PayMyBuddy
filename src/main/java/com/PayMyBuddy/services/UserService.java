@@ -17,12 +17,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
 import com.PayMyBuddy.interfaces.IBalanceService;
+import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.Balance;
+import com.PayMyBuddy.models.Connections;
 import com.PayMyBuddy.models.Role;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.RoleRepository;
 import com.PayMyBuddy.repo.UserRepository;
+import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
 public class UserService implements IUserService {
@@ -37,6 +40,7 @@ public class UserService implements IUserService {
 
 	@Autowired
 	private IBalanceService iBalanceService;
+
 
 	// method from Spring doc to avoid circular references error
 
