@@ -44,7 +44,7 @@ public class TransactionController {
 	@Autowired
 	private IConnectionService connectionService;
 
-	@GetMapping(value = "/user/operation/transfer")
+	@GetMapping(value = "/user/operation")
 	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error)
 			throws Exception, NullPointerException {
 		try {
@@ -53,7 +53,7 @@ public class TransactionController {
 			model.addAttribute("connections",connectionService.getConnectionsAsUserLs());
 			model.addAttribute("transactionRecordLs", transactionRecordLs);
 			if (null != error && error.equalsIgnoreCase("true")) {
-				model.addAttribute("error", "Unable to launch /user/operation/transfer");
+				model.addAttribute("error", "Unable to launch /user/operation");
 			}
 		} catch (NullPointerException e) {
 			e.getMessage();
@@ -63,7 +63,7 @@ public class TransactionController {
 			e.getMessage();
 			e.printStackTrace();
 		} 
-		return "homeTest";
+		return "transferPage";
 	}
 
 	@PostMapping(value = "/user/operation/transfer")
@@ -88,7 +88,7 @@ public class TransactionController {
 			e.printStackTrace();
 			errors.getGlobalErrors();
 		}
-		return new ModelAndView("transferSucess", "transaction", transferDTO);
+		return new ModelAndView("homeTest", "transaction", transferDTO);
 	}
 
 	@GetMapping(value = "/user/operation/payment")

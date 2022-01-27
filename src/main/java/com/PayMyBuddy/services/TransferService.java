@@ -58,7 +58,7 @@ public class TransferService implements ITransferService {
 		User connectionAccount = new User();
 
 		userAccount = userService.findByEmail(currentUser.getCurrentUser());
-		connectionAccount = userService.findByEmail(transferDTO.getConnection().getEmail());
+		connectionAccount = userService.findByEmail(transferDTO.getFriend().getEmail());
 		if (connectionAccount == null) {
 			throw new NotAConnectionException();
 		}

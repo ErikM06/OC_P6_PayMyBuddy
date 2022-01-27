@@ -1,20 +1,18 @@
 package com.PayMyBuddy.dto;
 
-import org.springframework.stereotype.Component;
-
 import com.PayMyBuddy.models.User;
 
-@Component
+
 public class TransferDTO {
 
 	float amount;
 
-	User connection;
+	User friend;
 	
 	String description;
 
-	public TransferDTO(User connection, String description, float amount) {
-		this.connection = connection;
+	public TransferDTO(User friend, String description, float amount) {
+		this.friend = friend;
 		this.description = description;
 		this.amount = amount;
 	}
@@ -23,12 +21,12 @@ public class TransferDTO {
 		
 	}
 
-	public User getConnection() {
-		return connection;
+	public User getFriend() {
+		return friend;
 	}
 
-	public void setConnection(User connection) {
-		this.connection = connection;
+	public void setFriend(User friend) {
+		this.friend = friend;
 	}
 
 	public float getAmount() {
