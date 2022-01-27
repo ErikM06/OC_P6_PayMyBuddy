@@ -58,7 +58,7 @@ public class TransferService implements ITransferService {
 		User connectionAccount = new User();
 
 		userAccount = userService.findByEmail(currentUser.getCurrentUser());
-		connectionAccount = userService.findByEmail(transferDTO.getFriend().getEmail());
+		connectionAccount = userService.findByEmail(transferDTO.getConnectionEmail());
 		if (connectionAccount == null) {
 			throw new NotAConnectionException();
 		}
@@ -73,7 +73,7 @@ public class TransferService implements ITransferService {
 
 		transfer.setAmount(deductedAmount);
 		transfer.setDateTime(new Timestamp(System.currentTimeMillis()));
-		if (transferDTO.getDescription().isEmpty()) {
+		if (transferDTO.getDescription() == null) {
 			transfer.setDescription("No description !");
 		} else {
 			transfer.setDescription(transferDTO.getDescription());

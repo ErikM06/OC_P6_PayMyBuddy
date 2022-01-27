@@ -24,11 +24,6 @@ import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
 import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.IPaymentService;
 import com.PayMyBuddy.interfaces.ITransferService;
-import com.PayMyBuddy.interfaces.IUserService;
-import com.PayMyBuddy.models.Connections;
-import com.PayMyBuddy.models.Payment;
-import com.PayMyBuddy.models.Transfer;
-import com.PayMyBuddy.services.TransferService;
 
 @Controller
 public class TransactionController {
@@ -88,7 +83,7 @@ public class TransactionController {
 			e.printStackTrace();
 			errors.getGlobalErrors();
 		}
-		return new ModelAndView("homeTest", "transaction", transferDTO);
+		return new ModelAndView("home", "transaction", transferDTO);
 	}
 
 	@GetMapping(value = "/user/operation/payment")

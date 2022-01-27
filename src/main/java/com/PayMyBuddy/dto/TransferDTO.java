@@ -7,26 +7,21 @@ public class TransferDTO {
 
 	float amount;
 
-	User friend;
+	String connectionEmail;
 	
 	String description;
 
-	public TransferDTO(User friend, String description, float amount) {
-		this.friend = friend;
-		this.description = description;
-		this.amount = amount;
-	}
-	
+
 	public TransferDTO () {
 		
 	}
 
-	public User getFriend() {
-		return friend;
+	public String getConnectionEmail() {
+		return connectionEmail;
 	}
 
-	public void setFriend(User friend) {
-		this.friend = friend;
+	public void setConnectionEmail(String connectionEmail) {
+		this.connectionEmail = connectionEmail;
 	}
 
 	public float getAmount() {
