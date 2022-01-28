@@ -1,12 +1,8 @@
 package com.PayMyBuddy.services;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -36,7 +32,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = userService.findUserByUsername(username);
-		logger.info("loading User by username: {} ", username);
+		logger.info("loading User by username: {} ", username.toString());
 		if (user == null) {
 			throw new UsernameNotFoundException("user with {} "+username+" not found!");
 		}

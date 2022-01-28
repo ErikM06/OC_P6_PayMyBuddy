@@ -83,7 +83,7 @@ public class UserController {
 		if (null != error && error.equalsIgnoreCase("true")) {
 			model.addAttribute("registerError", "Unable to get /register");
 		}
-		return "signup";
+		return "registerPage";
 	}
 
 	@PostMapping(value = "/register")
@@ -104,7 +104,7 @@ public class UserController {
 			errors.getGlobalErrors();
 			return new ModelAndView("ErrorRegister", "error", e.getMessage());
 		}
-		return new ModelAndView("successRegister", "user", userDto);
+		return new ModelAndView("login", "user", userDto);
 	}
 
 	@GetMapping("/user/connection")

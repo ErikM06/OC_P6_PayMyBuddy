@@ -31,10 +31,16 @@
 		</rollingPolicy>
 	</appender>
 
-	<root level="INFo">
+	<root level="INFO">
 		<appender-ref ref="CONSOLE" />
 		<appender-ref ref ="LOGS"/>
 	</root>
+	
+	<logger name ="org.thymeleaf" LEVEL ="INFO" >
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="LOGS"/>
+	</logger>
+		
 
 
 </configuration>

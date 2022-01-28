@@ -13,7 +13,7 @@ import com.PayMyBuddy.models.User;
 @Repository
 public interface TransferRepository extends JpaRepository<Transfer, Integer> {
 
-	@Query (value= "Select distinct new com.PayMyBuddy.dto.TransactionRecordDto "
+	@Query (value= "Select new com.PayMyBuddy.dto.TransactionRecordDto "
 			+ "(b.user as user, t.description as description, t.amount as amount) "
 			+ "FROM Transfer t INNER JOIN Balance b ON t.connectionBalance = b.user"
 			+ " INNER JOIN User u ON u = b.user WHERE t.user =?1 ")
