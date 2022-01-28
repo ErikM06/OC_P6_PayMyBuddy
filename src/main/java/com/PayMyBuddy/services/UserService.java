@@ -41,7 +41,7 @@ public class UserService implements IUserService {
 
 	public User registerNewUserAccount(UserDTO userDto) throws UserAlreadyExistException {
 		User user = new User();
-		List<Role> userRoleLs = new ArrayList<>();
+		
 		List<Balance> userBalance = new ArrayList<>();
 		if (emailExists(userDto.getEmail())) {
 			logger.info("ok");
@@ -52,9 +52,8 @@ public class UserService implements IUserService {
 			user.setEmail(userDto.getEmail());
 			user.setCreateTime(new Timestamp(System.currentTimeMillis()));
 			user.setEnable(true);
-			userRoleLs.add(roleRepo.findRoleByRoleName("ROLE_USER"));
 			userBalance.add(iBalanceService.initBalance(user));
-			user.setRoles(userRoleLs);
+			user.setRoles(roleRepo.findRoleByRoleName("ROLE_USER"));
 			user.setBalance(userBalance);
 			logger.info("UserService user is: " + user);
 

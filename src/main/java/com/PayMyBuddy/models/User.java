@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -45,10 +46,10 @@ public class User implements UserDetails {
 	@Column (name ="password")
 	protected String password;
 	
-	@ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "users_role", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "Id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "roleId"))
-    private List<Role> roles;
+	
+	@ManyToOne (cascade = CascadeType.ALL)
+	@JoinColumn(name="userRole")
+    private Role roles;
 	
 	@OneToMany( mappedBy = "user", cascade = CascadeType.ALL)
 	private Collection<Connections> user;
@@ -74,7 +75,7 @@ public class User implements UserDetails {
 
 	
 	
-	public User(String username, String email, String password, List<Role> roles, Timestamp createTime,
+	public User(String username, String email, String password, Role roles, Timestamp createTime,
 			boolean enable, Collection<Balance> balance) {
 		super();
 		this.username = username;
@@ -138,11 +139,11 @@ public class User implements UserDetails {
 		this.enable = enable;
 	}
 
-	public List<Role> getRoles() {
+	public Role getRoles() {
 		return roles;
 	}
 
-	public void setRoles(List<Role> roles) {
+	public void setRoles(Role roles) {
 		this.roles = roles;
 	}
 
