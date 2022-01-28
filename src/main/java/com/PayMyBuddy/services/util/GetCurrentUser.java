@@ -6,7 +6,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 import com.PayMyBuddy.models.User;
-import com.PayMyBuddy.services.TransferService;
 
 @Component
 public class GetCurrentUser {

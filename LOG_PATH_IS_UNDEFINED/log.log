@@ -5560,3 +5560,183 @@ java.lang.IllegalStateException: Neither BindingResult nor plain target object f
 				c.P.controllers.UserController.getRegister - reach /register
 28-01-2022 12:39:02.652 [http-nio-8080-exec-7] INFO 
 				c.P.controllers.UserController.getRegister - reach /register
+28-01-2022 13:43:04.963 [RMI TCP Connection(82)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+28-01-2022 13:43:05.104 [RMI TCP Connection(82)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-01-2022 13:43:05.105 [RMI TCP Connection(82)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+28-01-2022 13:43:05.109 [RMI TCP Connection(82)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+28-01-2022 13:48:40.297 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 16588 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+28-01-2022 13:48:40.300 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+28-01-2022 13:48:41.012 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28-01-2022 13:48:41.079 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 60 ms. Found 8 JPA repository interfaces.
+28-01-2022 13:48:41.603 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+28-01-2022 13:48:41.612 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+28-01-2022 13:48:41.612 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-01-2022 13:48:41.612 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+28-01-2022 13:48:41.698 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+28-01-2022 13:48:41.699 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1365 ms
+28-01-2022 13:48:42.044 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-01-2022 13:48:42.091 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+28-01-2022 13:48:42.243 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-01-2022 13:48:42.334 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-01-2022 13:48:42.467 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-01-2022 13:48:42.497 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+28-01-2022 13:48:43.224 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-01-2022 13:48:43.231 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-01-2022 13:48:43.669 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-01-2022 13:48:43.832 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+28-01-2022 13:48:44.141 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@453bbb9b, org.springframework.security.web.context.SecurityContextPersistenceFilter@11f752d1, org.springframework.security.web.header.HeaderWriterFilter@2a41d17a, org.springframework.security.web.authentication.logout.LogoutFilter@49d5c751, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@235b4aea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@381c826c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@480fb706, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@170b27a7, org.springframework.security.web.session.SessionManagementFilter@735dc133, org.springframework.security.web.access.ExceptionTranslationFilter@2688b2be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a507ea0]
+28-01-2022 13:48:44.470 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+28-01-2022 13:48:45.049 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+28-01-2022 13:48:45.096 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+28-01-2022 13:48:45.113 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+28-01-2022 13:48:45.126 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.091 seconds (JVM running for 5.86)
+28-01-2022 13:48:46.050 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-01-2022 13:48:46.050 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+28-01-2022 13:48:46.052 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+28-01-2022 13:49:00.981 [http-nio-8080-exec-3] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: user1 
+28-01-2022 13:49:01.197 [http-nio-8080-exec-3] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [134] milliseconds.
+28-01-2022 13:49:07.606 [http-nio-8080-exec-8] INFO 
+				c.P.controllers.UserController.getRegister - reach /register
+28-01-2022 13:49:17.413 [http-nio-8080-exec-2] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: user1 
+28-01-2022 13:49:19.467 [http-nio-8080-exec-5] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: user1@gmail.com
+28-01-2022 13:49:19.502 [http-nio-8080-exec-5] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 8
+28-01-2022 13:49:19.508 [http-nio-8080-exec-5] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: user1@gmail.com
+28-01-2022 13:49:19.513 [http-nio-8080-exec-5] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list is : [com.PayMyBuddy.models.User@1c64e1b1, com.PayMyBuddy.models.User@b17818]
+28-01-2022 13:50:34.242 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+28-01-2022 13:50:34.389 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-01-2022 13:50:34.391 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+28-01-2022 13:50:34.400 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+28-01-2022 14:23:50.678 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 15236 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+28-01-2022 14:23:50.680 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+28-01-2022 14:23:51.369 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28-01-2022 14:23:51.432 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 55 ms. Found 8 JPA repository interfaces.
+28-01-2022 14:23:51.934 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+28-01-2022 14:23:51.943 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+28-01-2022 14:23:51.944 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-01-2022 14:23:51.944 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+28-01-2022 14:23:52.030 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+28-01-2022 14:23:52.030 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1322 ms
+28-01-2022 14:23:52.364 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+28-01-2022 14:23:52.408 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+28-01-2022 14:23:52.542 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28-01-2022 14:23:52.629 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-01-2022 14:23:52.762 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-01-2022 14:23:52.790 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+28-01-2022 14:23:53.448 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28-01-2022 14:23:53.456 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-01-2022 14:23:53.857 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-01-2022 14:23:53.996 [main] INFO 
+				com.PayMyBuddy.services.UserService.passwordEncoder - in passwordEncoder @Bean
+28-01-2022 14:23:54.279 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1609ed55, org.springframework.security.web.context.SecurityContextPersistenceFilter@f36c8b1, org.springframework.security.web.header.HeaderWriterFilter@381c826c, org.springframework.security.web.authentication.logout.LogoutFilter@67201eeb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@21dbd651, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d20cbb5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@381d7c4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5edd2170, org.springframework.security.web.session.SessionManagementFilter@36dbfa68, org.springframework.security.web.access.ExceptionTranslationFilter@57330423, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5da799]
+28-01-2022 14:23:54.584 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+28-01-2022 14:23:55.037 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+28-01-2022 14:23:55.076 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+28-01-2022 14:23:55.090 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+28-01-2022 14:23:55.101 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.661 seconds (JVM running for 5.403)
+28-01-2022 14:23:55.226 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28-01-2022 14:23:55.227 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+28-01-2022 14:23:55.228 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+28-01-2022 14:24:55.503 [http-nio-8080-exec-3] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: user1 
+28-01-2022 14:24:55.690 [http-nio-8080-exec-3] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [111] milliseconds.
+28-01-2022 14:24:59.878 [http-nio-8080-exec-6] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: user1@gmail.com
+28-01-2022 14:24:59.914 [http-nio-8080-exec-6] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 8
+28-01-2022 14:24:59.920 [http-nio-8080-exec-6] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: user1@gmail.com
+28-01-2022 14:24:59.923 [http-nio-8080-exec-6] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list is : [com.PayMyBuddy.models.User@5bbbc1d0, com.PayMyBuddy.models.User@497d9728]
+28-01-2022 14:25:02.866 [http-nio-8080-exec-8] INFO 
+				c.P.c.TransactionController.transferToConnection - entering transfer with : com.PayMyBuddy.dto.TransferDTO@54f95e5b
+28-01-2022 14:25:02.867 [http-nio-8080-exec-8] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: user1@gmail.com
+28-01-2022 14:25:02.895 [http-nio-8080-exec-8] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: user1@gmail.com
+28-01-2022 14:25:02.927 [http-nio-8080-exec-8] INFO 
+				c.P.services.TransferService.transferToConnection - transaction is :
+28-01-2022 14:25:02.927 [http-nio-8080-exec-8] INFO 
+				c.P.services.TransferService.transferToConnection - current User for transfer is : com.PayMyBuddy.models.User@200dff81
+28-01-2022 14:25:02.927 [http-nio-8080-exec-8] INFO 
+				c.P.services.TransferService.transferToConnection - current connection for transfer is : com.PayMyBuddy.models.User@3d4e67a1
+28-01-2022 14:25:18.015 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+28-01-2022 14:25:18.142 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-01-2022 14:25:18.144 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+28-01-2022 14:25:18.154 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.

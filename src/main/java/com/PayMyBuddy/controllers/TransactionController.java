@@ -24,6 +24,7 @@ import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
 import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.IPaymentService;
 import com.PayMyBuddy.interfaces.ITransferService;
+import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Controller
 public class TransactionController {
@@ -38,14 +39,17 @@ public class TransactionController {
 	
 	@Autowired
 	private IConnectionService connectionService;
+	
+	@Autowired
+	private GetCurrentUser currentUser;
 
 	@GetMapping(value = "/user/operation")
 	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error)
 			throws Exception, NullPointerException {
 		try {
-			List<TransactionRecordDto> transactionRecordLs = transferService.getAllUserTransfer();
+			List<TransactionRecordDto> transactionRecordLs = transferService.getAllUserTransfer(currentUser);
 			model.addAttribute("transaction", new TransferDTO());
-			model.addAttribute("connections",connectionService.getConnectionsAsUserLs());
+			model.addAttribute("connections",connectionService.getConnectionsAsUserLs(currentUser));
 			model.addAttribute("transactionRecordLs", transactionRecordLs);
 			if (null != error && error.equalsIgnoreCase("true")) {
 				model.addAttribute("error", "Unable to launch /user/operation");
@@ -68,7 +72,7 @@ public class TransactionController {
 		logger.info("entering transfer with : {}", transferDTO.toString());
 		
 		try {
-			transferService.transferToConnection(transferDTO);
+			transferService.transferToConnection(transferDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			e.getMessage();
 			e.printStackTrace();
@@ -103,7 +107,7 @@ public class TransactionController {
 		logger.info("entering payment with : {}", paymentDTO.toString());
 		
 		try {
-			 paymentService.selfPaymentToAccount(paymentDTO);
+			 paymentService.selfPaymentToAccount(paymentDTO,currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			e.getMessage();
 			e.printStackTrace();
@@ -123,7 +127,7 @@ public class TransactionController {
 		logger.info("entering payment with : {}", paymentDTO.toString());
 		
 		try {
-			paymentService.selfPaymentToApp(paymentDTO);
+			paymentService.selfPaymentToApp(paymentDTO,currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			e.getMessage();
 			e.printStackTrace();

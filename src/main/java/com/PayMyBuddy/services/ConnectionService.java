@@ -9,7 +9,6 @@ import javax.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.PayMyBuddy.dto.ConnectionDTO;
@@ -31,10 +30,8 @@ public class ConnectionService implements IConnectionService {
 	@Autowired
 	IUserService iUserService;
 
-	@Autowired
-	GetCurrentUser currentUser;
 
-	public Connections addConnections(ConnectionDTO connectionDTO) throws NullPointerException {
+	public Connections addConnections(ConnectionDTO connectionDTO, GetCurrentUser currentUser) throws NullPointerException {
 
 		Connections connection = new Connections();
 		if (iUserService.findByEmail(connectionDTO.getEmail()) == null) {
@@ -52,7 +49,7 @@ public class ConnectionService implements IConnectionService {
 	}
 
 	@Transactional
-	public void deleteConnection(String connectionUsername) throws Exception, NullPointerException {
+	public void deleteConnection(String connectionUsername, GetCurrentUser currentUser) throws Exception, NullPointerException {
 		User user = new User();
 		User connectionProfil = new User();
 		List<Connections> connection = new ArrayList<>();
@@ -80,20 +77,19 @@ public class ConnectionService implements IConnectionService {
 
 	}
 
-	public List<Connections> getAllConnections() throws Exception {
-		String currrentUsername = currentUser.getCurrentUser();
-		User currentUser = iUserService.findByEmail(currrentUsername);
+	public List<Connections> getAllConnections(GetCurrentUser currentUser) throws Exception {
+		User user = iUserService.findByEmail(currentUser.getCurrentUser());
 		List<Connections> allConnectionFromCurrentUser = connectionRepository
-				.getAllConnectionsFromCurrentUser(currentUser);
+				.getAllConnectionsFromCurrentUser(user);
 		if (allConnectionFromCurrentUser.isEmpty()) {
 			throw new Exception("No buddies");
 		}
 		return allConnectionFromCurrentUser;
 	}
 	
-	public List<User> getConnectionsAsUserLs() throws Exception {
+	public List<User> getConnectionsAsUserLs(GetCurrentUser currentUser) throws Exception {
 		List<User> connectionsListAsUserLs = new ArrayList<>();
-		for (Connections connection : getAllConnections()) {
+		for (Connections connection : getAllConnections(currentUser)) {
 			User user = connection.getConnection();
 			connectionsListAsUserLs.add(user);
 		}

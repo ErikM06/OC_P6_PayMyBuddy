@@ -34,9 +34,6 @@ public class PaymentService implements IPaymentService {
 	IUserService userService;
 
 	@Autowired
-	GetCurrentUser currentUser;
-
-	@Autowired
 	IBankAccountService bankAccountService;
 
 	@Autowired
@@ -48,7 +45,7 @@ public class PaymentService implements IPaymentService {
 	@Autowired
 	ICompanyAccountService companyAccountService;
 
-	public Payment selfPaymentToAccount(PaymentDTO paymentDTO) throws NotEnoughtBalanceException {
+	public Payment selfPaymentToAccount(PaymentDTO paymentDTO, GetCurrentUser currentUser) throws NotEnoughtBalanceException {
 
 		Payment payment = new Payment();
 
@@ -75,7 +72,7 @@ public class PaymentService implements IPaymentService {
 		return payment;
 	}
 
-	public Payment selfPaymentToApp(PaymentDTO paymentDTO) throws NotEnoughtBalanceException {
+	public Payment selfPaymentToApp(PaymentDTO paymentDTO, GetCurrentUser currentUser ) throws NotEnoughtBalanceException {
 		Payment payment = new Payment();
 		if (bankAccountService.assertBankAccountExist(paymentDTO.getBankAccountNumber()) == true) {
 			User user = userService.findByEmail(currentUser.getCurrentUser());

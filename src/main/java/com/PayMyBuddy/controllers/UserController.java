@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -26,6 +25,7 @@ import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.BankAccount;
 import com.PayMyBuddy.models.User;
+import com.PayMyBuddy.services.util.GetCurrentUser;
 import com.PayMyBuddy.services.util.SecurityService;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 
@@ -45,6 +45,9 @@ public class UserController {
 
 	@Autowired
 	private IBankAccountService bankAccountService;
+	
+	@Autowired
+	private GetCurrentUser currentUser;
 
 	@GetMapping(value = "/admin/delete_user")
 	private void deleteUserByAdmin(@RequestParam(value = "user") String username) {
@@ -121,7 +124,7 @@ public class UserController {
 	private ModelAndView addConnection(@ModelAttribute("connection") ConnectionDTO connectionDto,
 			HttpServletRequest request, Errors errors) throws NullPointerException {
 		try {
-			IConnectionService.addConnections(connectionDto);
+			IConnectionService.addConnections(connectionDto,currentUser);
 		} catch (NullPointerException e) {
 			e.getMessage();
 			e.printStackTrace();
@@ -135,7 +138,7 @@ public class UserController {
 	private ModelAndView deleteConnection(@ModelAttribute("connection") ConnectionDTO connectionDto,
 			HttpServletRequest request, Errors errors) throws Exception, NullPointerException {
 		try {
-			IConnectionService.deleteConnection(connectionDto.getConnectionUsername());
+			IConnectionService.deleteConnection(connectionDto.getConnectionUsername(),currentUser);
 		} catch (NullPointerException e) {
 			e.getMessage();
 			e.printStackTrace();
@@ -151,7 +154,7 @@ public class UserController {
 
 	@GetMapping(value = "/user/get_bank_account")
 	private ModelAndView getAddBankAccount(Model model, @RequestParam(value = "error", required = false) String error) {
-		List<BankAccount> bankAccountls = bankAccountService.getAllBankAccountFromUser();
+		List<BankAccount> bankAccountls = bankAccountService.getAllBankAccountFromUser(currentUser);
 		model.addAttribute("bankAccountls", bankAccountls);
 		model.addAttribute("bankAccount", new BankAccountDTO());
 		model.addAttribute("bankAccountToDelete", new BankAccountDTO());
@@ -165,7 +168,7 @@ public class UserController {
 	private ModelAndView addBankAccount(@ModelAttribute("bankAccount") BankAccountDTO bankAccountDTO,
 			HttpServletRequest request, Errors errors) throws InvalidFormatException {
 		try {
-			bankAccountService.addBankAccount(bankAccountDTO.getBankAccountNumber());
+			bankAccountService.addBankAccount(bankAccountDTO.getBankAccountNumber(),currentUser);
 		} catch (InvalidFormatException e) {
 			e.getMessage();
 			e.printStackTrace();
@@ -178,7 +181,7 @@ public class UserController {
 	private ModelAndView deleteBankAccount(@ModelAttribute("bankAccountToDelete") BankAccountDTO bankAccountDTO,
 			HttpServletRequest request, Errors errors) throws NullPointerException {
 		try {
-		bankAccountService.deleteBankAccount(bankAccountDTO);
+		bankAccountService.deleteBankAccount(bankAccountDTO,currentUser);
 		} catch (NullPointerException e) {
 			e.getMessage();
 			e.printStackTrace();

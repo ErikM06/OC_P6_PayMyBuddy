@@ -1,6 +1,5 @@
 package com.PayMyBuddy.dto;
 
-import com.PayMyBuddy.models.Transfer;
 import com.PayMyBuddy.models.User;
 
 public class TransactionRecordDto {

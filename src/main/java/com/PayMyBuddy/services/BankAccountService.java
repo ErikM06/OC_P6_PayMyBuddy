@@ -28,23 +28,21 @@ public class BankAccountService implements IBankAccountService {
 	BankAccountRepository bankAccountRepository;
 
 	@Autowired
-	GetCurrentUser currentUser;
-
-	@Autowired
 	IUserService userService;
 
-	public BankAccount addBankAccount(String bankAccountNumber) throws InvalidFormatException {
+	public BankAccount addBankAccount(String bankAccountNumber, GetCurrentUser currentUser) throws InvalidFormatException {
 		BankAccount bankAccount = new BankAccount();
 		User user = userService.findByEmail(currentUser.getCurrentUser());
 		bankAccount.setUserid(user);
 		bankAccount.setBankAccountNumber(bankAccountNumber);
 		bankAccountRepository.save(bankAccount);
+		logger.info("Saved bank account is :{}", bankAccount.toString());
 		return bankAccount;
 	}
 	
 	@Transactional
 	@Modifying
-	public void deleteBankAccount(BankAccountDTO bankAccountDTO) throws NullPointerException {
+	public void deleteBankAccount(BankAccountDTO bankAccountDTO, GetCurrentUser currentUser) throws NullPointerException {
 		if (bankAccountRepository.existsWithBankAccountNumber(bankAccountDTO.getBankAccountNumber()) == false) {
 			throw new NullPointerException("Bank Account don't existe : {}");
 		} else {
@@ -52,7 +50,7 @@ public class BankAccountService implements IBankAccountService {
 		}
 	}
 
-	public List<BankAccount> getAllBankAccountFromUser() {
+	public List<BankAccount> getAllBankAccountFromUser(GetCurrentUser currentUser) {
 
 		List<BankAccount> allBankAccountFromUser = bankAccountRepository
 				.findAllForCurrentUser(currentUser.getCurrentUser());

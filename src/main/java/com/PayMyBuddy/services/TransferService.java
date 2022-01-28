@@ -1,7 +1,6 @@
 package com.PayMyBuddy.services;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -48,17 +47,11 @@ public class TransferService implements ITransferService {
 	@Autowired
 	ICompanyAccountService companyAccountService;
 
-	@Autowired
-	GetCurrentUser currentUser;
-
-	public Transfer transferToConnection(TransferDTO transferDTO)
+	public Transfer transferToConnection(TransferDTO transferDTO, GetCurrentUser currentUser)
 			throws NotEnoughtBalanceException, NotAConnectionException {
 		Transfer transfer = new Transfer();
-		User userAccount = new User();
-		User connectionAccount = new User();
-
-		userAccount = userService.findByEmail(currentUser.getCurrentUser());
-		connectionAccount = userService.findByEmail(transferDTO.getConnectionEmail());
+		User userAccount = userService.findByEmail(currentUser.getCurrentUser());
+		User connectionAccount = userService.findByEmail(transferDTO.getConnectionEmail());
 		if (connectionAccount == null) {
 			throw new NotAConnectionException();
 		}
@@ -93,10 +86,9 @@ public class TransferService implements ITransferService {
 		return transfer;
 	}
 
-	public List<TransactionRecordDto> getAllUserTransfer() throws NullPointerException {
-		User user = userService.findByEmail(currentUser.getCurrentUser());
-
-		List<TransactionRecordDto> transactionRecordLs = transferRepository.getTransactionRecordFromUser(user);
+	public List<TransactionRecordDto> getAllUserTransfer(GetCurrentUser currentUser) throws NullPointerException {
+		List<TransactionRecordDto> transactionRecordLs = transferRepository.getTransactionRecordFromUser
+				(userService.findByEmail(currentUser.getCurrentUser()));
 		logger.info("transferDtoLs lenght is : {}", transactionRecordLs.size());
 		if (transactionRecordLs.isEmpty()) {
 			throw new NullPointerException("No transaction for current user");

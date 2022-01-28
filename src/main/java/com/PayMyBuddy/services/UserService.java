@@ -8,24 +8,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
 import com.PayMyBuddy.interfaces.IBalanceService;
-import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.Balance;
-import com.PayMyBuddy.models.Connections;
 import com.PayMyBuddy.models.Role;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.RoleRepository;
 import com.PayMyBuddy.repo.UserRepository;
-import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
 public class UserService implements IUserService {
