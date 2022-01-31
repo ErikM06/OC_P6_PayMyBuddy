@@ -14,6 +14,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -34,7 +36,8 @@ public class User implements UserDetails {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue (strategy = GenerationType.AUTO)
+	@Column (name = "id")
 	private int id;
 	
 	@Column (name = "username")
@@ -48,7 +51,7 @@ public class User implements UserDetails {
 	
 	
 	@ManyToOne (cascade = CascadeType.ALL)
-	@JoinColumn(name="userRole")
+	@JoinColumn(name="RoleId")
     private Role roles;
 	
 	@OneToMany( mappedBy = "user", cascade = CascadeType.ALL)
@@ -57,8 +60,9 @@ public class User implements UserDetails {
 	@OneToMany( mappedBy = "connection", cascade = CascadeType.ALL)
 	private Collection<Connections> connection;
 	
-	@OneToMany (mappedBy = "amount", cascade = CascadeType.ALL)
-	private Collection<Balance>balance;
+	@OneToOne (mappedBy = "user", cascade = CascadeType.MERGE)
+	@PrimaryKeyJoinColumn
+	private Balance balance;
 	
 	@OneToMany (mappedBy ="userId", cascade = CascadeType.ALL)
 	private Collection<BankAccount> bankAccount;
@@ -76,7 +80,7 @@ public class User implements UserDetails {
 	
 	
 	public User(String username, String email, String password, Role roles, Timestamp createTime,
-			boolean enable, Collection<Balance> balance) {
+			boolean enable, Balance balance) {
 		super();
 		this.username = username;
 		this.email = email;
@@ -155,11 +159,11 @@ public class User implements UserDetails {
 		this.connection = connection;
 	}
 
-	public Collection<Balance> getBalance() {
+	public Balance getBalance() {
 		return balance;
 	}
 
-	public void setBalance(Collection<Balance> balance) {
+	public void setBalance(Balance balance) {
 		this.balance = balance;
 	}
 

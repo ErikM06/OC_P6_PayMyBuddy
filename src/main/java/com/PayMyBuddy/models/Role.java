@@ -3,11 +3,15 @@ package com.PayMyBuddy.models;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -15,13 +19,13 @@ import javax.persistence.Table;
 public class Role {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int roleId;
+	private int id;
 
 	private String roleName;
-
 	
-	@OneToMany( mappedBy ="roles", cascade = CascadeType.MERGE)
-	private List<User> users;
+	@OneToMany (mappedBy = "roles", cascade = CascadeType.ALL )
+	@Column(name="userId")
+	private List<User> user;
 
 	public Role(String roleName) {
 		this.roleName = roleName;
@@ -40,19 +44,12 @@ public class Role {
 	}
 
 	public int getRoleId() {
-		return roleId;
+		return id;
 	}
 
-	public void setRoleId(int roleId) {
-		this.roleId = roleId;
+	public void setRoleId(int id) {
+		this.id = id;
 	}
 
-	public List<User> getUsers() {
-		return users;
-	}
-
-	public void setUsers(List<User> users) {
-		this.users = users;
-	}
 
 }

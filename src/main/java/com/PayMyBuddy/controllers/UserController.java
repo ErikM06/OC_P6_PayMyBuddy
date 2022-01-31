@@ -20,6 +20,7 @@ import com.PayMyBuddy.dto.BankAccountDTO;
 import com.PayMyBuddy.dto.ConnectionDTO;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
+import com.PayMyBuddy.interfaces.IBalanceService;
 import com.PayMyBuddy.interfaces.IBankAccountService;
 import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.IUserService;
@@ -45,6 +46,9 @@ public class UserController {
 
 	@Autowired
 	private IBankAccountService bankAccountService;
+	
+	@Autowired
+	private IBalanceService balanceService;
 	
 	@Autowired
 	private GetCurrentUser currentUser;
@@ -192,7 +196,11 @@ public class UserController {
 	}
 
 	@GetMapping(value = "/user/home")
-	public String getUserHome() {
+	public String getUserHome(Model model,@RequestParam(value = "error", required = false) String error) {
+		model.addAttribute("sold", balanceService.getBalanceByUser(IUserService.findByEmail(currentUser.getCurrentUser())));
+		if (null != error && error.equalsIgnoreCase("true")) {
+			model.addAttribute("Error", "Unable to launch /user/get_bank_account");
+		}
 
 		return "home";
 	}
