@@ -55,12 +55,16 @@ public class TransactionController {
 				model.addAttribute("error", "Unable to launch /user/operation");
 			}
 		} catch (NullPointerException e) {
-			e.getMessage();
-			e.printStackTrace();
+			model.addAttribute("error",error);
+			logger.error(e.getMessage());
+			return "home";
+			
+			
 		}
 		catch (Exception e) {
-			e.getMessage();
-			e.printStackTrace();
+			model.addAttribute("error",error);
+			logger.error(e.getMessage());
+			return "home";
 		} 
 		return "transferPage";
 	}

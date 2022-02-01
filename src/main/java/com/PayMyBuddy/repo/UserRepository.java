@@ -24,5 +24,8 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	
 	@Query (value ="Select u FROM User u WHERE u.username =?1")
 	public User findByUsername(String username);
+	
+	@Query(value ="SELECT * FROM User  WHERE id != ?1 AND username != 'admin' ORDER BY RAND() limit 1", nativeQuery = true)
+	public User getRandomUser(int id);
 	 
 }

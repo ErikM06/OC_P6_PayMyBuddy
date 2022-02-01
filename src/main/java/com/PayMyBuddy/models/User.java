@@ -54,8 +54,8 @@ public class User implements UserDetails {
 	@JoinColumn(name="RoleId")
     private Role roles;
 	
-	@OneToMany( mappedBy = "user", cascade = CascadeType.ALL)
-	private Collection<Connections> user;
+	@OneToMany( mappedBy = "user", cascade = CascadeType.MERGE)
+	private List<Connections> user;
 	
 	@OneToMany( mappedBy = "connection", cascade = CascadeType.ALL)
 	private Collection<Connections> connection;
@@ -167,11 +167,11 @@ public class User implements UserDetails {
 		this.balance = balance;
 	}
 
-	public Collection<Connections> getUser() {
+	public List<Connections> getUser() {
 		return user;
 	}
 
-	public void setUser(Collection<Connections> user) {
+	public void setUser(List<Connections> user) {
 		this.user = user;
 	}
 

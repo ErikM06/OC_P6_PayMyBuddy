@@ -2,7 +2,11 @@ package com.PayMyBuddy.config;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
+import java.util.Random;
+import java.util.stream.Stream;
 
 import javax.annotation.PostConstruct;
 
@@ -13,16 +17,23 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.PayMyBuddy.dto.TransferDTO;
 import com.PayMyBuddy.models.Balance;
+import com.PayMyBuddy.models.Connections;
 import com.PayMyBuddy.models.Role;
+import com.PayMyBuddy.models.Transfer;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.BalanceRepository;
+import com.PayMyBuddy.repo.ConnectionRepository;
 import com.PayMyBuddy.repo.RoleRepository;
+import com.PayMyBuddy.repo.TransferRepository;
 import com.PayMyBuddy.repo.UserRepository;
 
 @Configuration
 @ComponentScan("com.PayMyBuddy.config")
 public class InitDbvalues {
+
+	private Stream<Connections> stream;
 
 	@Autowired
 	RoleRepository roleRepository;
@@ -34,11 +45,16 @@ public class InitDbvalues {
 	BalanceRepository balanceRepo;
 
 	@Autowired
+	TransferRepository transferRepository;
+
+	@Autowired
+	ConnectionRepository connectionRepo;
+
+	@Autowired
 	PasswordEncoder encoder;
 
 	@Bean("initRoles")
 	public void initRoles() throws Exception {
-
 		if (roleRepository.count() == 0) {
 			Role user = new Role();
 			Role admin = new Role();
@@ -70,11 +86,9 @@ public class InitDbvalues {
 			userLs.add(admin1);
 			userRepo.saveAll(userLs);
 		}
-
 	}
 
 	@Bean("initBalances")
-
 	public void setUsersBalance() {
 		if (balanceRepo.count() == 0) {
 			List<User> userLs = userRepo.findAll();
@@ -90,6 +104,43 @@ public class InitDbvalues {
 				userBalanceSet.add(user);
 			}
 			userRepo.saveAll(userBalanceSet);
+		}
+	}
+
+	@Bean("initConnection")
+	public void setUsersConnection() {
+		if (connectionRepo.count() == 0) {
+			List<User> userLs = userRepo.findAll();
+			List<Connections> connectionLs = new ArrayList<>();
+
+			for (User user : userLs) {
+
+				Connections connection = new Connections(getTimestamp(), null, user,
+						userRepo.getRandomUser(user.getId()));
+				connectionLs.add(connection);
+			}
+			connectionRepo.saveAll(connectionLs);
+		}
+	}
+
+	@Bean("initTransfer")
+	public void setUsersTransfer() {
+		Random r = new Random();
+		int low = 10;
+		int high = 100;
+		
+		if (transferRepository.count() == 0) {
+			List<Transfer> transferLs = new ArrayList<>();
+			List<User> userLs = userRepo.findAll();
+			for (User user : userLs) {
+				int result = r.nextInt(high - low) + low;
+				List<Connections> userConnections = connectionRepo.getAllConnectionsFromCurrentUser(user);
+				Optional<Connections> connection = userConnections.stream().findFirst();
+				Transfer transfer = new Transfer(getTimestamp(), (float) result, null, user.getBalance(),
+						connection.get().getUser().getBalance());
+				transferLs.add(transfer);
+			}
+			transferRepository.saveAll(transferLs);
 		}
 	}
 

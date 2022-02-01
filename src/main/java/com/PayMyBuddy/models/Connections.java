@@ -27,11 +27,11 @@ public class Connections {
 	@Column(name = "note")
 	private String note;
 
-	@ManyToOne (cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
 
-	@ManyToOne (cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "connection_id")
 	private User connection;
 

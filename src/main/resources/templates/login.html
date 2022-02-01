@@ -20,23 +20,28 @@
 
         <!-- Icon -->
         <div class="title">
-           <h3 > Pay My Buddy</h3>
-       </div>
+         <h3 > Pay My Buddy</h3>
+     </div>
 
-       <!-- Login Form -->
-       <form th:method="post" th:action="@{/login}" enctype="utf8">
-          <input data-th-type="username"  class="fadeIn first" id="username" name="username" placeholder="username">
-          <input data-th-type="password" class="fadeIn second" id="password" name="password" placeholder="password">
-          <input type="submit" class="fadeIn fourth" value="Log In">
-      </form>
-      <span>You Have No Account? <a th:href="@{/register}"> Create An Account</a></span>
-       
+     <!-- Login Form -->
+     <form th:method="post" th:action="@{/login}" enctype="utf8">
 
-      <!-- Remind Passowrd -->
-      <div id="formFooter">
-       <a class="underlineHover" href="#">Forgot Password?</a>
-      </div>
+      <input data-th-type="username"  class="fadeIn first" id="username" name="username" placeholder="username">
+      <input data-th-type="password" class="fadeIn second" id="password" name="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+      <div th:if="${param.error}">
+        <div class="alert alert-danger">
+            <span th:text="#{login.error}"></span>
+        </div>
+    </form>
+    <span>You Have No Account? <a th:href="@{/register}"> Create An Account</a></span>
+    
 
-      </div>
-  </div>
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+     <a class="underlineHover" href="#">Forgot Password?</a>
+ </div>
+
+</div>
+</div>
 </body>
