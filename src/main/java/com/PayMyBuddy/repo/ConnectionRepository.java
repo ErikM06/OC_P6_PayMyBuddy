@@ -21,7 +21,7 @@ public interface ConnectionRepository extends JpaRepository<Connections, Integer
 	@Query (value ="DELETE FROM Connections c WHERE c.id = ?1")
 	public void deleteConnectionById (int connectionId);
 	
-	@Query (value ="SElECT c FROM Connections c WHERE c.user =?1")
+	@Query (value ="SELECT c FROM Connections c WHERE c.user =?1")
 	public List<Connections> getAllConnectionsFromCurrentUser(User user);
 
 	@Query (value ="SELECT case when count(c) =1 then true else false end from Connections c "

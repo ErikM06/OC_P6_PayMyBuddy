@@ -93,7 +93,7 @@ public class ConnectionService implements IConnectionService {
 			User user = connection.getConnection();
 			connectionsListAsUserLs.add(user);
 		}
-		logger.info("Connection list is : {}", connectionsListAsUserLs.toString());
+		logger.info("Connection list lenght is : {}", connectionsListAsUserLs.size());
 		return connectionsListAsUserLs;
 	}
 

@@ -128,7 +128,6 @@ public class InitDbvalues {
 		Random r = new Random();
 		int low = 10;
 		int high = 100;
-		
 		if (transferRepository.count() == 0) {
 			List<Transfer> transferLs = new ArrayList<>();
 			List<User> userLs = userRepo.findAll();
@@ -136,8 +135,8 @@ public class InitDbvalues {
 				int result = r.nextInt(high - low) + low;
 				List<Connections> userConnections = connectionRepo.getAllConnectionsFromCurrentUser(user);
 				Optional<Connections> connection = userConnections.stream().findFirst();
-				Transfer transfer = new Transfer(getTimestamp(), (float) result, null, user.getBalance(),
-						connection.get().getUser().getBalance());
+				Transfer transfer = new Transfer(getTimestamp(), (float) result, "", user.getBalance(),
+						connection.get().getConnection().getBalance());
 				transferLs.add(transfer);
 			}
 			transferRepository.saveAll(transferLs);

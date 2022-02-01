@@ -36,7 +36,7 @@
                             <a class="nav-link "  href="@{/user/contact}">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link "  href="@{/logout}">Log off</a>
+                            <a class="nav-link "  href="@{/}">Log off</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +84,6 @@
         <div class="row">
             <div class="col">
                 <h3>My transactions</h3>
-                <h3 th:text="error"></h3>
             </div>
             <div class="col-12">
                 <table class = "table table-striped table-bordered" id="myTable">
@@ -98,9 +97,9 @@
 
                     <tbody>
                         <tr th:each = "transactionRecord: ${transactionRecordLs}">
-                            <td th:text = "${transactionRecord.connection.getUsername()}"></td>
-                            <td th:text = "${transactionRecord.description}"></td>
-                            <td th:text = "${transactionRecord.amount}"></td>
+                            <td th:text = "${transactionRecord?.connectionBalance?.user?.username} ?:'(null content)'"></td>
+                            <td th:text = "${transactionRecord?.description} ?:'(null content)'"></td>
+                            <td th:text = "${transactionRecord?.amount} ?:'(null content)'"></td>
                         </tr>
                     </tbody>
                 </table>

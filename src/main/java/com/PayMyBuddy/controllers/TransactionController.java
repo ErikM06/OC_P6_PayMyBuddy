@@ -1,7 +1,5 @@
 package com.PayMyBuddy.controllers;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -17,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.PayMyBuddy.dto.PaymentDTO;
-import com.PayMyBuddy.dto.TransactionRecordDto;
 import com.PayMyBuddy.dto.TransferDTO;
 import com.PayMyBuddy.exceptions.NotAConnectionException;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
@@ -36,10 +33,10 @@ public class TransactionController {
 
 	@Autowired
 	private IPaymentService paymentService;
-	
+
 	@Autowired
 	private IConnectionService connectionService;
-	
+
 	@Autowired
 	private GetCurrentUser currentUser;
 
@@ -47,25 +44,22 @@ public class TransactionController {
 	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error)
 			throws Exception, NullPointerException {
 		try {
-			List<TransactionRecordDto> transactionRecordLs = transferService.getAllUserTransfer(currentUser);
 			model.addAttribute("transaction", new TransferDTO());
-			model.addAttribute("connections",connectionService.getConnectionsAsUserLs(currentUser));
-			model.addAttribute("transactionRecordLs", transactionRecordLs);
+			model.addAttribute("connections", connectionService.getConnectionsAsUserLs(currentUser));
+			model.addAttribute("transactionRecordLs", transferService.getAllUserTransfer(currentUser));
 			if (null != error && error.equalsIgnoreCase("true")) {
 				model.addAttribute("error", "Unable to launch /user/operation");
 			}
 		} catch (NullPointerException e) {
-			model.addAttribute("error",error);
+			model.addAttribute("error", error);
 			logger.error(e.getMessage());
 			return "home";
-			
-			
+
+		} catch (Exception e) {
+			model.addAttribute("error", error);
+			logger.error(e.getMessage());
+			return "home";
 		}
-		catch (Exception e) {
-			model.addAttribute("error",error);
-			logger.error(e.getMessage());
-			return "home";
-		} 
 		return "transferPage";
 	}
 
@@ -74,7 +68,7 @@ public class TransactionController {
 			HttpServletRequest httpServletRequest, Errors errors)
 			throws NotEnoughtBalanceException, NotAConnectionException, Exception {
 		logger.info("entering transfer with : {}", transferDTO.toString());
-		
+
 		try {
 			transferService.transferToConnection(transferDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
@@ -101,17 +95,17 @@ public class TransactionController {
 			model.addAttribute("error", "Unable to launch /user/operation/payment");
 		}
 
-		return new ModelAndView("paymentPage") ;
-		
+		return new ModelAndView("paymentPage");
+
 	}
 
 	@PostMapping(value = "/user/operation/paymentToBankAccount")
 	private ModelAndView paymentToBankAccount(@ModelAttribute(value = "payment") PaymentDTO paymentDTO,
 			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException, Exception {
 		logger.info("entering payment with : {}", paymentDTO.toString());
-		
+
 		try {
-			 paymentService.selfPaymentToAccount(paymentDTO,currentUser);
+			paymentService.selfPaymentToAccount(paymentDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			e.getMessage();
 			e.printStackTrace();
@@ -129,9 +123,9 @@ public class TransactionController {
 	private ModelAndView paymentToAppAccount(@ModelAttribute(value = "payment") PaymentDTO paymentDTO,
 			HttpServletRequest httpServletRequest, Errors errors) throws NotEnoughtBalanceException, Exception {
 		logger.info("entering payment with : {}", paymentDTO.toString());
-		
+
 		try {
-			paymentService.selfPaymentToApp(paymentDTO,currentUser);
+			paymentService.selfPaymentToApp(paymentDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			e.getMessage();
 			e.printStackTrace();

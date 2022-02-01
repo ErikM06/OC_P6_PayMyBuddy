@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.PayMyBuddy.dto.TransactionRecordDto;
 import com.PayMyBuddy.dto.TransferDTO;
 import com.PayMyBuddy.exceptions.NotAConnectionException;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
@@ -73,7 +72,6 @@ public class TransferService implements ITransferService {
 		}
 		transfer.setUserBalance(userBalance);
 		transfer.setConnectionBalance(connectionBalance);
-		transfer.setUser(userService.findByEmail(currentUser.getCurrentUser()));
 
 		companyAccountService.transferToCompanyAccount(amountToDeduct, transfer);
 		transferRepository.save(transfer);
@@ -86,14 +84,13 @@ public class TransferService implements ITransferService {
 		return transfer;
 	}
 
-	public List<TransactionRecordDto> getAllUserTransfer(GetCurrentUser currentUser) throws NullPointerException {
-		List<TransactionRecordDto> transactionRecordLs = transferRepository.getTransactionRecordFromUser
-				(userService.findByEmail(currentUser.getCurrentUser()));
+	public List<Transfer> getAllUserTransfer(GetCurrentUser currentUser) throws NullPointerException {
+		List<Transfer> transactionRecordLs = transferRepository
+				.getTransactionRecordFromUser(userService.findByEmail(currentUser.getCurrentUser()));
 		logger.info("transferDtoLs lenght is : {}", transactionRecordLs.size());
 		if (transactionRecordLs.isEmpty()) {
 			throw new NullPointerException("No transaction for current user");
 		} else {
-			
 
 			return transactionRecordLs;
 		}

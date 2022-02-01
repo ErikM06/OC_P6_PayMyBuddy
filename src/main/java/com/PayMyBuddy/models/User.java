@@ -54,11 +54,11 @@ public class User implements UserDetails {
 	@JoinColumn(name="RoleId")
     private Role roles;
 	
-	@OneToMany( mappedBy = "user", cascade = CascadeType.MERGE)
+	@OneToMany( mappedBy = "user", cascade = CascadeType.ALL)
 	private List<Connections> user;
 	
 	@OneToMany( mappedBy = "connection", cascade = CascadeType.ALL)
-	private Collection<Connections> connection;
+	private List<Connections> connection;
 	
 	@OneToOne (mappedBy = "user", cascade = CascadeType.MERGE)
 	@PrimaryKeyJoinColumn
@@ -66,9 +66,6 @@ public class User implements UserDetails {
 	
 	@OneToMany (mappedBy ="userId", cascade = CascadeType.ALL)
 	private Collection<BankAccount> bankAccount;
-	
-	@OneToMany (mappedBy ="user")
-	private Collection<Transfer> transfer;
 	
 	@Column (name ="create_time")
 	private Timestamp createTime;
@@ -151,11 +148,11 @@ public class User implements UserDetails {
 		this.roles = roles;
 	}
 
-	public Collection<Connections> getConnection() {
+	public List<Connections> getConnection() {
 		return connection;
 	}
 
-	public void setConnection(Collection<Connections> connection) {
+	public void setConnection(List<Connections> connection) {
 		this.connection = connection;
 	}
 
@@ -175,13 +172,6 @@ public class User implements UserDetails {
 		this.user = user;
 	}
 
-	public Collection<Transfer> getTransfer() {
-		return transfer;
-	}
-
-	public void setTransfer(Collection<Transfer> transfer) {
-		this.transfer = transfer;
-	}
 
 	public Collection<BankAccount> getBankAccount() {
 		return bankAccount;

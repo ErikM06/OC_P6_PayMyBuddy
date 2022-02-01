@@ -30,10 +30,7 @@ public class Transfer {
 	
 	@Column (name = "description")
 	private String description;
-	
-	@ManyToOne 
-	@JoinColumn (name = "user_id")
-	private User user;
+
 	
 	@ManyToOne 
 	@JoinColumn (name = "user_balance_id")
@@ -66,15 +63,6 @@ public class Transfer {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
 	}
 
 	public Timestamp getDateTime() {

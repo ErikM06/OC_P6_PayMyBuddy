@@ -31,7 +31,7 @@ public class Balance {
 	@OneToMany (mappedBy = "userBalance", cascade = CascadeType.ALL)
 	private Collection<Transfer> transactionsUser;
 	
-	@OneToMany (mappedBy = "connectionBalance", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany (mappedBy = "connectionBalance", cascade = CascadeType.ALL)
 	private Collection<Transfer> transactionsConnection;
 
 	public Balance(float amount, User user) {

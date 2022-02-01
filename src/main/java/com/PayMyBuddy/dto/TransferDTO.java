@@ -14,8 +14,10 @@ public class TransferDTO {
 		
 	}
 
-	public TransferDTO(float f, String email, String string) {
-		// TODO Auto-generated constructor stub
+	public TransferDTO(float amount, String connectionEmail, String description) {
+		this.amount = amount;
+		this.connectionEmail = connectionEmail;
+		this.description = description;
 	}
 
 	public String getConnectionEmail() {
