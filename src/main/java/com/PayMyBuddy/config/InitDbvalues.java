@@ -2,28 +2,23 @@ package com.PayMyBuddy.config;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
-import java.util.stream.Stream;
-
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.PayMyBuddy.dto.TransferDTO;
 import com.PayMyBuddy.models.Balance;
+import com.PayMyBuddy.models.BankAccount;
 import com.PayMyBuddy.models.Connections;
 import com.PayMyBuddy.models.Role;
 import com.PayMyBuddy.models.Transfer;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.BalanceRepository;
+import com.PayMyBuddy.repo.BankAccountRepository;
 import com.PayMyBuddy.repo.ConnectionRepository;
 import com.PayMyBuddy.repo.RoleRepository;
 import com.PayMyBuddy.repo.TransferRepository;
@@ -32,8 +27,6 @@ import com.PayMyBuddy.repo.UserRepository;
 @Configuration
 @ComponentScan("com.PayMyBuddy.config")
 public class InitDbvalues {
-
-	private Stream<Connections> stream;
 
 	@Autowired
 	RoleRepository roleRepository;
@@ -49,6 +42,9 @@ public class InitDbvalues {
 
 	@Autowired
 	ConnectionRepository connectionRepo;
+
+	@Autowired
+	BankAccountRepository bankAccountRepo;
 
 	@Autowired
 	PasswordEncoder encoder;
@@ -141,6 +137,23 @@ public class InitDbvalues {
 			}
 			transferRepository.saveAll(transferLs);
 		}
+	}
+
+	@Bean("iniBankAccount")
+	public void setBankAccount() {
+		if (bankAccountRepo.count() == 0) {
+			List<BankAccount> bankAccountLs = new ArrayList<BankAccount>();
+			List<User> userLs = userRepo.findAll();
+			for (User user : userLs) {
+				String msg = "'s bank account";
+				String username = user.getUsername();
+				String bankAccountmsg = username.concat(msg);
+				BankAccount bankAccount = new BankAccount(bankAccountmsg, user);
+				bankAccountLs.add(bankAccount);
+			}
+			bankAccountRepo.saveAll(bankAccountLs);
+		}
+
 	}
 
 	private Timestamp getTimestamp() {
