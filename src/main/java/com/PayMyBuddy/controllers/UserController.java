@@ -18,7 +18,7 @@ import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
 import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.User;
-import com.PayMyBuddy.services.util.SecurityService;
+import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Controller
 public class UserController {
@@ -27,6 +27,9 @@ public class UserController {
 
 	@Autowired
 	private IUserService IUserService;
+	
+	@Autowired
+	private GetCurrentUser currentUser;
 
 
 	@GetMapping(value = "/register")
@@ -59,11 +62,14 @@ public class UserController {
 		}
 		return new ModelAndView("login", "user", userDto);
 	}
-
 	
+	@GetMapping (value ="/user/profil")
+	private String getUserProfil (Model model, @RequestParam(value = "error", required = false) String error) {
+		model.addAttribute("user", IUserService.findByEmail(currentUser.getCurrentUser()));
+		
+		return "profilPage";	
+	}
 
-	
 
-	
 
 }
