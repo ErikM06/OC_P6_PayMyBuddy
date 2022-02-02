@@ -1,7 +1,5 @@
 package com.PayMyBuddy.controllers;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,12 +28,9 @@ public class BankAccountController {
 	private GetCurrentUser currentUser;
 	
 	
-	@GetMapping(value = "/user/get_bank_account")
+	@PostMapping(value = "/user/get_bank_account")
 	private ModelAndView getAddBankAccount(Model model, @RequestParam(value = "error", required = false) String error) {
-		List<BankAccount> bankAccountls = bankAccountService.getAllBankAccountFromUser(currentUser);
-		model.addAttribute("bankAccountls", bankAccountls);
-		model.addAttribute("bankAccount", new BankAccountDTO());
-		model.addAttribute("bankAccountToDelete", new BankAccountDTO());
+		model.addAttribute("bankAccount", new BankAccount());
 		if (null != error && error.equalsIgnoreCase("true")) {
 			model.addAttribute("Error", "Unable to launch /user/get_bank_account");
 		}

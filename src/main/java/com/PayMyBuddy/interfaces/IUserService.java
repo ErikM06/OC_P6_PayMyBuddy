@@ -13,5 +13,7 @@ public interface IUserService {
 	public User findUserByUsername(String username);
 
 	public void deleteUser(String username);
+	
+	public void uptadeUser (UserDTO userDto);
 
 }
