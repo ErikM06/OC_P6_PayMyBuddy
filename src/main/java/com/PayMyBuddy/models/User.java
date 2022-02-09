@@ -18,13 +18,14 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 
-
+@DynamicUpdate
 @Entity
 @Table (name="user")
 

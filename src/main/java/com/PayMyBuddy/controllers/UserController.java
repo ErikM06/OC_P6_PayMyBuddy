@@ -16,10 +16,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.PayMyBuddy.dto.BankAccountDTO;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
 import com.PayMyBuddy.interfaces.IBankAccountService;
 import com.PayMyBuddy.interfaces.IUserService;
+import com.PayMyBuddy.models.BankAccount;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.services.util.GetCurrentUser;
 
@@ -30,13 +32,12 @@ public class UserController {
 
 	@Autowired
 	private IUserService IUserService;
-	
+
 	@Autowired
 	private IBankAccountService bankAccountService;
-	
+
 	@Autowired
 	private GetCurrentUser currentUser;
-
 
 	@GetMapping(value = "/register")
 	private String getRegister(Model model, @RequestParam(value = "error", required = false) String error) {
@@ -68,27 +69,26 @@ public class UserController {
 		}
 		return new ModelAndView("login", "user", userDto);
 	}
-	
-	@PutMapping(value ="/user/profil/uptade")
-	private ModelAndView uptadeUser (@ModelAttribute("userUpdate") UserDTO userDto, 
-			HttpServletRequest request, BindingResult bindingResult) throws Exception{
+
+	@PutMapping(value = "/user/profil/update")
+	private ModelAndView uptadeUser(@ModelAttribute("user") User user, HttpServletRequest request,
+			BindingResult bindingResult) throws Exception {
 		try {
-		IUserService.uptadeUser(userDto);
+			IUserService.uptadeUser(user, currentUser);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 		}
-		return new ModelAndView("redirect:/user/profil", "userUpdate", userDto);
-		
+		return new ModelAndView("successPage");
+
 	}
-	
-	@GetMapping (value ="/user/profil")
-	private String getUserProfil (Model model, @RequestParam(value = "error", required = false) String error) {
-		model.addAttribute("user", IUserService.findByEmail(currentUser.getCurrentUser()));
+
+	@GetMapping(value = "/user/profil")
+	private String getUserProfil(Model model, @RequestParam(value = "error", required = false) String error) {
+		model.addAttribute("user", new User());
 		model.addAttribute("bankAccountls", bankAccountService.getAllBankAccountFromUser(currentUser));
-		
-		return "profilPage";	
+		model.addAttribute("bankAccount", new BankAccountDTO());
+
+		return "profilPage";
 	}
-
-
 
 }

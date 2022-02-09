@@ -18,6 +18,7 @@ import com.PayMyBuddy.dto.PaymentDTO;
 import com.PayMyBuddy.dto.TransferDTO;
 import com.PayMyBuddy.exceptions.NotAConnectionException;
 import com.PayMyBuddy.exceptions.NotEnoughtBalanceException;
+import com.PayMyBuddy.interfaces.IBankAccountService;
 import com.PayMyBuddy.interfaces.IConnectionService;
 import com.PayMyBuddy.interfaces.IPaymentService;
 import com.PayMyBuddy.interfaces.ITransferService;
@@ -38,6 +39,9 @@ public class TransactionController {
 	private IConnectionService connectionService;
 
 	@Autowired
+	private IBankAccountService bankAccountService;
+
+	@Autowired
 	private GetCurrentUser currentUser;
 
 	@GetMapping(value = "/user/operation")
@@ -53,12 +57,12 @@ public class TransactionController {
 		} catch (NullPointerException e) {
 			model.addAttribute("error", error);
 			logger.error(e.getMessage());
-			return "home";
+			return "500";
 
 		} catch (Exception e) {
 			model.addAttribute("error", error);
 			logger.error(e.getMessage());
-			return "home";
+			return "500";
 		}
 		return "transferPage";
 	}
@@ -91,6 +95,7 @@ public class TransactionController {
 	@GetMapping(value = "/user/operation/payment")
 	private ModelAndView selfPayment(Model model, @RequestParam(value = "error", required = false) String error) {
 		model.addAttribute("payment", new PaymentDTO());
+		model.addAttribute("bankAccountLs", bankAccountService.getAllBankAccountFromUser(currentUser));
 		if (null != error && error.equalsIgnoreCase("true")) {
 			model.addAttribute("error", "Unable to launch /user/operation/payment");
 		}
@@ -109,14 +114,14 @@ public class TransactionController {
 		} catch (NotEnoughtBalanceException e) {
 			e.getMessage();
 			e.printStackTrace();
-			errors.getGlobalErrors();
-			return new ModelAndView("paymentFailed");
+			return new ModelAndView("500");
 		} catch (Exception e) {
 			e.getMessage();
 			e.printStackTrace();
 			errors.getGlobalErrors();
+			return new ModelAndView("500");
 		}
-		return new ModelAndView("paymentSucess", "payment", paymentDTO);
+		return new ModelAndView("successPage");
 	}
 
 	@PostMapping(value = "/user/operation/paymentToAppAccount")
@@ -136,7 +141,7 @@ public class TransactionController {
 			e.printStackTrace();
 			errors.getGlobalErrors();
 		}
-		return new ModelAndView("paymentSucess", "payment", paymentDTO);
+		return new ModelAndView("successPage");
 	}
 
 }

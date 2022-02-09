@@ -47,11 +47,11 @@ public class BankAccountController {
 			e.printStackTrace();
 			errors.getGlobalErrors();
 		}
-		return new ModelAndView("redirect:/user/profil", "bankaccount", bankAccountDTO);
+		return new ModelAndView("successPage");
 	}
 
 	@GetMapping(value = "/user/delete_bank_account")
-	private ModelAndView deleteBankAccount(@ModelAttribute("bankAccountToDelete") BankAccountDTO bankAccountDTO,
+	private ModelAndView deleteBankAccount(@ModelAttribute("bankAccount") BankAccountDTO bankAccountDTO,
 			HttpServletRequest request, Errors errors) throws NullPointerException {
 		try {
 		bankAccountService.deleteBankAccount(bankAccountDTO,currentUser);
@@ -61,7 +61,7 @@ public class BankAccountController {
 			errors.getGlobalErrors();
 		}
 
-		return new ModelAndView("redirect:/user/profil", "bankAccount", bankAccountDTO);
+		return new ModelAndView("successPage");
 	}
 
 }

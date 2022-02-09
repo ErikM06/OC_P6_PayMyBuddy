@@ -45,7 +45,7 @@ public class ConnectionController {
 			e.printStackTrace();
 			errors.getGlobalErrors();
 		}
-		return new ModelAndView("home", "connection", connectionDto);
+		return new ModelAndView("successPage");
 
 	}
 
@@ -63,7 +63,7 @@ public class ConnectionController {
 			e.printStackTrace();
 			errors.getGlobalErrors();
 		}
-		return new ModelAndView("home");
+		return new ModelAndView("successPage");
 
 	}
 

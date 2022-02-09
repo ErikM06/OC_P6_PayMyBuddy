@@ -2,10 +2,6 @@ package com.PayMyBuddy.services;
 
 import java.sql.Timestamp;
 
-import org.mapstruct.BeanMapping;
-import org.mapstruct.Mapper;
-import org.mapstruct.MappingTarget;
-import org.mapstruct.NullValuePropertyMappingStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +17,7 @@ import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.RoleRepository;
 import com.PayMyBuddy.repo.UserRepository;
-import com.PayMyBuddy.services.util.UserMapper;
+import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
 public class UserService implements IUserService {
@@ -37,8 +33,8 @@ public class UserService implements IUserService {
 	@Autowired
 	private IBalanceService iBalanceService;
 	
-	@Autowired
-	private UserMapper mapper;
+	 /* @Autowired
+	private UserMapper mapper; */
 
 
 	// method from Spring doc to avoid circular references error
@@ -84,12 +80,12 @@ public class UserService implements IUserService {
 		return userRepo.findByUsername(username);
 	}
 	
-	public void uptadeUser (UserDTO userDto) {
-		User user = userRepo.findByUsername(userDto.getUsername());
-		mapper.updateCustomerFromDto(userDto, user);
-		userRepo.save(user);
+	 public void uptadeUser (User user, GetCurrentUser currentUser) {
+		User user1 = findByEmail(currentUser.getCurrentUser());
+		User userUptade = userRepo.save(user);
+		userRepo.save(userUptade);
 		
-	}
+	} 
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {

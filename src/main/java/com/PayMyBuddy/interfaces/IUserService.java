@@ -3,6 +3,7 @@ package com.PayMyBuddy.interfaces;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
 import com.PayMyBuddy.models.User;
+import com.PayMyBuddy.services.util.GetCurrentUser;
 
 public interface IUserService {
 
@@ -14,6 +15,6 @@ public interface IUserService {
 
 	public void deleteUser(String username);
 	
-	public void uptadeUser (UserDTO userDto);
+	public void uptadeUser (User user, GetCurrentUser currentUser);
 
 }
