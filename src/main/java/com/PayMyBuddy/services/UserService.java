@@ -81,10 +81,11 @@ public class UserService implements IUserService {
 	}
 	
 	 public void uptadeUser (User user, GetCurrentUser currentUser) {
-		User user1 = findByEmail(currentUser.getCurrentUser());
-		User userUptade = userRepo.save(user);
-		userRepo.save(userUptade);
-		
+		User currentUserForUpdate = findByEmail(currentUser.getCurrentUser());
+		currentUserForUpdate.setUsername(user.getUsername());
+		currentUserForUpdate.setEmail(user.getEmail());
+		currentUserForUpdate.setPassword(user.getPassword());
+		userRepo.save(currentUserForUpdate);
 	} 
 
 	@Bean

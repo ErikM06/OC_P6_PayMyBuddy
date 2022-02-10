@@ -2,6 +2,8 @@ package com.PayMyBuddy.controllers;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +21,8 @@ import com.PayMyBuddy.services.util.GetCurrentUser;
 @Controller
 public class ConnectionController {
 	
+	private static Logger logger = LoggerFactory.getLogger(ConnectionController.class);
+	
 	@Autowired
 	private IConnectionService IConnectionService;
 
@@ -29,7 +33,7 @@ public class ConnectionController {
 	private ModelAndView getAddConnection(Model model, @RequestParam(value = "error", required = false) String error) {
 		model.addAttribute("connection", new ConnectionDTO());
 		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("Error", "Unable to launch /connection");
+			model.addAttribute("error", "Unable to launch /connection");
 		}
 		return new ModelAndView("connectionPage");
 
@@ -41,9 +45,8 @@ public class ConnectionController {
 		try {
 			IConnectionService.addConnections(connectionDto,currentUser);
 		} catch (NullPointerException e) {
-			e.getMessage();
-			e.printStackTrace();
-			errors.getGlobalErrors();
+			logger.info(e.getMessage());
+			return new ModelAndView("notAConnectionPage");
 		}
 		return new ModelAndView("successPage");
 
@@ -55,13 +58,11 @@ public class ConnectionController {
 		try {
 			IConnectionService.deleteConnection(connectionDto.getConnectionUsername(),currentUser);
 		} catch (NullPointerException e) {
-			e.getMessage();
-			e.printStackTrace();
-			errors.getGlobalErrors();
+			logger.info(e.getMessage());
+			return new ModelAndView("notAConnectionPage");
 		} catch (Exception e) {
-			e.getMessage();
-			e.printStackTrace();
-			errors.getGlobalErrors();
+			logger.info(e.getMessage());
+			return new ModelAndView("500");
 		}
 		return new ModelAndView("successPage");
 

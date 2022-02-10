@@ -46,5 +46,11 @@ public class HomeController {
 	private String getIndex() {
 		return "index";
 	}
+	
+	@GetMapping(value = "/user/contact")
+	private String getContact() {
+		return "contactPage";
+	}
+	
 
 }

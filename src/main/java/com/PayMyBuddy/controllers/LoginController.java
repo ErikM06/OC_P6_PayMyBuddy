@@ -19,7 +19,7 @@ public class LoginController {
 	@GetMapping(value = "/login")
 	private String getLogin(Model model, @RequestParam(value = "error", required = false) String error) {
 		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("loginError", "Unable to Login");
+			model.addAttribute("error", "Unable to Login");
 		}
 		return "login";
 

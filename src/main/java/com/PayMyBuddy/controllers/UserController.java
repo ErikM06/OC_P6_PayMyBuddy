@@ -44,7 +44,7 @@ public class UserController {
 		model.addAttribute("user", new UserDTO());
 		logger.info("reach /register");
 		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("registerError", "Unable to get /register");
+			model.addAttribute("error", "Unable to get /register");
 		}
 		return "registerPage";
 	}
@@ -56,38 +56,37 @@ public class UserController {
 			IUserService.registerNewUserAccount(userDto);
 			logger.info("reach registration at /register : {}", userDto.getUsername());
 		} catch (UserAlreadyExistException e) {
-			e.getMessage();
-			e.printStackTrace();
-			errors.getGlobalErrors();
-			return new ModelAndView("ErrorRegister", "error", e.getMessage());
-
+			logger.info(e.getMessage());
+			return new ModelAndView("500");
 		} catch (Exception e) {
-			e.getMessage();
-			e.printStackTrace();
-			errors.getGlobalErrors();
-			return new ModelAndView("ErrorRegister", "error", e.getMessage());
+			logger.info(e.getMessage());
+			return new ModelAndView("500");
 		}
 		return new ModelAndView("login", "user", userDto);
 	}
 
-	@PutMapping(value = "/user/profil/update")
+	@PostMapping(value = "/user/profil/update")
 	private ModelAndView uptadeUser(@ModelAttribute("user") User user, HttpServletRequest request,
 			BindingResult bindingResult) throws Exception {
 		try {
 			IUserService.uptadeUser(user, currentUser);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
+			return new ModelAndView("500");
 		}
-		return new ModelAndView("successPage");
+		return new ModelAndView("redirect:/user/home");
 
 	}
 
 	@GetMapping(value = "/user/profil")
 	private String getUserProfil(Model model, @RequestParam(value = "error", required = false) String error) {
-		model.addAttribute("user", new User());
+		model.addAttribute("user", IUserService.findByEmail(currentUser.getCurrentUser()));
 		model.addAttribute("bankAccountls", bankAccountService.getAllBankAccountFromUser(currentUser));
 		model.addAttribute("bankAccount", new BankAccountDTO());
+		if (null != error && error.equalsIgnoreCase("true")) {
+			model.addAttribute("error", "Unable to get /user/profil");
 
+		}
 		return "profilPage";
 	}
 

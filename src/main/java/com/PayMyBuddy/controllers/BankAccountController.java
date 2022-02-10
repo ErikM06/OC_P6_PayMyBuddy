@@ -2,6 +2,8 @@ package com.PayMyBuddy.controllers;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +23,8 @@ import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 @Controller
 public class BankAccountController {
 	
+	private static Logger logger = LoggerFactory.getLogger(BankAccountController.class);
+	
 	@Autowired
 	private IBankAccountService bankAccountService;
 	
@@ -32,7 +36,7 @@ public class BankAccountController {
 	private ModelAndView getAddBankAccount(Model model, @RequestParam(value = "error", required = false) String error) {
 		model.addAttribute("bankAccount", new BankAccount());
 		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("Error", "Unable to launch /user/get_bank_account");
+			model.addAttribute("error", "Unable to launch /user/get_bank_account");
 		}
 		return new ModelAndView("profilPage");
 	}
@@ -43,9 +47,8 @@ public class BankAccountController {
 		try {
 			bankAccountService.addBankAccount(bankAccountDTO.getBankAccountNumber(),currentUser);
 		} catch (InvalidFormatException e) {
-			e.getMessage();
-			e.printStackTrace();
-			errors.getGlobalErrors();
+			logger.info(e.getMessage());
+			return new ModelAndView("500");
 		}
 		return new ModelAndView("successPage");
 	}
@@ -56,9 +59,8 @@ public class BankAccountController {
 		try {
 		bankAccountService.deleteBankAccount(bankAccountDTO,currentUser);
 		} catch (NullPointerException e) {
-			e.getMessage();
-			e.printStackTrace();
-			errors.getGlobalErrors();
+			logger.info(e.getMessage());
+			return new ModelAndView("500");
 		}
 
 		return new ModelAndView("successPage");

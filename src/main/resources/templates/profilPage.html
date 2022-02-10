@@ -9,8 +9,6 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
    <link rel="stylesheet"  type="text/css" th:href="@{/css/style.css}" href="C:\dev\P6\OC_P6_PayMyBuddy\src\main\resources\static\css\style.css">
 </head>
-<header>
-   
 <body>
      <header>
         <nav class="navbar navbar-expand navbar-light bg-white">
@@ -44,7 +42,7 @@
    <div class="container-fluid bg-light py-3" style="font-size: 1.33rem;">
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item active"><a th:href="@{/user/home}" href="@{/user/home}">Home </a></li>
+            <li class="breadcrumb-item active"><a th:href="@{/user/home}">Home </a></li>
             <li class="breadcrumb-item active" aria-current="page">Profil</li>
          </ol>
       </nav>
@@ -56,12 +54,11 @@
       <div class="container ">
          <div class="row">
             <div class="col-md-8 mx-auto">
-               <form class="form-inline bg-light" th:action="@{/user/profil/update}" th:object="${user}" method="put">
+               <form class="form-inline bg-light" th:action="@{/user/profil/update}" th:object="${user}" method="post">
                   <div class="row w-60 justify-content-center mx-auto ">
                      <div class="col">
                         <div>
-                           <h4>Username : </h4>
-                           <p th:text="${username}" placeholder="username"></p>
+                           <h4>Username : <span th:text="*{username}" ></span> </h4>
                         </div>
                      </div>
                      <div class="col">
@@ -72,8 +69,7 @@
                   <div class="row w-60 justify-content-center mx-auto ">
                      <div class="col">
                         <div>
-                           <h4>Email : </h4>
-                           <p th:field="*{email}" placeholder="email"></p>
+                           <h4>Email : <span th:text="*{email}" ></span> </h4>
                         </div>
                      </div>
                      <div class="col">
