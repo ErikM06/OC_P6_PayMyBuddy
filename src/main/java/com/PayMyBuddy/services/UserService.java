@@ -33,6 +33,9 @@ public class UserService implements IUserService {
 	@Autowired
 	private IBalanceService iBalanceService;
 	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
 	
 	 /* @Autowired
 	private UserMapper mapper; */
@@ -48,7 +51,7 @@ public class UserService implements IUserService {
 			throw new UserAlreadyExistException("user already exist " + userDto.getEmail());
 		} else {
 			user.setUsername(userDto.getUsername());
-			user.setPassword(passwordEncoder().encode(userDto.getPassword()));
+			user.setPassword(passwordEncoder.encode(userDto.getPassword()));
 			user.setEmail(userDto.getEmail());
 			user.setCreateTime(new Timestamp(System.currentTimeMillis()));
 			user.setEnable(true);
@@ -84,14 +87,9 @@ public class UserService implements IUserService {
 	 public void uptadeUser (User user, User cUser) {
 		cUser.setUsername(user.getUsername());
 		cUser.setEmail(user.getEmail());
-		cUser.setPassword(passwordEncoder().encode(user.getPassword()));
+		cUser.setPassword(passwordEncoder.encode(user.getPassword()));
 		userRepo.save(cUser);
 	} 
 
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		logger.info("in passwordEncoder @Bean");
-		return new BCryptPasswordEncoder();
-	}
-
+	
 }

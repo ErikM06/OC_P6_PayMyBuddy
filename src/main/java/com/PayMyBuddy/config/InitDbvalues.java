@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.PayMyBuddy.models.Balance;
@@ -46,8 +47,7 @@ public class InitDbvalues {
 	@Autowired
 	BankAccountRepository bankAccountRepo;
 
-	@Autowired
-	PasswordEncoder encoder;
+	
 
 	@Bean("initRoles")
 	public void initRoles() throws Exception {
@@ -65,14 +65,14 @@ public class InitDbvalues {
 	public void initSomeUsers() {
 		List<User> userLs = new ArrayList<User>();
 		if (userRepo.count() == 0) {
-			User userNathalie = new User("Nathalie", "nathalie@gmail.com", encoder.encode("nathMDP"), null,
+			User userNathalie = new User("Nathalie", "nathalie@gmail.com", passwordEncoder().encode("nathMDP"), null,
 					getTimestamp(), true, null);
-			User userBob = new User("Bob", "Bob@gmail.com", encoder.encode("BobMDP"), null, getTimestamp(), true, null);
-			User userYann = new User("Yann", "Yann@gmail.com", encoder.encode("YannMDP"), null, getTimestamp(), true,
+			User userBob = new User("Bob", "Bob@gmail.com", passwordEncoder().encode("BobMDP"), null, getTimestamp(), true, null);
+			User userYann = new User("Yann", "Yann@gmail.com", passwordEncoder().encode("YannMDP"), null, getTimestamp(), true,
 					null);
-			User userMarine = new User("Marine", "Marine@gmail.com", encoder.encode("MarineMDP"), null, getTimestamp(),
+			User userMarine = new User("Marine", "Marine@gmail.com", passwordEncoder().encode("MarineMDP"), null, getTimestamp(),
 					true, null);
-			User admin1 = new User("admin", "admin@gmail.com", encoder.encode("admin"), null, getTimestamp(), true,
+			User admin1 = new User("admin", "admin@gmail.com", passwordEncoder().encode("admin"), null, getTimestamp(), true,
 					null);
 
 			userLs.add(userMarine);
@@ -158,6 +158,12 @@ public class InitDbvalues {
 
 	private Timestamp getTimestamp() {
 		return new Timestamp(System.currentTimeMillis());
+	}
+	
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		
+		return new BCryptPasswordEncoder();
 	}
 
 }

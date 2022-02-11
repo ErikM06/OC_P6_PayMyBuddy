@@ -35,7 +35,7 @@ public class HomeController {
 	@GetMapping(value = "/user/home")
 	public String getUserHome(Model model,@RequestParam(value = "error", required = false) String error) {
 		
-		model.addAttribute("sold",IUserService.findByEmail(currentUser.getCurrentUser()).getBalance());
+		model.addAttribute("sold",IUserService.findByEmail(currentUser.getCurrentUser()).getBalance().getAmount());
 		if (null != error && error.equalsIgnoreCase("true")) {
 			model.addAttribute("Error", "Unable to launch /user/get_bank_account");
 		}

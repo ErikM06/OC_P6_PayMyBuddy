@@ -56,11 +56,11 @@ public class TransactionController {
 			}
 		} catch (NullPointerException e) {
 			logger.error(e.getMessage());
-			return "500";
+			return "redirect:/error";
 
 		} catch (Exception e) {
 			logger.error(e.getMessage());
-			return "500";
+			return "redirect:/error";
 		}
 		return "transferPage";
 	}
@@ -82,7 +82,7 @@ public class TransactionController {
 		} catch (Exception e) {
 			logger.info(e.getMessage());
 		}
-		return new ModelAndView("home", "transaction", transferDTO);
+		return new ModelAndView("redirect:/user/home");
 	}
 
 	@GetMapping(value = "/user/operation/payment")

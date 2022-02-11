@@ -1,5 +1,7 @@
 package com.PayMyBuddy.config;
 
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.PayMyBuddy.services.UserDetailsServiceImpl;
@@ -23,10 +26,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
-
+	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
-
+	
 	@Bean(name = BeanIds.AUTHENTICATION_MANAGER)
 	@Override
 	public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -41,17 +44,13 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 		auth.userDetailsService(username -> userDetailsService.loadUserByUsername(username))
 				// grant authorities here
 				.passwordEncoder(passwordEncoder);
-	
 
 	}
 
 	@Override
-	public void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-				.antMatchers("/", "/register").anonymous()
-				.antMatchers("/","/register","/css/**").permitAll()
-				.antMatchers("/user/**").authenticated()
-				.antMatchers("/admin/**").hasRole("ADMIN").and()
+	protected void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests().antMatchers("/", "/register").anonymous().antMatchers("/", "/register", "/css/**")
+				.permitAll().antMatchers("/user/**").authenticated().antMatchers("/admin/**").hasRole("ADMIN").and()
 				.formLogin().loginPage("/login").permitAll().loginProcessingUrl("/login")
 				.defaultSuccessUrl("/user/home").and().logout().invalidateHttpSession(true).permitAll()
 				.logoutSuccessUrl("/");
