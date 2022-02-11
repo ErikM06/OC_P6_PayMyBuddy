@@ -15,7 +15,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SelectBeforeUpdate;
 import org.springframework.security.core.GrantedAuthority;
@@ -26,55 +25,51 @@ import javax.persistence.JoinColumn;
 @DynamicUpdate
 @SelectBeforeUpdate
 @Entity
-@Table (name="user")
+@Table(name = "user")
 
 public class User implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
-	@Column (name = "id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
 	private int id;
-	
-	@Column (name = "username")
+
+	@Column(name = "username")
 	private String username;
-	
-	@Column (name ="email")
+
+	@Column(name = "email")
 	private String email;
-	
-	@Column (name ="password")
+
+	@Column(name = "password")
 	protected String password;
-	
-	
-	@ManyToOne (cascade = CascadeType.ALL)
-	@JoinColumn(name="RoleId")
-    private Role roles;
-	
-	@OneToMany( mappedBy = "user", cascade = CascadeType.ALL)
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "RoleId")
+	private Role roles;
+
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private List<Connections> user;
-	
-	@OneToMany( mappedBy = "connection", cascade = CascadeType.ALL)
+
+	@OneToMany(mappedBy = "connection", cascade = CascadeType.ALL)
 	private List<Connections> connection;
-	
-	@OneToOne (mappedBy = "user", cascade = CascadeType.MERGE)
+
+	@OneToOne(mappedBy = "user", cascade = CascadeType.MERGE)
 	@PrimaryKeyJoinColumn
 	private Balance balance;
-	
-	@OneToMany (mappedBy ="userId", cascade = CascadeType.ALL)
+
+	@OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
 	private Collection<BankAccount> bankAccount;
-	
-	@Column (name ="create_time")
+
+	@Column(name = "create_time")
 	private Timestamp createTime;
-	
-	
-	@Column (name ="enable")
+
+	@Column(name = "enable")
 	private boolean enable;
 
-	
-	
-	public User(String username, String email, String password, Role roles, Timestamp createTime,
-			boolean enable, Balance balance) {
+	public User(String username, String email, String password, Role roles, Timestamp createTime, boolean enable,
+			Balance balance) {
 		super();
 		this.username = username;
 		this.email = email;
@@ -85,8 +80,8 @@ public class User implements UserDetails {
 		this.balance = balance;
 	}
 
-	public User () {
-		
+	public User() {
+
 	}
 
 	public int getId() {
@@ -169,7 +164,6 @@ public class User implements UserDetails {
 		this.user = user;
 	}
 
-
 	public Collection<BankAccount> getBankAccount() {
 		return bankAccount;
 	}
@@ -207,5 +201,5 @@ public class User implements UserDetails {
 		// TODO Auto-generated method stub
 		return true;
 	}
-	
-} 
+
+}

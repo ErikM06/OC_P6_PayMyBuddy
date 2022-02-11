@@ -15,6 +15,6 @@ public interface IUserService {
 
 	public void deleteUser(String username);
 	
-	public void uptadeUser (User user, GetCurrentUser currentUser);
+	public void uptadeUser (User user, User cUser);
 
 }

@@ -75,10 +75,10 @@ public class TransactionController {
 			transferService.transferToConnection(transferDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("soldError");
+			return new ModelAndView("redirect:/error/sold_error");
 		} catch (NotAConnectionException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("notAConnectionError");
+			return new ModelAndView("redirect:/error/not_a_connection");
 		} catch (Exception e) {
 			logger.info(e.getMessage());
 		}
@@ -93,7 +93,6 @@ public class TransactionController {
 			model.addAttribute("error", "Unable to launch /user/operation/payment");
 		}
 		return new ModelAndView("paymentPage");
-
 	}
 
 	@PostMapping(value = "/user/operation/paymentToBankAccount")
@@ -108,7 +107,7 @@ public class TransactionController {
 			return new ModelAndView("soldError");
 		} catch (Exception e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("500");
+			return new ModelAndView("redirect:/error");
 		}
 		return new ModelAndView("successPage");
 	}
@@ -122,7 +121,7 @@ public class TransactionController {
 			paymentService.selfPaymentToApp(paymentDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("soldError");
+			return new ModelAndView("redirect:/error/sold_error");
 		} catch (Exception e) {
 			logger.info(e.getMessage());
 		}

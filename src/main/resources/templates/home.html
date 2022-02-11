@@ -58,7 +58,7 @@
         <div class="container">
             <form th:object ="${sold}">
             <div class="row align-items-center text-center py-5"  style="height: 100px;"> 
-               <h4> your sold is : <span th:text ="*{amount}"> </span></h4>
+               <h4> your sold is : <span th:text ="${sold}"> </span></h4>
            </div>
            </form>
        </div>
@@ -92,7 +92,7 @@
                 <div class="col-lg-6 mbr-col-md-10" >
                     <div class="wrap position-relative" type="button" >   
                         <div class="text-wrap vcenter">
-                            <h2 class="mbr-fonts-style mbr-bold text-dark  mbr-section-title3 display-5">Bank Account</h2>  
+                            <h2 class="mbr-fonts-style mbr-bold text-dark  mbr-section-title3 display-5">Profil</h2>  
                             <a class="stretched-link" href="@{/user/profil}" th:href="@{/user/profil}"></a> 
                         </div>
                     </div>

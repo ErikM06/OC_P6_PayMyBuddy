@@ -33,6 +33,7 @@ public class UserService implements IUserService {
 	@Autowired
 	private IBalanceService iBalanceService;
 	
+	
 	 /* @Autowired
 	private UserMapper mapper; */
 
@@ -80,12 +81,11 @@ public class UserService implements IUserService {
 		return userRepo.findByUsername(username);
 	}
 	
-	 public void uptadeUser (User user, GetCurrentUser currentUser) {
-		User currentUserForUpdate = findByEmail(currentUser.getCurrentUser());
-		currentUserForUpdate.setUsername(user.getUsername());
-		currentUserForUpdate.setEmail(user.getEmail());
-		currentUserForUpdate.setPassword(user.getPassword());
-		userRepo.save(currentUserForUpdate);
+	 public void uptadeUser (User user, User cUser) {
+		cUser.setUsername(user.getUsername());
+		cUser.setEmail(user.getEmail());
+		cUser.setPassword(passwordEncoder().encode(user.getPassword()));
+		userRepo.save(cUser);
 	} 
 
 	@Bean

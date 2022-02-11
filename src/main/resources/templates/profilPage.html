@@ -50,8 +50,7 @@
    <div class="row text-center">
       <h1>PROFIL</h1>
    </div>
-   <div class="container-fluid bg-light py-3" style="font-size: 1.33rem;">
-      <div class="container ">
+   <div class="container bg-light py-3" style="font-size: 1.33rem;">
          <div class="row">
             <div class="col-md-8 mx-auto">
                <form class="form-inline bg-light" th:action="@{/user/profil/update}" th:object="${user}" method="post">
@@ -63,7 +62,7 @@
                      </div>
                      <div class="col">
                         <h4>change username</h4>
-                        <input type="text" class="form-control form-control-lg" th:field="*{username}" >
+                        <input type="text" class="form-control form-control-lg small" th:field="*{username}"  th:errorclass="fieldError"  >
                      </div>
                   </div>
                   <div class="row w-60 justify-content-center mx-auto ">
@@ -74,13 +73,13 @@
                      </div>
                      <div class="col">
                         <h4>change email</h4>
-                        <input type="text" class="form-control form-control-lg" th:field="*{email}">
+                        <input type="text" class="form-control form-control-lg small" th:field="*{email}" th:errorclass="fieldError">
                      </div>
                   </div>  
                   <div class="row w-60 justify-content-center mx-auto mb-3 ">
                      <div class="col">
                         <h4>change password</h4>
-                        <input type="password" class="form-control form-control-lg" th:field="*{password}">
+                        <input type="password" class="form-control form-control-lg small" th:field="*{password}" th:errorclass="fieldError">
                      </div>
                      
                   </div>
@@ -92,7 +91,7 @@
                </form>
             </div>
          </div>
-      </div>
+     
    </div>
    <div class="row text-center">
       <h1>BANK ACCOUNTS</h1>

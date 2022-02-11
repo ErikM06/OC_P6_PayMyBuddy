@@ -48,7 +48,7 @@ public class BankAccountController {
 			bankAccountService.addBankAccount(bankAccountDTO.getBankAccountNumber(),currentUser);
 		} catch (InvalidFormatException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("500");
+			return new ModelAndView("redirect:/error");
 		}
 		return new ModelAndView("successPage");
 	}
@@ -60,7 +60,7 @@ public class BankAccountController {
 		bankAccountService.deleteBankAccount(bankAccountDTO,currentUser);
 		} catch (NullPointerException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("500");
+			return new ModelAndView("redirect:/error");
 		}
 
 		return new ModelAndView("successPage");

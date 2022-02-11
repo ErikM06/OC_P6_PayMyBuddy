@@ -11,5 +11,4 @@ public interface BalanceRepository extends JpaRepository<Balance, Double>{
 	@Query(value ="Select b FROM Balance b INNER JOIN User u ON b.user = u.id WHERE u = ?1")
 	public Balance getBalanceByUser(User user);
 	
-
 }

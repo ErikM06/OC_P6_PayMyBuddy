@@ -46,7 +46,7 @@ public class ConnectionController {
 			IConnectionService.addConnections(connectionDto,currentUser);
 		} catch (NullPointerException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("notAConnectionPage");
+			return new ModelAndView("redirect:/error/not_a_connection");
 		}
 		return new ModelAndView("successPage");
 
@@ -59,10 +59,10 @@ public class ConnectionController {
 			IConnectionService.deleteConnection(connectionDto.getConnectionUsername(),currentUser);
 		} catch (NullPointerException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("notAConnectionPage");
+			return new ModelAndView("redirect:/error/not_a_connection");
 		} catch (Exception e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("500");
+			return new ModelAndView("redirect:/error");
 		}
 		return new ModelAndView("successPage");
 

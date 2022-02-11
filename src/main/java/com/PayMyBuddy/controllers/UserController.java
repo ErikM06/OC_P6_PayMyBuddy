@@ -57,10 +57,10 @@ public class UserController {
 			logger.info("reach registration at /register : {}", userDto.getUsername());
 		} catch (UserAlreadyExistException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("500");
+			return new ModelAndView("redirect:/error");
 		} catch (Exception e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("500");
+			return new ModelAndView("redirect:/error");
 		}
 		return new ModelAndView("login", "user", userDto);
 	}
@@ -69,12 +69,22 @@ public class UserController {
 	private ModelAndView uptadeUser(@ModelAttribute("user") User user, HttpServletRequest request,
 			BindingResult bindingResult) throws Exception {
 		try {
-			IUserService.uptadeUser(user, currentUser);
+			User cUser = IUserService.findByEmail(currentUser.getCurrentUser());
+			if(user.getUsername().isEmpty() || user.getUsername() == null) {
+				user.setUsername(cUser.getUsername());
+			}
+			if(user.getEmail().isEmpty() || user.getEmail() == null) {
+				user.setEmail(cUser.getEmail());
+			}
+			if(user.getPassword().isEmpty() || user.getPassword() == null) {
+				user.setPassword(cUser.getPassword());
+			}
+			IUserService.uptadeUser(user, cUser);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
-			return new ModelAndView("500");
+			return new ModelAndView("redirect:/error");
 		}
-		return new ModelAndView("redirect:/user/home");
+		return new ModelAndView("redirect:/logout");
 
 	}
 
