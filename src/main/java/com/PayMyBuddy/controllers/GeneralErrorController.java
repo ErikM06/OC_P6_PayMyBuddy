@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class GeneralErrorController implements ErrorController {
-	
-	private static Logger logger = LoggerFactory.getLogger(GeneralErrorController.class);
+
 
 	@RequestMapping("/error")
 	public String handleError(HttpServletRequest request) {
@@ -31,17 +30,4 @@ public class GeneralErrorController implements ErrorController {
 	    }
 	    return "error";
 	}
-	
-	@RequestMapping("/error/not_a_connection")
-	public String notAConnectionError () {
-		logger.info("in /error/not_a_connection");
-		return "notAConnectionError";
-	}
-	
-	@RequestMapping("/error/sold_error")
-	public String soldError () {
-		logger.info("in /error/not_a_connection");
-		return "soldError";
-	}
-
 }

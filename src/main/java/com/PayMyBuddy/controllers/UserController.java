@@ -82,7 +82,7 @@ public class UserController {
 			IUserService.uptadeUser(user, cUser);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
-			return new ModelAndView("redirect:/error");
+			return new ModelAndView("redirect:/user/profil");
 		}
 		return new ModelAndView("redirect:/logout");
 
@@ -95,7 +95,6 @@ public class UserController {
 		model.addAttribute("bankAccount", new BankAccountDTO());
 		if (null != error && error.equalsIgnoreCase("true")) {
 			model.addAttribute("error", "Unable to get /user/profil");
-
 		}
 		return "profilPage";
 	}

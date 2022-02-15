@@ -51,16 +51,16 @@ public class TransactionController {
 			model.addAttribute("transaction", new TransferDTO());
 			model.addAttribute("connections", connectionService.getConnectionsAsUserLs(currentUser));
 			model.addAttribute("transactionRecordLs", transferService.getAllUserTransfer(currentUser));
-			if (null != error && error.equalsIgnoreCase("true")) {
-				model.addAttribute("error", "Unable to launch /user/operation");
+			if (null != error) {
+				model.addAttribute("error", error);
 			}
 		} catch (NullPointerException e) {
 			logger.error(e.getMessage());
-			return "redirect:/error";
+			model.addAttribute("error", e.getMessage());
 
 		} catch (Exception e) {
 			logger.error(e.getMessage());
-			return "redirect:/error";
+			model.addAttribute("error", e.getMessage());
 		}
 		return "transferPage";
 	}
@@ -75,10 +75,10 @@ public class TransactionController {
 			transferService.transferToConnection(transferDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("redirect:/error/sold_error");
+			return new ModelAndView("redirect:/user/operation", "error", e.getMessage());
 		} catch (NotAConnectionException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("redirect:/error/not_a_connection");
+			return new ModelAndView("redirect:/user/operation", "error", e.getMessage());
 		} catch (Exception e) {
 			logger.info(e.getMessage());
 		}
@@ -104,10 +104,10 @@ public class TransactionController {
 			paymentService.selfPaymentToAccount(paymentDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("soldError");
+			return new ModelAndView("redirect:/user/operation", "error", e.getMessage());
 		} catch (Exception e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("redirect:/error");
+			return new ModelAndView("redirect:/user/operation", "error", e.getMessage());
 		}
 		return new ModelAndView("successPage");
 	}
@@ -121,7 +121,7 @@ public class TransactionController {
 			paymentService.selfPaymentToApp(paymentDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("redirect:/error/sold_error");
+			return new ModelAndView("redirect:/user/operation", "error", e.getMessage());
 		} catch (Exception e) {
 			logger.info(e.getMessage());
 		}
