@@ -1,7 +1,5 @@
 package com.PayMyBuddy.config;
 
-import javax.annotation.PostConstruct;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +11,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.PayMyBuddy.services.UserDetailsServiceImpl;
@@ -35,10 +32,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public AuthenticationManager authenticationManagerBean() throws Exception {
 		return super.authenticationManagerBean();
 	}
-	// this set userdetailsService to match user's info and set a password with
-	// encoder to match with the token from db
-
-	// https://github.com/Yoh0xFF/java-spring-security-example/blob/master/src/main/java/io/example/configuration/security/SecurityConfig.java
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(username -> userDetailsService.loadUserByUsername(username))
@@ -54,8 +48,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.formLogin().loginPage("/login").permitAll().loginProcessingUrl("/login")
 				.defaultSuccessUrl("/user/home").and().logout().invalidateHttpSession(true).permitAll()
 				.logoutSuccessUrl("/");
-		// .oauth2Login();
-		// disabled csrf to permit post operation
 		http.csrf().disable();
 	}
 

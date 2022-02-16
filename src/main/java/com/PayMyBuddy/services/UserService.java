@@ -5,9 +5,7 @@ import java.sql.Timestamp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.PayMyBuddy.dto.UserDTO;
@@ -17,7 +15,6 @@ import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.repo.RoleRepository;
 import com.PayMyBuddy.repo.UserRepository;
-import com.PayMyBuddy.services.util.GetCurrentUser;
 
 @Service
 public class UserService implements IUserService {
@@ -35,13 +32,6 @@ public class UserService implements IUserService {
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
-	
-	
-	 /* @Autowired
-	private UserMapper mapper; */
-
-
-	// method from Spring doc to avoid circular references error
 
 	public User registerNewUserAccount(UserDTO userDto) throws UserAlreadyExistException {
 		User user = new User();

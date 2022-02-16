@@ -45,14 +45,17 @@ public class TransactionController {
 	private GetCurrentUser currentUser;
 
 	@GetMapping(value = "/user/operation")
-	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error)
-			throws Exception, NullPointerException {
+	private String operationPage(Model model, @RequestParam(value = "error", required = false) String error,
+			@RequestParam(value = "success", required = false) String success) throws Exception, NullPointerException {
 		try {
 			model.addAttribute("transaction", new TransferDTO());
 			model.addAttribute("connections", connectionService.getConnectionsAsUserLs(currentUser));
 			model.addAttribute("transactionRecordLs", transferService.getAllUserTransfer(currentUser));
 			if (null != error) {
 				model.addAttribute("error", error);
+			}
+			if (null != success) {
+				model.addAttribute("success", "transfer success!");
 			}
 		} catch (NullPointerException e) {
 			logger.error(e.getMessage());
@@ -82,15 +85,19 @@ public class TransactionController {
 		} catch (Exception e) {
 			logger.info(e.getMessage());
 		}
-		return new ModelAndView("redirect:/user/home");
+		return new ModelAndView("redirect:/user/operation", "success", "transfer_success");
 	}
 
 	@GetMapping(value = "/user/operation/payment")
-	private ModelAndView selfPayment(Model model, @RequestParam(value = "error", required = false) String error) {
+	private ModelAndView selfPayment(Model model, @RequestParam(value = "error", required = false) String error,
+			@RequestParam(value = "success", required = false) String success) {
 		model.addAttribute("payment", new PaymentDTO());
 		model.addAttribute("bankAccountLs", bankAccountService.getAllBankAccountFromUser(currentUser));
-		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("error", "Unable to launch /user/operation/payment");
+		if (null != error) {
+			model.addAttribute("error", error);
+		}
+		if (null != success) {
+			model.addAttribute("success", "payment success!");
 		}
 		return new ModelAndView("paymentPage");
 	}
@@ -104,12 +111,12 @@ public class TransactionController {
 			paymentService.selfPaymentToAccount(paymentDTO, currentUser);
 		} catch (NotEnoughtBalanceException e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("redirect:/user/operation", "error", e.getMessage());
+			return new ModelAndView("redirect:/user/operation/payment", "error", e.getMessage());
 		} catch (Exception e) {
 			logger.info(e.getMessage());
-			return new ModelAndView("redirect:/user/operation", "error", e.getMessage());
+			return new ModelAndView("redirect:/user/operation/payment", "error", e.getMessage());
 		}
-		return new ModelAndView("successPage");
+		return new ModelAndView("redirect:/user/operation/payment");
 	}
 
 	@PostMapping(value = "/user/operation/paymentToAppAccount")
@@ -124,8 +131,9 @@ public class TransactionController {
 			return new ModelAndView("redirect:/user/operation", "error", e.getMessage());
 		} catch (Exception e) {
 			logger.info(e.getMessage());
+			return new ModelAndView("redirect:/user/operation", "error", e.getMessage());
 		}
-		return new ModelAndView("successPage");
+		return new ModelAndView("redirect:/user/operation/payment");
 	}
 
 }

@@ -42,6 +42,22 @@
             </div>
         </nav>
     </header>
+    <div class="container">
+        <div th:if="*{error}">
+            <div class="alert alert-danger alert-dismissible fade show">
+                <strong>Error!</strong> <span th:text="${error}"> </span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div th:if="*{success}">
+            <div class="alert alert-success alert-dismissible fade show">
+                <strong>Success!</strong> <span th:text="${success}"> </span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid bg-light py-3 mb-5" style="font-size: 1.33rem;">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">

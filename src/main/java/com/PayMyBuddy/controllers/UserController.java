@@ -12,7 +12,6 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -21,7 +20,6 @@ import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
 import com.PayMyBuddy.interfaces.IBankAccountService;
 import com.PayMyBuddy.interfaces.IUserService;
-import com.PayMyBuddy.models.BankAccount;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.services.util.GetCurrentUser;
 
@@ -65,38 +63,42 @@ public class UserController {
 		return new ModelAndView("login", "user", userDto);
 	}
 
+	@GetMapping(value = "/user/profil")
+	private String getUserProfil(Model model, @RequestParam(value = "error", required = false) String error,
+			@RequestParam(value = "success", required = false) String success) {
+		model.addAttribute("user", IUserService.findByEmail(currentUser.getCurrentUser()));
+		model.addAttribute("bankAccountls", bankAccountService.getAllBankAccountFromUser(currentUser));
+		model.addAttribute("bankAccount", new BankAccountDTO());
+		if (null != error) {
+			model.addAttribute("error", error);
+		}
+		if (null != success) {
+			model.addAttribute("success", success);
+		}
+		return "profilPage";
+	}
+
 	@PostMapping(value = "/user/profil/update")
 	private ModelAndView uptadeUser(@ModelAttribute("user") User user, HttpServletRequest request,
 			BindingResult bindingResult) throws Exception {
 		try {
 			User cUser = IUserService.findByEmail(currentUser.getCurrentUser());
-			if(user.getUsername().isEmpty() || user.getUsername() == null) {
+			if (user.getUsername().isEmpty() || user.getUsername() == null) {
 				user.setUsername(cUser.getUsername());
 			}
-			if(user.getEmail().isEmpty() || user.getEmail() == null) {
+			if (user.getEmail().isEmpty() || user.getEmail() == null) {
 				user.setEmail(cUser.getEmail());
 			}
-			if(user.getPassword().isEmpty() || user.getPassword() == null) {
+			if (user.getPassword().isEmpty() || user.getPassword() == null) {
 				user.setPassword(cUser.getPassword());
 			}
 			IUserService.uptadeUser(user, cUser);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
-			return new ModelAndView("redirect:/user/profil");
+			return new ModelAndView("redirect:/user/profil", "error", e.getMessage());
 		}
 		return new ModelAndView("redirect:/logout");
 
-	}
-
-	@GetMapping(value = "/user/profil")
-	private String getUserProfil(Model model, @RequestParam(value = "error", required = false) String error) {
-		model.addAttribute("user", IUserService.findByEmail(currentUser.getCurrentUser()));
-		model.addAttribute("bankAccountls", bankAccountService.getAllBankAccountFromUser(currentUser));
-		model.addAttribute("bankAccount", new BankAccountDTO());
-		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("error", "Unable to get /user/profil");
-		}
-		return "profilPage";
 	}
 
 }

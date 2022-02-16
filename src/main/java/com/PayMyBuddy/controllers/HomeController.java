@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.PayMyBuddy.interfaces.IBalanceService;
 import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.services.util.GetCurrentUser;
 
@@ -21,9 +20,6 @@ public class HomeController {
 	private IUserService IUserService;
 	
 	@Autowired
-	private IBalanceService balanceService;
-	
-	@Autowired
 	private GetCurrentUser currentUser;
 
 	@GetMapping(value = "/admin/delete_user")
@@ -33,11 +29,11 @@ public class HomeController {
 	}
 	
 	@GetMapping(value = "/user/home")
-	public String getUserHome(Model model,@RequestParam(value = "error", required = false) String error) {
+	private String getUserHome(Model model,@RequestParam(value = "error", required = false) String error) {
 		
 		model.addAttribute("sold",IUserService.findByEmail(currentUser.getCurrentUser()).getBalance().getAmount());
 		if (null != error && error.equalsIgnoreCase("true")) {
-			model.addAttribute("Error", "Unable to launch /user/get_bank_account");
+			model.addAttribute("error", "Unable to launch /user/get_bank_account");
 		}
 
 		return "home";

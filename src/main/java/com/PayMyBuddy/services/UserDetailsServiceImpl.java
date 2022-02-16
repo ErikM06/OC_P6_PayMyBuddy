@@ -12,32 +12,25 @@ import com.PayMyBuddy.interfaces.IUserService;
 import com.PayMyBuddy.models.User;
 import com.PayMyBuddy.services.UserDetailsServiceImpl;
 
-/*
- * implementation of UserDetailsService found on 
- * https://github.com/arshadalisoomro/secure-spring-demo/blob/master/src/main/java/pk/edu/suk/service/UserDetailsServiceImpl.java
- */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
 	Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
-	
+
 	private final IUserService userService;
-	
 
 	@Autowired
-    public UserDetailsServiceImpl(UserService userService) {
-        this.userService = userService;
-    }
-    
+	public UserDetailsServiceImpl(UserService userService) {
+		this.userService = userService;
+	}
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = userService.findUserByUsername(username);
 		logger.info("loading User by username: {} ", username.toString());
 		if (user == null) {
-			throw new UsernameNotFoundException("user with {} "+username+" not found!");
+			throw new UsernameNotFoundException("user with {} " + username + " not found!");
 		}
-		
-		
 		return user;
 	}
 

@@ -56,7 +56,7 @@ public class PaymentService implements IPaymentService {
 			Balance balance = balanceService.takeFromBalance(user, deductedAmount);
 			logger.info("user is : ", user, "amount is : ", deductedAmount);
 
-			payment.setAmount(deductedAmount);
+			payment.setAmount(paymentDTO.getAmount());
 			payment.setUserBalance(balance);
 			payment.setDescription(paymentDTO.getDescription());
 			payment.setDateTime(new Timestamp(System.currentTimeMillis()));
@@ -81,7 +81,7 @@ public class PaymentService implements IPaymentService {
 			Balance balance = balanceService.addToBalance(user, deductedAmount);
 			logger.info("user is : ", user, "amount is : ", deductedAmount);
 
-			payment.setAmount(deductedAmount);
+			payment.setAmount(paymentDTO.getAmount());
 			payment.setUserBalance(balance);
 			payment.setDescription(paymentDTO.getDescription());
 			payment.setDateTime(new Timestamp(System.currentTimeMillis()));

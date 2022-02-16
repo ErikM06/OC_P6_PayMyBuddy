@@ -57,7 +57,7 @@ public class TransferService implements ITransferService {
 
 		float amountToDeduct = (float) (transferDTO.getAmount() * (DebitAmount.DEBIT_AMOUNT));
 		float deductedAmount = transferDTO.getAmount() - amountToDeduct;
-		Balance userBalance = balanceService.takeFromBalance(userAccount, deductedAmount);
+		Balance userBalance = balanceService.takeFromBalance(userAccount, transferDTO.getAmount());
 		if (userBalance.getAmount() <= 0) {
 			throw new NotEnoughtBalanceException();
 		}

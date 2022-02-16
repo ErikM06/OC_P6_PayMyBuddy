@@ -51,6 +51,15 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div th:if="*{success}">
+            <div class="alert alert-success alert-dismissible fade show">
+                <strong>Success!</strong> <span th:text="${success}"> </span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        </div>
+    </div>
+
 
     <div class="container-fluid bg-light py-3 mb-5" style="font-size: 1.33rem;">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -65,7 +74,7 @@
             <div class="col">
                 <div class="container-fluid d-flex justify-content-between px-0">
                     <h4> Send Money </h4>
-                    <button type="button" class="btn btn-primary btn-lg" href ="@{/user/add_connection}">Add Connection </button>
+                    <button type="button" class="btn btn-primary btn-lg" href ="@{/user/connection}">Add Connection </button>
                 </div>
             </div>
             <div class="col-12">

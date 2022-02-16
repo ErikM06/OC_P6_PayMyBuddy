@@ -3,7 +3,6 @@ package com.PayMyBuddy.interfaces;
 import com.PayMyBuddy.dto.UserDTO;
 import com.PayMyBuddy.exceptions.UserAlreadyExistException;
 import com.PayMyBuddy.models.User;
-import com.PayMyBuddy.services.util.GetCurrentUser;
 
 public interface IUserService {
 
