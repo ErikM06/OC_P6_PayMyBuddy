@@ -7,10 +7,6 @@
  ## Lien
  https://github.com/ErikM06/OC_P6_PayMyBuddy.git
  
-
- ## Lien
- https://github.com/ErikM06/OC_P6_PayMyBuddy.git
- 
 ## Files
 
 ![BDD diagram](diagrams/P6_DBB_Modele/P6_DBB_Modele.png)
