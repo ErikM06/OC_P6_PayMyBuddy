@@ -6,7 +6,14 @@
 
 ## Files
 
-![Modèle BDD](diagrams/P6_DBB_Modele/P6_DBB_Modele.jpg)
+
+ ## Lien
+ https://github.com/ErikM06/OC_P6_PayMyBuddy.git
+ 
+## Files
+
+![diagrams] (diagrams/P6_DBB_Modele/P6_DBB_Modele.png)
+![class_diagram] (diagrams/domaine metierP6.png)
 
 
 
