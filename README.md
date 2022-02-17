@@ -11,7 +11,7 @@
 
 ![BDD diagram](diagrams/P6_DBB_Modele/P6_DBB_Modele.png)
 
-![Class diagram](diagrams/P6_DBB_Modele/domaine_metierP6.png)
+![Class diagram](diagrams/P6_DBB_Modele/Domaine_metier P6.png)
 
 
 
