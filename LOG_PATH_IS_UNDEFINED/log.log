@@ -3048,3 +3048,11 @@ Caused by: java.sql.SQLSyntaxErrorException: La table 'paymybuddy_db.compagny_ac
 				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
 22-02-2022 10:46:45.923 [RMI TCP Connection(3)-127.0.0.1] INFO 
 				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+22-02-2022 10:57:01.007 [http-nio-8080-exec-4] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: zdada 
+22-02-2022 10:57:01.196 [http-nio-8080-exec-4] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [111] milliseconds.
+22-02-2022 10:59:14.400 [http-nio-8080-exec-9] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: Nathalie 
+22-02-2022 10:59:14.479 [http-nio-8080-exec-10] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
