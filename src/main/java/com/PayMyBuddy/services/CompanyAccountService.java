@@ -19,16 +19,7 @@ public class CompanyAccountService implements ICompanyAccountService {
 	@Autowired
 	private CompanyAccountRepository companyAccountRepository;
 
-	@PostConstruct
-	public void initCompanyAccount() {
-		if (companyAccountRepository.count() == 0) {
-			CompanyAccount companyAccount = new CompanyAccount();
-			companyAccount.setId(1);
-			companyAccount.setSold(1000);
-			companyAccount.setBankAccountNumber("company bank account");
-			companyAccountRepository.save(companyAccount);
-		}
-	}
+	
 
 	public void transferToCompanyAccount(float amount, Transfer transfer) {
 		CompanyAccount companyAccount = companyAccountRepository.getLastCompanyAccountOperation();

@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,6 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.PayMyBuddy.models.Balance;
 import com.PayMyBuddy.models.BankAccount;
+import com.PayMyBuddy.models.CompanyAccount;
 import com.PayMyBuddy.models.Connections;
 import com.PayMyBuddy.models.Role;
 import com.PayMyBuddy.models.Transfer;
@@ -28,7 +32,7 @@ import com.PayMyBuddy.repo.UserRepository;
 @Configuration
 @ComponentScan("com.PayMyBuddy.config")
 public class InitDbvalues {
-
+/*
 	@Autowired
 	RoleRepository roleRepository;
 
@@ -118,7 +122,18 @@ public class InitDbvalues {
 			connectionRepo.saveAll(connectionLs);
 		}
 	}
-
+	
+	@PostConstruct
+	public void initCompanyAccount() {
+		if (companyAccountRepository.count() == 0) {
+			CompanyAccount companyAccount = new CompanyAccount();
+			companyAccount.setId(1);
+			companyAccount.setSold(1000);
+			companyAccount.setBankAccountNumber("company bank account");
+			companyAccountRepository.save(companyAccount);
+		}
+	}
+	
 	@Bean("initTransfer")
 	public void setUsersTransfer() {
 		Random r = new Random();
@@ -159,7 +174,7 @@ public class InitDbvalues {
 	private Timestamp getTimestamp() {
 		return new Timestamp(System.currentTimeMillis());
 	}
-	
+	*/
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		

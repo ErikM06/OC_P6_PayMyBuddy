@@ -5,7 +5,7 @@ import com.PayMyBuddy.models.Transfer;
 
 public interface ICompanyAccountService {
 	
-	public void initCompanyAccount();
+
 	
 	public void transferToCompanyAccount(float amount, Transfer transfer);
 	
