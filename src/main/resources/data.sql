@@ -1,3 +1,4 @@
+INSERT INTO `hibernate_sequence` (`next_val`) VALUES (12);
 /*
 -- Query: SELECT `role`.`id`,
     `role`.`role_name`
