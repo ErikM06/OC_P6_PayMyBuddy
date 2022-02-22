@@ -3281,3 +3281,399 @@ Caused by: java.sql.SQLSyntaxErrorException: La table 'paymybuddy_db.hivernate_s
 22-02-2022 11:35:02.242 [RMI TCP Connection(10)-127.0.0.1] INFO 
 				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
 
+22-02-2022 11:40:16.613 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 3328 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+22-02-2022 11:40:16.615 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2022 11:40:17.448 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-02-2022 11:40:17.524 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 67 ms. Found 8 JPA repository interfaces.
+22-02-2022 11:40:18.078 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-02-2022 11:40:18.087 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+22-02-2022 11:40:18.088 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-02-2022 11:40:18.088 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+22-02-2022 11:40:18.196 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-02-2022 11:40:18.196 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1545 ms
+22-02-2022 11:40:18.483 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-02-2022 11:40:18.617 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-02-2022 11:40:19.030 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-02-2022 11:40:19.072 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+22-02-2022 11:40:19.212 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22-02-2022 11:40:19.413 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22-02-2022 11:40:20.157 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-02-2022 11:40:20.167 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-02-2022 11:40:20.220 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-02-2022 11:40:21.048 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ab780fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@1df83569, org.springframework.security.web.header.HeaderWriterFilter@21b792c2, org.springframework.security.web.authentication.logout.LogoutFilter@321302bc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3985175e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62b2bc2e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3894d1b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b8683b8, org.springframework.security.web.session.SessionManagementFilter@ab595e8, org.springframework.security.web.access.ExceptionTranslationFilter@46cb800b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d50f682]
+22-02-2022 11:40:21.397 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+22-02-2022 11:40:21.947 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+22-02-2022 11:40:21.989 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+22-02-2022 11:40:22.005 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+22-02-2022 11:40:22.017 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.686 seconds (JVM running for 6.45)
+22-02-2022 11:40:23.171 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22-02-2022 11:40:23.171 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+22-02-2022 11:40:23.173 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+22-02-2022 11:40:43.092 [http-nio-8080-exec-4] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: Nathalie 
+22-02-2022 11:40:43.301 [http-nio-8080-exec-4] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [131] milliseconds.
+22-02-2022 11:40:43.309 [http-nio-8080-exec-5] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:15.014 [http-nio-8080-exec-1] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:15.021 [http-nio-8080-exec-1] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:41:15.027 [http-nio-8080-exec-1] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:15.044 [http-nio-8080-exec-1] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 1
+22-02-2022 11:41:19.199 [http-nio-8080-exec-3] INFO 
+				c.P.c.TransactionController.transferToConnection - entering transfer with : com.PayMyBuddy.dto.TransferDTO@4f2241d8
+22-02-2022 11:41:19.200 [http-nio-8080-exec-3] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:19.252 [http-nio-8080-exec-3] INFO 
+				c.P.services.TransferService.transferToConnection - transaction is :
+22-02-2022 11:41:19.252 [http-nio-8080-exec-3] INFO 
+				c.P.services.TransferService.transferToConnection - current User for transfer is : com.PayMyBuddy.models.User@594d54ce
+22-02-2022 11:41:19.252 [http-nio-8080-exec-3] INFO 
+				c.P.services.TransferService.transferToConnection - current connection for transfer is : com.PayMyBuddy.models.User@5d990f8b
+22-02-2022 11:41:19.264 [http-nio-8080-exec-4] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:19.269 [http-nio-8080-exec-4] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:41:19.270 [http-nio-8080-exec-4] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:19.274 [http-nio-8080-exec-4] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 2
+22-02-2022 11:41:28.005 [http-nio-8080-exec-6] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:29.506 [http-nio-8080-exec-8] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:35.290 [http-nio-8080-exec-10] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:40.984 [http-nio-8080-exec-5] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:43.820 [http-nio-8080-exec-7] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:43.824 [http-nio-8080-exec-7] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:41:48.968 [http-nio-8080-exec-9] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:42:09.746 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+22-02-2022 11:42:09.876 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-02-2022 11:42:09.877 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-02-2022 11:42:09.885 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-02-2022 11:51:02.545 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 15904 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+22-02-2022 11:51:02.547 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2022 11:51:03.257 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-02-2022 11:51:03.321 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 56 ms. Found 8 JPA repository interfaces.
+22-02-2022 11:51:03.819 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-02-2022 11:51:03.827 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+22-02-2022 11:51:03.827 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-02-2022 11:51:03.827 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+22-02-2022 11:51:03.913 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-02-2022 11:51:03.913 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1335 ms
+22-02-2022 11:51:04.167 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-02-2022 11:51:04.290 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-02-2022 11:51:04.621 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-02-2022 11:51:04.665 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+22-02-2022 11:51:04.804 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22-02-2022 11:51:04.917 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22-02-2022 11:51:05.491 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-02-2022 11:51:05.499 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-02-2022 11:51:05.544 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-02-2022 11:51:06.310 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76929266, org.springframework.security.web.context.SecurityContextPersistenceFilter@5620470a, org.springframework.security.web.header.HeaderWriterFilter@4ffcb1bd, org.springframework.security.web.authentication.logout.LogoutFilter@330d557e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3ad80206, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e76ade9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53630682, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20331c8e, org.springframework.security.web.session.SessionManagementFilter@7fae6f43, org.springframework.security.web.access.ExceptionTranslationFilter@6037748a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51158fb1]
+22-02-2022 11:51:06.627 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+22-02-2022 11:51:07.144 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+22-02-2022 11:51:07.183 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+22-02-2022 11:51:07.198 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+22-02-2022 11:51:07.209 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 4.911 seconds (JVM running for 5.647)
+22-02-2022 11:51:09.713 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22-02-2022 11:51:09.715 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+22-02-2022 11:51:09.716 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+22-02-2022 11:51:13.890 [http-nio-8080-exec-3] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: Nathalie 
+22-02-2022 11:51:14.100 [http-nio-8080-exec-3] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [130] milliseconds.
+22-02-2022 11:51:14.107 [http-nio-8080-exec-4] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:51:16.801 [http-nio-8080-exec-6] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:51:16.810 [http-nio-8080-exec-6] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:51:16.816 [http-nio-8080-exec-6] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:51:16.833 [http-nio-8080-exec-6] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 1
+22-02-2022 11:51:21.165 [http-nio-8080-exec-8] INFO 
+				c.P.c.TransactionController.transferToConnection - entering transfer with : com.PayMyBuddy.dto.TransferDTO@172f6db0
+22-02-2022 11:51:21.166 [http-nio-8080-exec-8] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:51:21.191 [http-nio-8080-exec-8] INFO 
+				c.P.c.TransactionController.transferToConnection - Not enought founds on account
+22-02-2022 11:51:21.198 [http-nio-8080-exec-9] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:51:21.205 [http-nio-8080-exec-9] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:51:21.206 [http-nio-8080-exec-9] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:51:21.209 [http-nio-8080-exec-9] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 1
+22-02-2022 11:51:25.240 [http-nio-8080-exec-1] INFO 
+				c.P.c.TransactionController.transferToConnection - entering transfer with : com.PayMyBuddy.dto.TransferDTO@53c7da31
+22-02-2022 11:51:25.241 [http-nio-8080-exec-1] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:51:25.248 [http-nio-8080-exec-1] INFO 
+				c.P.c.TransactionController.transferToConnection - Not enought founds on account
+22-02-2022 11:51:25.253 [http-nio-8080-exec-2] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:51:25.258 [http-nio-8080-exec-2] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:51:25.259 [http-nio-8080-exec-2] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:51:25.263 [http-nio-8080-exec-2] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 1
+22-02-2022 11:52:04.558 [http-nio-8080-exec-4] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:52:04.564 [http-nio-8080-exec-4] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:52:04.565 [http-nio-8080-exec-4] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:52:04.568 [http-nio-8080-exec-4] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 1
+22-02-2022 11:52:05.445 [http-nio-8080-exec-6] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:52:05.451 [http-nio-8080-exec-6] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:52:05.452 [http-nio-8080-exec-6] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:52:05.455 [http-nio-8080-exec-6] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 1
+22-02-2022 11:52:06.322 [http-nio-8080-exec-8] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:52:17.347 [http-nio-8080-exec-3] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: Yann 
+22-02-2022 11:52:17.425 [http-nio-8080-exec-4] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:20.949 [http-nio-8080-exec-6] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:20.955 [http-nio-8080-exec-6] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:52:20.956 [http-nio-8080-exec-6] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:20.959 [http-nio-8080-exec-6] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 1
+22-02-2022 11:52:24.177 [http-nio-8080-exec-8] INFO 
+				c.P.c.TransactionController.transferToConnection - entering transfer with : com.PayMyBuddy.dto.TransferDTO@515c09a1
+22-02-2022 11:52:24.178 [http-nio-8080-exec-8] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:24.211 [http-nio-8080-exec-8] INFO 
+				c.P.services.TransferService.transferToConnection - transaction is :
+22-02-2022 11:52:24.211 [http-nio-8080-exec-8] INFO 
+				c.P.services.TransferService.transferToConnection - current User for transfer is : com.PayMyBuddy.models.User@27d3e3b0
+22-02-2022 11:52:24.211 [http-nio-8080-exec-8] INFO 
+				c.P.services.TransferService.transferToConnection - current connection for transfer is : com.PayMyBuddy.models.User@cabcd99
+22-02-2022 11:52:24.219 [http-nio-8080-exec-9] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:24.225 [http-nio-8080-exec-9] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:52:24.226 [http-nio-8080-exec-9] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:24.229 [http-nio-8080-exec-9] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 2
+22-02-2022 11:52:39.483 [http-nio-8080-exec-1] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:39.488 [http-nio-8080-exec-1] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:52:39.489 [http-nio-8080-exec-1] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:39.492 [http-nio-8080-exec-1] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 2
+22-02-2022 11:52:43.218 [http-nio-8080-exec-3] INFO 
+				c.P.c.TransactionController.transferToConnection - entering transfer with : com.PayMyBuddy.dto.TransferDTO@253bc8f
+22-02-2022 11:52:43.219 [http-nio-8080-exec-3] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:43.225 [http-nio-8080-exec-3] INFO 
+				c.P.c.TransactionController.transferToConnection - Not enought founds on account
+22-02-2022 11:52:43.229 [http-nio-8080-exec-4] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:43.234 [http-nio-8080-exec-4] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:52:43.235 [http-nio-8080-exec-4] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: Yann@gmail.com
+22-02-2022 11:52:43.238 [http-nio-8080-exec-4] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 2
+22-02-2022 11:52:57.877 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+22-02-2022 11:52:58.010 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-02-2022 11:52:58.011 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-02-2022 11:52:58.019 [RMI TCP Connection(12)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-02-2022 11:53:13.776 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarting - Starting PayMyBuddyApplication using Java 11 on DESKTOP-Q0H09QF with PID 6252 (C:\dev\P6\OC_P6_PayMyBuddy\target\classes started by Megaport in C:\dev\P6\OC_P6_PayMyBuddy)
+22-02-2022 11:53:13.778 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2022 11:53:14.477 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22-02-2022 11:53:14.540 [main] INFO 
+				o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 56 ms. Found 8 JPA repository interfaces.
+22-02-2022 11:53:15.037 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-02-2022 11:53:15.045 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+22-02-2022 11:53:15.046 [main] INFO 
+				o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-02-2022 11:53:15.046 [main] INFO 
+				o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.55]
+22-02-2022 11:53:15.131 [main] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-02-2022 11:53:15.131 [main] INFO 
+				o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1323 ms
+22-02-2022 11:53:15.373 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-02-2022 11:53:15.496 [main] INFO 
+				com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-02-2022 11:53:16.089 [main] INFO 
+				o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+22-02-2022 11:53:16.132 [main] INFO 
+				org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.1.Final
+22-02-2022 11:53:16.270 [main] INFO 
+				o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22-02-2022 11:53:16.383 [main] INFO 
+				org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22-02-2022 11:53:16.952 [main] INFO 
+				o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22-02-2022 11:53:16.960 [main] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-02-2022 11:53:16.998 [main] WARN 
+				o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-02-2022 11:53:17.765 [main] INFO 
+				o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a3c3a04, org.springframework.security.web.context.SecurityContextPersistenceFilter@156d7556, org.springframework.security.web.header.HeaderWriterFilter@1d2ce035, org.springframework.security.web.authentication.logout.LogoutFilter@1dab2cf5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1267adbe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77331437, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64b0ec4a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78ca8258, org.springframework.security.web.session.SessionManagementFilter@5f6b1f19, org.springframework.security.web.access.ExceptionTranslationFilter@1df83569, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b6e32ee]
+22-02-2022 11:53:18.070 [main] INFO 
+				o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+22-02-2022 11:53:18.598 [main] INFO 
+				o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 3 endpoint(s) beneath base path '/actuator'
+22-02-2022 11:53:18.638 [main] INFO 
+				o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+22-02-2022 11:53:18.653 [main] INFO 
+				o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+22-02-2022 11:53:18.664 [main] INFO 
+				com.PayMyBuddy.PayMyBuddyApplication.logStarted - Started PayMyBuddyApplication in 5.136 seconds (JVM running for 5.858)
+22-02-2022 11:53:20.354 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22-02-2022 11:53:20.355 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+22-02-2022 11:53:20.356 [RMI TCP Connection(3)-127.0.0.1] INFO 
+				o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+22-02-2022 11:53:28.062 [http-nio-8080-exec-1] WARN 
+				o.a.c.util.SessionIdGeneratorBase.log - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [130] milliseconds.
+22-02-2022 11:53:30.690 [http-nio-8080-exec-4] INFO 
+				c.P.services.UserDetailsServiceImpl.loadUserByUsername - loading User by username: Nathalie 
+22-02-2022 11:53:30.771 [http-nio-8080-exec-5] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:53:32.367 [http-nio-8080-exec-7] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:53:32.375 [http-nio-8080-exec-7] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:53:32.380 [http-nio-8080-exec-7] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:53:32.396 [http-nio-8080-exec-7] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 1
+22-02-2022 11:53:35.849 [http-nio-8080-exec-9] INFO 
+				c.P.c.TransactionController.transferToConnection - entering transfer with : com.PayMyBuddy.dto.TransferDTO@5cdb1336
+22-02-2022 11:53:35.850 [http-nio-8080-exec-9] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:53:35.857 [http-nio-8080-exec-9] INFO 
+				c.P.c.TransactionController.transferToConnection - Not enought founds on account
+22-02-2022 11:53:35.864 [http-nio-8080-exec-10] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:53:35.871 [http-nio-8080-exec-10] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:53:35.872 [http-nio-8080-exec-10] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:53:35.876 [http-nio-8080-exec-10] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 1
+22-02-2022 11:53:40.488 [http-nio-8080-exec-2] INFO 
+				c.P.c.TransactionController.transferToConnection - entering transfer with : com.PayMyBuddy.dto.TransferDTO@75e13da4
+22-02-2022 11:53:40.489 [http-nio-8080-exec-2] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:53:40.541 [http-nio-8080-exec-2] INFO 
+				c.P.services.TransferService.transferToConnection - transaction is :
+22-02-2022 11:53:40.541 [http-nio-8080-exec-2] INFO 
+				c.P.services.TransferService.transferToConnection - current User for transfer is : com.PayMyBuddy.models.User@6ae3a834
+22-02-2022 11:53:40.542 [http-nio-8080-exec-2] INFO 
+				c.P.services.TransferService.transferToConnection - current connection for transfer is : com.PayMyBuddy.models.User@5aefa822
+22-02-2022 11:53:40.552 [http-nio-8080-exec-3] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:53:40.557 [http-nio-8080-exec-3] INFO 
+				c.P.services.ConnectionService.getConnectionsAsUserLs - Connection list lenght is : 1
+22-02-2022 11:53:40.558 [http-nio-8080-exec-3] INFO 
+				c.P.services.util.GetCurrentUser.getCurrentUser - username is: nathalie@gmail.com
+22-02-2022 11:53:40.563 [http-nio-8080-exec-3] INFO 
+				c.P.services.TransferService.getAllUserTransfer - transferDtoLs lenght is : 2
+22-02-2022 11:54:00.167 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+22-02-2022 11:54:00.306 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-02-2022 11:54:00.308 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-02-2022 11:54:00.316 [RMI TCP Connection(11)-127.0.0.1] INFO 
+				com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.

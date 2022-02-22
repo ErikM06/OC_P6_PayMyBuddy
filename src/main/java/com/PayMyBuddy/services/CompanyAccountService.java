@@ -1,6 +1,5 @@
 package com.PayMyBuddy.services;
 
-import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
