@@ -13,6 +13,14 @@
 
 ![Class diagram](diagrams/P6_DBB_Modele/domaine_metier_P6.png)
 
+## Passwords
+
+Nathalie = nathMDP
+Bob = BobMDP
+Yann = YannMDP
+Marine = MarineMDP
+Admin = admin
+
 
 
 
