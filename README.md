@@ -15,7 +15,7 @@
 
 La DB s'initialise par schema.sql et data.sql.
 
-( Si vous souhaitez initialiser la DB par le code, enlever les commentaires de la classe <code> InitDbValues </code> et supprimez  
+( Si vous souhaitez initialiser la DB par le code, enlevez les commentaires de la classe <code> InitDbValues </code> et supprimez  
 <code> spring.sql.init.schema-locations=classpath:script.sql 
 spring.sql.init.data-locations=classpath:data.sql </code>
 puis changer <code> spring.jpa.hibernate.ddl-auto </code> a votre préférence. )
