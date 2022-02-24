@@ -31,7 +31,7 @@ import com.PayMyBuddy.repo.UserRepository;
 
 @Configuration
 @ComponentScan("com.PayMyBuddy.config")
-public class InitDbvalues {
+public class InitDbValues {
 /*
 	@Autowired
 	RoleRepository roleRepository;
